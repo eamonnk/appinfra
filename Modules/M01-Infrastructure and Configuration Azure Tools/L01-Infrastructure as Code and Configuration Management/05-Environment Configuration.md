@@ -4,11 +4,11 @@ The configuration of your servers, code, and other resources is typically stored
 
 ### Manual configuration versus Configuration as Code
 
-Manually managing the configuration of a single application and environment can be challenging. The challenges are greater for managing multiple applications and environments across multiple servers. Automated configuration, or treating Configuration as Code, can elevate some of the challenges associated with manual configuration.
+Manually managing the configuration of a single application and environment can be challenging. The challenges are greater for managing multiple applications and environments across multiple servers. Automated configuration, or treating Configuration as Code, can alleviate some of the challenges associated with manual configuration.
 
 The following table lists the major differences between manual configuration and Configuration as Code.
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/cac_vs_manual.png" alt="Table showing bulleted lists that describe the main differences between manual configuration and Configuration as Code. This table is described in the following paragraph."></p>
+<p style="text-align:center;"><img src="../../Linked_Image_Files/cac_vs_manual.png" alt="Table showing bulleted lists that describe the main differences between manual configuration and Configuration as Code. This table is described in the following paragraph."></p>
 
 > :information_source: Note that the term *Configuration as Code* is not used widely. In some cases, the term *Infrastructure as Code* is used to describe both the provisioning and configuring of machines. The term *Infrastructure as Code* is also used sometimes to include *Configuration as Code*, but not vice versa.
 
@@ -18,7 +18,7 @@ The following table lists the major differences between manual configuration and
 - Allows configuration to be version controlled.
 - Helps detect and correct configuration drift.
 - Provides code-review and unit-testing capabilities to help manage infrastructure changes.
-- Treats infrastructure as flexible resource.
+- Treats infrastructure as a flexible resource.
 - Facilitates automation.
 - Enables automated scale-up and scale-out.
 - Provides consistency across environments.

@@ -1,23 +1,24 @@
-Configuration management refers to the automated management of configuration, typically in the form of version-controlled scripts, for an application and all the environments needed to support it. Configuration management means lighter-weight, executable configurations that allow us to have configuration and environments as code.
+*Configuration Management* refers to automatically managing the configuration of an application and the environments needed to support it. Configurations are typically managed by version-controlled scripts or definition files. Using these light-weight, executable, configuration scripts and definition files, we can implement Configuration and Environments as Code.
 
+The configuration of your servers, code, and other resources is typically stored in a text file, script or definition. The configuration files can be checked into version control, and used as the base source for creating or updating configurations. For instance, a new port can be added to a firewall by editing the configuration file and running the release pipeline, rather than remoting into the environment and adding the firewall port manually.
 
-The configuration of your servers, code, and other resources is typically stored in a text file, script or definition, and is checked into version control to be used as the base source for creating or updating those configurations. For instance, adding a new port to a firewall should be done by editing a text file and running the release pipeline, not by remoting into the environment and spinning one up manually. Managing the configuration of one application and environment can be challenging. Imagine scaling this out manually for application across multiple servers.
+### Manual configuration versus Configuration as Code
 
-The following table lists the major differences between manual configuration and automated configuration, or treating "configuration as code".
+Manually managing the configuration of a single application and environment can be challenging. The challenges are greater for managing multiple applications and environments across multiple servers. Automated configuration, or treating Configuration as Code, can elevate some of the challenges associated with manual configuration.
 
+The following table lists the major differences between manual configuration and Configuration as Code.
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/cacvsmanual.png" alt="Table of Manual configuration versus Configuration as code. This table is described in the following paragraph."></p>
+<p style="text-align:center;"><img src="../Linked_Image_Files/cac_vs_manual.png" alt="Table showing bulleted lists that describe the main differences between manual configuration and Configuration as Code. This table is described in the following paragraph."></p>
 
-> Note: The term *configuration as code* is not used as widely, and in some cases, Infrastructure as Code is used to describe both provisioning and configuring machines. The term *Infrastructure as Code* is also sometimes used to include *configuration as code*, but not vice versa.
+> :information_source: Note that the term *Configuration as Code* is not used widely. In some cases, the term *Infrastructure as Code* is used to describe both the provisioning and configuring of machines. The term *Infrastructure as Code* is also used sometimes to include *Configuration as Code*, but not vice versa.
 
 ### Benefits of configuration management
 
-- Ability to audit or Traceability:
-- Allowing configuration to be version controlled.
-- Detecting and correcting configuration drift.
-- Providing ability to code-review and unit-test your infrastructure changes.
-- Treating infrastructure as flexible resource.
-- Facilitating automation.
-- Enabling automated scale-up and scale-out.
-- Providing environment consistency.
-
+- Facilitates auditing and improves Traceability
+- Allows configuration to be version controlled.
+- Helps detect and correct configuration drift.
+- Provides code-review and unit-testing capabilities to help manage infrastructure changes.
+- Treats infrastructure as flexible resource.
+- Facilitates automation.
+- Enables automated scale-up and scale-out.
+- Provides consistency across environments.

@@ -1,21 +1,16 @@
+With regards to Infrastructure and Configuration as Code, another important area of note is the database. By adopting a similar approach to deploying Infrastructure as Code, we can also treat the *Database as Code*. Treating the database as code can reduce database read/ write operation times, and improve the efficacy of database administration.
 
+The database can be version-controlled in the same way that applications can, and bugs can be reproduced more easily. By treating the database as code, the configuration remains consistent. Drifts that occur in the production environment can be addressed by initializing the database in a development environment for debugging.
 
-One additional important area to call out, when talking about infrastructure and configuration as code, is the database. 
+<p style="text-align:center;"><img src="../Linked_Image_Files/databasepipeline.png" alt="An arrow representing a build and release pipeline, with three icons representing three different databases: one database icon for dev, another database icon for test and a final database icon for production."></p>
 
-The database administration procedure does not need to differ from the practice of deploying Infrastructure as Code and the database can be treated as code for higher efficiency and fewer delays. 
+### Benefits to treating Database as Code
 
-The database can be versioned the same way that applications can, and bugs can be easily reproduced. When treating the database as code, the configuration remains consistent, and drifts in production can be addressed by bringing it back to development.
+The following are the main benefits to treating Database as Code.
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/databasepipeline.png" alt="An arrow representing a build and release pipeline, on which are three icons representing databases, one for dev, test and production."></p>
+- Making changes in small increments allows you to change a few scripts, as opposed to performing a huge roll-up of schema changes that might result in time-consuming errors.
+- Configuration scripts can be treated as executable documentation because they are small enough for people to read through them and understand them.
+- Schema changes can go forwards and backwards because DevOps provides tools for comparing production with development (i.e. 'Diff'). These tools make it easy to identify difference between production with development, and to determine which modifications need to be made.
+- Improves *auditability*, that is: the ability to track the history of changes to identify and address problems quickly.
 
-### Benefits
-Some of the benefits of treating Database as code include:
-- Making changes in small increments allows you to change a few scripts as opposed to a huge roll-up of schema changes that might result in time-consuming errors.
-- configuration scripts can be treated as executable documentation because they are small enough that people can understand them
-- Schema changes can go forward and backward because DevOps provides the tools that you can "Diff" with production and development to see if they are identical or not, and to identify what modifications need to be made.
-- Auditability, or the ability to go back and track the history of changes to quickly identify and address problems. This is one of the main benefits.
-
-
-> **Note**: <p> For more information on Database DevOps, see <a href="http://www.red-gate.com/solutions/database-devops/" target="_blank"><span style="color: #0066cc;" color="#0066cc">Redgate’s Compliant Database DevOps</span> page.</p></a>
-
-
+> :information_source: For more information about *Database DevOps*, see the page [Redgate’s Compliant Database DevOps](http://www.red-gate.com/solutions/database-devops/).

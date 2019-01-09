@@ -8,7 +8,7 @@ We highly recommend that you complete the assigned hands-on lab work. To do the 
 
     ![Screenshot of the Azure DevOps Demo Generator Home Page.](../Linked_Image_Files/DevOps_IAI_Image_001.png)
 
-4. You will then be asked give the generator site permission to create objects in your Azure DevOps account.
+4. You will be asked give the generator site permission to create objects in your Azure DevOps account.
 
     ![Screenshot of the Accept Permissions page.](../Linked_Image_Files/DevOps_IAI_Image_002.png)
 

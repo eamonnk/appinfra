@@ -1,22 +1,29 @@
+If you have ever received an emergency support call to recover a crashed server, you will recognize how difficult it can be to recall the steps that are required to set up a new machine from scratch. Another well known issue is the problem of keeping consistent development and production environments.
 
-If you’ve ever received a middle-of-the-night emergency support call because of a crashed server, you know the pain of searching through multiple spreadsheets, or even your memory, to access the manual steps of setting up a new machine from scratch. There is also an age-old difficulty: keeping the development and production environments consistent. An easier way to remove the possibility of human error when initializing machines and treat environments like code so that they are stood up from a single consistent definition is to use Infrastructure as Code.
+One useful alternative to relying on manual deployment and configuration is *Infrastructure as Code* (IaC). Infrastructure as Code involves using preset definitions for initializing machines and setting up environments. By using consistent definitions, Infrastructure as Code can reduce the possibility of introducing human error when initializing machines and can help to maintain consistency across multiple environments.
 
-A common analogy for using Infrastructure as Code is the distinction between owning pets and cattle. When you own pets, you give them names, you treat them individually, and if something bad happens to them, you care a lot. If you have a herd of cattle, you might still name them, but you treat them as a herd. In infrastructure terms, without treating environments as code, there might be severe implications if a machine crashes and you need to replace it (pets). If you use Infrastructure as Code, if a machine goes down, you can just spin up another machine with no issues (cattle).
+### Manual deployment versus Infrastructure as Code
 
+A common analogy for understanding the differences between manual deployment and Infrastructure as Code, is the distinction between owning pets and cattle. When you have pets, you name each one, and you view them as individuals; if something bad happens to one of your pets, you are inclined to care a lot. If you have a herd of cattle, you might still name them, but you consider them as a herd.
 
-Defining your environments to include networks, servers, and other compute resources as a text file (script or definition) that is checked into version control and used as the base source for creating or updating those environments. For instance, adding a new server is done by editing a text file and running the release pipeline, not by remoting into the environment and spinning up one manually.
+In infrastructure terms, with a manual deployment approach, there might be severe implications if a single machine crashes and you need to replace it (pets). If you adopt an Infrastructure as Code approach, whenever a single machine goes down, you can easily provision another machine without adversely impacting your entire infrastructure (cattle).
+
+> :information_source: You can read more about IaC on the page [What is Infrastructure as Code](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-infrastructure-as-code)?
+
+### Implementing Infrastructure as Code
+
+With Infrastructure as Code, you capture your environments in a text file (script or definition), including any networks, servers, and other compute resources. The script or definition file can be checked into version control, and used as the base source for updating existing environments or creating new ones. For instance, a new server can be added by editing the text file and running the release pipeline, rather than remoting into the environment and manually provisioning a new server.
 
 The following table lists the major differences between manual deployment and Infrastructure as Code.
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/iacvsmanual.png" alt="Table of Manual deployment versus Infrastructure as code. This table is described in the following paragraph."></p>
-
+<p style="text-align:center;"><img src="../Linked_Image_Files/iac_vs_manual.png" alt="Table showing bulleted lists that describe the main differences between manual deployment and Infrastructure as Code. This table is described in the following paragraph."></p>
 
 ### Benefits of treating Infrastructure as Code
 
-- Ability to audit or Traceability: Being able to trace what was deployed when, and how.
-- Consistency of environments form release to release.
-- Consistency of environments across dev, test and production.
-- Facilitating automation: Enabling automated scale-up and scale-out.
-- Allowing configuration to be version controlled.
-- Providing ability to code-review and unit-test your infrastructure changes.
-- Treating infrastructure as flexible resource.
+- Facilitates auditing by making it easier to trace what was deployed, when, and how (i.e. improves *Traceability*).
+- Provides consistent environments from release to release.
+- Greater consistency across dev, test and production environments.
+- Automates scale-up and scale-out processes.
+- Allows configurations to be version controlled.
+- Provides code-review and unit-testing capabilities to help manage infrastructure changes.
+- Treats infrastructure as flexible resource.

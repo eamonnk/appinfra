@@ -1,0 +1,215 @@
+1
+00:00:00,000 --> 00:00:01,680
+>> Azure PowerShell is
+
+2
+00:00:01,680 --> 00:00:03,530
+a module that you add
+to Windows PowerShell,
+
+3
+00:00:03,530 --> 00:00:05,100
+or PowerShell Core to let you
+
+4
+00:00:05,100 --> 00:00:08,245
+connect to your Azure subscription
+on managed resources.
+
+5
+00:00:08,245 --> 00:00:12,510
+Azure PowerShell requires
+PowerShell in order to function.
+
+6
+00:00:12,510 --> 00:00:15,720
+PowerShell provide services
+like the shell window,
+
+7
+00:00:15,720 --> 00:00:17,115
+command parsing and so on.
+
+8
+00:00:17,115 --> 00:00:20,955
+An Azure PowerShell as the
+Azure specific commands.
+
+9
+00:00:20,955 --> 00:00:24,645
+The base PowerShell product is
+available in two different formats.
+
+10
+00:00:24,645 --> 00:00:27,450
+PowerShell on Windows
+this comes by default in
+
+11
+00:00:27,450 --> 00:00:30,555
+Windows environments
+or PowerShell Core.
+
+12
+00:00:30,555 --> 00:00:32,850
+A cross-platform version
+of PowerShell that
+
+13
+00:00:32,850 --> 00:00:35,920
+can be installed
+a Windows, Linux, or Mac.
+
+14
+00:00:36,620 --> 00:00:40,875
+Azure PowerShell is also accessible
+via two different methods.
+
+15
+00:00:40,875 --> 00:00:42,540
+Firstly, via local install,
+
+16
+00:00:42,540 --> 00:00:44,025
+on Windows, Linux, or Mac.
+
+17
+00:00:44,025 --> 00:00:46,925
+The same as the base
+PowerShell product or
+
+18
+00:00:46,925 --> 00:00:50,180
+via any browser using the
+Azure Cloud Shell service.
+
+19
+00:00:50,180 --> 00:00:52,415
+This is a browser-based
+management console
+
+20
+00:00:52,415 --> 00:00:55,340
+providing boat a Bash on
+the PowerShell experience.
+
+21
+00:00:55,340 --> 00:00:59,060
+In both cases, Azure PowerShell
+can be run either interactively
+
+22
+00:00:59,060 --> 00:01:01,190
+issuing commands in
+real-time providing input
+
+23
+00:01:01,190 --> 00:01:03,350
+as needed or scripted,
+
+24
+00:01:03,350 --> 00:01:05,630
+where everything is
+predefined then executed.
+
+25
+00:01:05,630 --> 00:01:08,580
+Let's look briefly at some of
+the core PowerShell components.
+
+26
+00:01:08,580 --> 00:01:10,410
+Firstly, there's Cmdlets:
+
+27
+00:01:10,410 --> 00:01:12,565
+PowerShell command are
+just called Cmdlets.
+
+28
+00:01:12,565 --> 00:01:15,485
+Cmdlets follow a verb-noun
+naming convention.
+
+29
+00:01:15,485 --> 00:01:20,675
+For example, Get-Process,
+format-Table, Start-Service.
+
+30
+00:01:20,675 --> 00:01:23,695
+There's also a convention
+for verb choice.
+
+31
+00:01:23,695 --> 00:01:25,575
+With Get to retrieve data,
+
+32
+00:01:25,575 --> 00:01:27,600
+Set to insert or update data,
+
+33
+00:01:27,600 --> 00:01:29,265
+Format to format data,
+
+34
+00:01:29,265 --> 00:01:32,405
+and Out to direct outputs
+to a destination, and more.
+
+35
+00:01:32,405 --> 00:01:34,790
+There also PowerShell modules.
+
+36
+00:01:34,790 --> 00:01:37,270
+Cmdlets are shipped in modules.
+
+37
+00:01:37,270 --> 00:01:39,590
+The PowerShell module is a DLL that
+
+38
+00:01:39,590 --> 00:01:42,365
+includes the code to process
+each available Cmdlets.
+
+39
+00:01:42,365 --> 00:01:44,270
+You load Cmdlets into PowerShell
+
+40
+00:01:44,270 --> 00:01:46,460
+by loading the module
+they are contained in.
+
+41
+00:01:46,460 --> 00:01:48,290
+You can obtain additional Cmdlets by
+
+42
+00:01:48,290 --> 00:01:51,010
+downloading specific modules
+and installing them.
+
+43
+00:01:51,010 --> 00:01:53,570
+For example, the module
+specific to Azure
+
+44
+00:01:53,570 --> 00:01:56,585
+provides the Cmdlets for
+interacting with Microsoft Azure.
+
+45
+00:01:56,585 --> 00:01:58,760
+You can get a list
+of loaded modules in
+
+46
+00:01:58,760 --> 00:02:02,600
+your PowerShell session using
+the Cmdlets Get-module.
+

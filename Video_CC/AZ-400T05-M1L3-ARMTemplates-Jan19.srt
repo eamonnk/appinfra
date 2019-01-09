@@ -1,0 +1,204 @@
+1
+00:00:00,000 --> 00:00:03,060
+>> Azure Resource Manager is
+a management layer on which
+
+2
+00:00:03,060 --> 00:00:06,185
+resource groups and all the
+resources within it are created,
+
+3
+00:00:06,185 --> 00:00:08,550
+configured, managed, and deleted.
+
+4
+00:00:08,550 --> 00:00:10,905
+It provides a consistent
+management layer
+
+5
+00:00:10,905 --> 00:00:12,840
+which allows you to
+automate the deployment and
+
+6
+00:00:12,840 --> 00:00:14,790
+configuration of resources using
+
+7
+00:00:14,790 --> 00:00:16,890
+different automation scripting tools,
+
+8
+00:00:16,890 --> 00:00:19,995
+such as, Azure PowerShell,
+Azure command-line interface,
+
+9
+00:00:19,995 --> 00:00:24,330
+the Azure portal, REST
+APIs, and Client SDKs.
+
+10
+00:00:24,330 --> 00:00:26,580
+With Azure Resource Manager
+you can deploy
+
+11
+00:00:26,580 --> 00:00:29,340
+application resources,
+update, manage,
+
+12
+00:00:29,340 --> 00:00:31,650
+and delete all the resources
+for your solution in
+
+13
+00:00:31,650 --> 00:00:34,990
+a single coordinated operation.
+
+14
+00:00:35,870 --> 00:00:39,090
+An Azure Resource Manager
+template precisely
+
+15
+00:00:39,090 --> 00:00:42,225
+defines all the resource manager
+resources in a deployment.
+
+16
+00:00:42,225 --> 00:00:44,570
+You can deploy
+a Resource Manager template
+
+17
+00:00:44,570 --> 00:00:47,300
+into a resource group
+in a single operation.
+
+18
+00:00:47,300 --> 00:00:49,790
+Resource Manager templates
+are declarative
+
+19
+00:00:49,790 --> 00:00:52,175
+in nature on written in JSON format.
+
+20
+00:00:52,175 --> 00:00:53,615
+By using a template,
+
+21
+00:00:53,615 --> 00:00:57,080
+you can repeatedly deploy
+your solution through its lifecycle,
+
+22
+00:00:57,080 --> 00:00:59,810
+and development test and
+production type environments,
+
+23
+00:00:59,810 --> 00:01:01,670
+and have confidence your resources
+
+24
+00:01:01,670 --> 00:01:04,350
+are deployed in a consistent state.
+
+25
+00:01:05,830 --> 00:01:09,995
+The benefits of using
+Resource Manager templates include;
+
+26
+00:01:09,995 --> 00:01:14,390
+improved consistency. Making it
+easier to express and define
+
+27
+00:01:14,390 --> 00:01:17,905
+complex co-deployments and
+relationships between resources.
+
+28
+00:01:17,905 --> 00:01:21,330
+Reduce manual error-prone tasks.
+
+29
+00:01:21,330 --> 00:01:23,000
+Support infrastructure as
+
+30
+00:01:23,000 --> 00:01:25,430
+code principles including
+version control,
+
+31
+00:01:25,430 --> 00:01:30,390
+traceability, and modularization,
+and promote re-use.
+
+32
+00:01:30,610 --> 00:01:35,705
+A template consists of the
+following components: Parameters,
+
+33
+00:01:35,705 --> 00:01:37,520
+where you specify which values are
+
+34
+00:01:37,520 --> 00:01:40,490
+configurable when the template runs.
+
+35
+00:01:40,490 --> 00:01:42,980
+Variables, where you define
+
+36
+00:01:42,980 --> 00:01:45,605
+values that are used
+throughout the template.
+
+37
+00:01:45,605 --> 00:01:48,200
+Functions, here you define
+
+38
+00:01:48,200 --> 00:01:52,025
+procedures that you can re-use
+throughout the template.
+
+39
+00:01:52,025 --> 00:01:54,680
+Resources, where you define
+
+40
+00:01:54,680 --> 00:01:57,770
+the Azure resources that
+make up your deployment.
+
+41
+00:01:57,770 --> 00:02:00,980
+Outputs, where you
+define any information
+
+42
+00:02:00,980 --> 00:02:03,440
+you'd like to receive
+when the template runs,
+
+43
+00:02:03,440 --> 00:02:05,395
+such as data generated at runtime.
+
+44
+00:02:05,395 --> 00:02:08,560
+For example, a fully
+qualified domain name.
+

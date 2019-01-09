@@ -1,0 +1,160 @@
+1
+00:00:00,000 --> 00:00:02,160
+>> Configuration management refers to
+
+2
+00:00:02,160 --> 00:00:04,005
+the automated management
+of configuration,
+
+3
+00:00:04,005 --> 00:00:06,420
+typically in the form of
+version control scripts for
+
+4
+00:00:06,420 --> 00:00:08,160
+an application on
+all the environments
+
+5
+00:00:08,160 --> 00:00:09,930
+and infrastructure
+needed to support it.
+
+6
+00:00:09,930 --> 00:00:12,780
+Configuration management
+means lighter weight,
+
+7
+00:00:12,780 --> 00:00:15,000
+executable configurations
+that allow us
+
+8
+00:00:15,000 --> 00:00:17,745
+to have configuration on
+environment scripted and automated.
+
+9
+00:00:17,745 --> 00:00:20,340
+For instance, adding
+a new port to a firewall,
+
+10
+00:00:20,340 --> 00:00:22,080
+should be done by editing a text file
+
+11
+00:00:22,080 --> 00:00:23,550
+and running the release pipeline,
+
+12
+00:00:23,550 --> 00:00:27,120
+not by remoting into the environment
+and spending on app manually.
+
+13
+00:00:27,120 --> 00:00:29,100
+Generally, managing the configuration
+
+14
+00:00:29,100 --> 00:00:31,215
+of one application in
+an environment can be challenging.
+
+15
+00:00:31,215 --> 00:00:34,500
+So, scaling this out for
+applications across multiple servers
+
+16
+00:00:34,500 --> 00:00:35,850
+is very difficult to do
+
+17
+00:00:35,850 --> 00:00:38,070
+without using the Configuration
+as Code type model.
+
+18
+00:00:38,070 --> 00:00:40,340
+A quick comparison of
+manual deployments versus
+
+19
+00:00:40,340 --> 00:00:43,610
+deployments through a Configuration
+as Code type model include;
+
+20
+00:00:43,610 --> 00:00:45,440
+bugs being more easily reproduced
+
+21
+00:00:45,440 --> 00:00:47,060
+with a Configuration
+as Code type model.
+
+22
+00:00:47,060 --> 00:00:48,470
+Configuration as Code providing
+
+23
+00:00:48,470 --> 00:00:51,590
+better traceability and
+a means of auditing changes.
+
+24
+00:00:51,590 --> 00:00:53,445
+Consistent configuration.
+
+25
+00:00:53,445 --> 00:00:55,775
+Configuration as Code
+being less error prone.
+
+26
+00:00:55,775 --> 00:00:59,240
+Increased deployment cadence,
+less documentation needed and
+
+27
+00:00:59,240 --> 00:01:00,740
+needing to be maintained as
+
+28
+00:01:00,740 --> 00:01:03,140
+all configuration is
+available in scripts.
+
+29
+00:01:03,140 --> 00:01:06,175
+It's easier to scale with
+automatic configuration.
+
+30
+00:01:06,175 --> 00:01:07,710
+Also, just be aware that
+
+31
+00:01:07,710 --> 00:01:10,170
+the term Configuration as
+Code is not used widely.
+
+32
+00:01:10,170 --> 00:01:12,590
+More widely used is
+configuration management.
+
+33
+00:01:12,590 --> 00:01:15,380
+In some cases, Infrastructure
+as Code is used to
+
+34
+00:01:15,380 --> 00:01:19,140
+describe both provisioning and
+the configuration of environments.
+

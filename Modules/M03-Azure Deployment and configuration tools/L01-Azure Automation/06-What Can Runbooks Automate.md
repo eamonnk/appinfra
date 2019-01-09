@@ -1,0 +1,5 @@
+<h1><strong><span style="color: #0000CD;">What Can Runbooks Automate?</span></strong></h1>
+
+Runbooks in Microsoft Azure Automation are based on Windows PowerShell or Windows PowerShell Workflow, so they do anything that PowerShell can do. If an application or service has an API, then a runbook can work with it. If you have a PowerShell module for the application, then you can load that module into Azure Automation and include those cmdlets in your runbook. 
+
+Azure Automation runbooks run in the Azure cloud and are capable of accessing any cloud resources or external resources that can be accessed from the cloud. Using [Hybrid Runbook Worker](https://docs.microsoft.com/en-us/azure/automation/automation-hybrid-runbook-worker), runbooks can run in your local datacenter to manage local resources. The runbooks are stored and managed in Azure Automation and then delivered to one or more on-premises machines. Azure runbooks can also [automate provisioning of a virtual machine in Amazon Web Services (AWS)](https://docs.microsoft.com/en-us/azure/automation/automation-scenario-aws-deployment).

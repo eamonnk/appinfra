@@ -1,0 +1,630 @@
+1
+00:00:00,000 --> 00:00:01,680
+>> Let's check out some of
+
+2
+00:00:01,680 --> 00:00:03,480
+the common architecting
+considerations when
+
+3
+00:00:03,480 --> 00:00:04,800
+looking to implement infrastructure
+
+4
+00:00:04,800 --> 00:00:06,675
+and configuration as code models.
+
+5
+00:00:06,675 --> 00:00:09,075
+Firstly is modularization.
+
+6
+00:00:09,075 --> 00:00:11,310
+So, how the various
+components that define
+
+7
+00:00:11,310 --> 00:00:14,100
+your environmental structured or
+reference such as text files,
+
+8
+00:00:14,100 --> 00:00:16,860
+definitions, script, et
+cetera, can be important?
+
+9
+00:00:16,860 --> 00:00:18,900
+Over time, Azure applications
+
+10
+00:00:18,900 --> 00:00:21,570
+environments change and
+complexity increases,
+
+11
+00:00:21,570 --> 00:00:23,190
+it can become more
+difficult to manage,
+
+12
+00:00:23,190 --> 00:00:26,205
+maintain or troubleshoot
+your automation files.
+
+13
+00:00:26,205 --> 00:00:29,400
+For small to medium solutions
+with small teams,
+
+14
+00:00:29,400 --> 00:00:30,930
+having single file to define
+
+15
+00:00:30,930 --> 00:00:33,375
+application resources and
+configuration can be fun,
+
+16
+00:00:33,375 --> 00:00:35,940
+and maybe easier to
+understand the maintain.
+
+17
+00:00:35,940 --> 00:00:37,950
+It's possible to see
+all the resources
+
+18
+00:00:37,950 --> 00:00:39,510
+and values in a single file,
+
+19
+00:00:39,510 --> 00:00:42,645
+so there can be benefits to
+this scenario in certain situations.
+
+20
+00:00:42,645 --> 00:00:45,900
+However, for advanced
+more complex scenarios,
+
+21
+00:00:45,900 --> 00:00:47,540
+breaking all automation
+resources into
+
+22
+00:00:47,540 --> 00:00:50,165
+their constituent parts
+is of major benefit.
+
+23
+00:00:50,165 --> 00:00:53,240
+This can be referred to
+as modularization or
+
+24
+00:00:53,240 --> 00:00:56,930
+modularizing your automation
+assets into the component parts,
+
+25
+00:00:56,930 --> 00:00:58,640
+which collectively
+defined environments
+
+26
+00:00:58,640 --> 00:01:01,130
+and configuration for
+your application.
+
+27
+00:01:01,130 --> 00:01:04,400
+Some of the benefits of
+modularization include,
+
+28
+00:01:04,400 --> 00:01:07,850
+easier to reuse components
+across different scenarios,
+
+29
+00:01:07,850 --> 00:01:10,195
+easier to manage and
+maintain your code,
+
+30
+00:01:10,195 --> 00:01:11,685
+and it's easier to extend
+
+31
+00:01:11,685 --> 00:01:14,675
+an Azure existing
+infrastructure definitions.
+
+32
+00:01:14,675 --> 00:01:16,580
+Now, let's look at imperative
+
+33
+00:01:16,580 --> 00:01:18,890
+versus declarative models
+for automation.
+
+34
+00:01:18,890 --> 00:01:20,900
+There are a few types of
+approaches to implementing
+
+35
+00:01:20,900 --> 00:01:23,800
+infrastructure and configuration
+as code which you can adopt.
+
+36
+00:01:23,800 --> 00:01:27,690
+Two of the main methods of
+approach are; declarative.
+
+37
+00:01:27,690 --> 00:01:31,310
+The declarative approach states
+what the final state should be,
+
+38
+00:01:31,310 --> 00:01:34,970
+without defining how
+that final state should be achieved.
+
+39
+00:01:34,970 --> 00:01:37,945
+Imperative. In
+the imperative approach,
+
+40
+00:01:37,945 --> 00:01:40,280
+we define what
+the final state needs to be,
+
+41
+00:01:40,280 --> 00:01:44,550
+but also include how to
+achieve that final state.
+
+42
+00:01:45,340 --> 00:01:48,290
+The declarative approach
+abstracts away
+
+43
+00:01:48,290 --> 00:01:51,310
+the methodology of how
+a state is achieved,
+
+44
+00:01:51,310 --> 00:01:52,850
+and as such, it can be easier to
+
+45
+00:01:52,850 --> 00:01:54,820
+read and understand
+what is being done,
+
+46
+00:01:54,820 --> 00:01:58,100
+as well as making it easier
+to write and define.
+
+47
+00:01:58,100 --> 00:02:00,500
+A declarative approach
+would generally be
+
+48
+00:02:00,500 --> 00:02:02,795
+preferred option for ease of use.
+
+49
+00:02:02,795 --> 00:02:05,150
+Azure Resource Manager
+templates would be
+
+50
+00:02:05,150 --> 00:02:08,510
+an example automation file
+using a declarative approach.
+
+51
+00:02:08,510 --> 00:02:10,565
+Now, let's look at Idempotency.
+
+52
+00:02:10,565 --> 00:02:13,400
+Idempotence is a mathematical
+term that can be
+
+53
+00:02:13,400 --> 00:02:16,295
+used in the context of infrastructure
+and configuration as code.
+
+54
+00:02:16,295 --> 00:02:18,065
+Where there is the ability to apply
+
+55
+00:02:18,065 --> 00:02:20,195
+one or more operations
+against the resource,
+
+56
+00:02:20,195 --> 00:02:22,055
+resulting in the same outcome.
+
+57
+00:02:22,055 --> 00:02:23,870
+In essence, if you apply
+
+58
+00:02:23,870 --> 00:02:26,525
+a deployment to a set of
+resources a 1,000 times,
+
+59
+00:02:26,525 --> 00:02:28,100
+you'll end up with the same result
+
+60
+00:02:28,100 --> 00:02:30,505
+after each application
+a descriptor template.
+
+61
+00:02:30,505 --> 00:02:33,405
+Idempotency can be
+achieved in two ways,
+
+62
+00:02:33,405 --> 00:02:35,930
+automatically configuring
+and reconfiguring
+
+63
+00:02:35,930 --> 00:02:37,595
+an existing set of resources
+
+64
+00:02:37,595 --> 00:02:40,220
+or discarding to existing resources
+
+65
+00:02:40,220 --> 00:02:41,900
+and recreating a fresh environment.
+
+66
+00:02:41,900 --> 00:02:44,465
+So, using an immutable
+infrastructure model
+
+67
+00:02:44,465 --> 00:02:47,825
+where infrastructure is not
+modified after it is applied.
+
+68
+00:02:47,825 --> 00:02:50,510
+When the finding infrastructure
+and configuration as code,
+
+69
+00:02:50,510 --> 00:02:52,910
+it'll be best practice to build
+those scripts and templates
+
+70
+00:02:52,910 --> 00:02:55,640
+in such a way as to
+embrace Idempotency.
+
+71
+00:02:55,640 --> 00:02:57,145
+Then there's Technical Debt.
+
+72
+00:02:57,145 --> 00:02:59,240
+Technical Debt is
+the set of problems in
+
+73
+00:02:59,240 --> 00:03:01,040
+a development effort
+that make progress on
+
+74
+00:03:01,040 --> 00:03:03,095
+customer value inefficient or costly.
+
+75
+00:03:03,095 --> 00:03:05,960
+It creates Unplanned
+work blocks progress.
+
+76
+00:03:05,960 --> 00:03:09,380
+It can start small and grow
+significantly over time,
+
+77
+00:03:09,380 --> 00:03:12,635
+through rush changes and the lack
+of context and discipline.
+
+78
+00:03:12,635 --> 00:03:14,795
+It can ultimate materialize
+out of nowhere,
+
+79
+00:03:14,795 --> 00:03:17,060
+even for a project regarded as clean,
+
+80
+00:03:17,060 --> 00:03:20,140
+because of changes in
+projects circumstances.
+
+81
+00:03:20,140 --> 00:03:23,510
+Technical Debt includes anything
+the team must do to deploy
+
+82
+00:03:23,510 --> 00:03:26,390
+production quantity code and
+keep it running in production.
+
+83
+00:03:26,390 --> 00:03:29,825
+Examples of technical
+debt can be; bugs,
+
+84
+00:03:29,825 --> 00:03:33,260
+accessibility, changing
+technologies or
+
+85
+00:03:33,260 --> 00:03:37,340
+versions which are not accounted
+for as part of your dev process.
+
+86
+00:03:37,340 --> 00:03:39,560
+You can think of technical debt and
+
+87
+00:03:39,560 --> 00:03:41,900
+loose terms as the taking
+of a shortcut,
+
+88
+00:03:41,900 --> 00:03:44,165
+be it intended or unintended.
+
+89
+00:03:44,165 --> 00:03:46,680
+Technical debt is not
+necessarily eliminated,
+
+90
+00:03:46,680 --> 00:03:47,985
+rather it is managed.
+
+91
+00:03:47,985 --> 00:03:50,930
+Some considerations of managing
+technical debt include,
+
+92
+00:03:50,930 --> 00:03:52,910
+understanding and
+identifying the debt
+
+93
+00:03:52,910 --> 00:03:54,485
+and where it is located in the code,
+
+94
+00:03:54,485 --> 00:03:56,705
+as well as evaluating
+the cost to fix it.
+
+95
+00:03:56,705 --> 00:03:59,425
+There are tools that can
+be used to help with this.
+
+96
+00:03:59,425 --> 00:04:01,910
+Putting policies in place focused on
+
+97
+00:04:01,910 --> 00:04:04,460
+preventing debt from getting
+worse and managing it down,
+
+98
+00:04:04,460 --> 00:04:06,290
+such as allowing for
+the periodic updates of
+
+99
+00:04:06,290 --> 00:04:08,690
+Resource Management templates
+for new API versions,
+
+100
+00:04:08,690 --> 00:04:12,145
+and doing that as part of
+your general development work.
+
+101
+00:04:12,145 --> 00:04:14,300
+Tracking debt over time to ensure
+
+102
+00:04:14,300 --> 00:04:15,965
+it's trending down in
+the right direction,
+
+103
+00:04:15,965 --> 00:04:17,885
+and meeting defined policies,
+
+104
+00:04:17,885 --> 00:04:19,670
+prioritizing debt along with
+
+105
+00:04:19,670 --> 00:04:22,685
+new application features
+and desired functionality.
+
+106
+00:04:22,685 --> 00:04:25,445
+Finally, let's look at
+Configuration Drift.
+
+107
+00:04:25,445 --> 00:04:27,200
+Configuration Drift is the process
+
+108
+00:04:27,200 --> 00:04:29,560
+whereby set of resources
+changed her state over time,
+
+109
+00:04:29,560 --> 00:04:32,405
+from what was the original state
+in which they were deployed.
+
+110
+00:04:32,405 --> 00:04:35,570
+Over time, each environment
+may become a snowflake,
+
+111
+00:04:35,570 --> 00:04:39,035
+or unique configuration that cannot
+be reproduced automatically.
+
+112
+00:04:39,035 --> 00:04:41,540
+With snowflakes,
+administration and maintenance
+
+113
+00:04:41,540 --> 00:04:43,970
+of infrastructure involves
+manual processes,
+
+114
+00:04:43,970 --> 00:04:46,925
+which are hard to track
+and contribute to errors.
+
+115
+00:04:46,925 --> 00:04:49,430
+Configuration Drift
+may also introduce
+
+116
+00:04:49,430 --> 00:04:51,560
+security vulnerabilities
+into environments.
+
+117
+00:04:51,560 --> 00:04:53,570
+For example, parts being opened are
+
+118
+00:04:53,570 --> 00:04:55,595
+intended to be closed, updates,
+
+119
+00:04:55,595 --> 00:04:56,870
+security patch has not been
+
+120
+00:04:56,870 --> 00:04:59,045
+applied consistently
+across environments,
+
+121
+00:04:59,045 --> 00:05:00,680
+or software installed that
+
+122
+00:05:00,680 --> 00:05:03,210
+does not meet your
+compliance requirements.
+
+123
+00:05:03,250 --> 00:05:06,620
+It can be difficult to completely
+eliminate Configuration Drift,
+
+124
+00:05:06,620 --> 00:05:09,079
+but there are many ways you can
+manage it in your environments,
+
+125
+00:05:09,079 --> 00:05:11,975
+using Configuration Management tools
+and products such as;
+
+126
+00:05:11,975 --> 00:05:14,820
+Windows PowerShell
+Desired State Configuration,
+
+127
+00:05:14,820 --> 00:05:17,345
+which is a management
+platform in PowerShell
+
+128
+00:05:17,345 --> 00:05:20,464
+allowing you to manage and
+enforce Resource Configurations,
+
+129
+00:05:20,464 --> 00:05:23,600
+Azure Policy, which is
+an Azure service that enforces
+
+130
+00:05:23,600 --> 00:05:26,555
+policies and compliance standards
+for Azure resources.
+
+131
+00:05:26,555 --> 00:05:28,910
+There are also many other
+non Microsoft solutions
+
+132
+00:05:28,910 --> 00:05:30,440
+that can be integrated
+with Microsoft Azure.
+
+133
+00:05:30,440 --> 00:05:32,400
+To help deal with
+Configuration Drift.
+

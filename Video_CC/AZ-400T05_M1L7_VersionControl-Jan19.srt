@@ -1,0 +1,176 @@
+1
+00:00:00,000 --> 00:00:04,230
+>> To fully implement infrastructure
+and configuration as code,
+
+2
+00:00:04,230 --> 00:00:06,345
+the application code of scripts,
+
+3
+00:00:06,345 --> 00:00:07,680
+definitions,text files and other
+
+4
+00:00:07,680 --> 00:00:08,880
+related files that are required for
+
+5
+00:00:08,880 --> 00:00:12,030
+deployment and configuration
+must be version controlled.
+
+6
+00:00:12,030 --> 00:00:15,330
+Version Control has
+the following characteristics:
+
+7
+00:00:15,330 --> 00:00:17,760
+Provides for accessing
+version differences,
+
+8
+00:00:17,760 --> 00:00:20,715
+so, ways to visualize
+differences between versions.
+
+9
+00:00:20,715 --> 00:00:23,465
+Provides traceability,
+so, ways to see
+
+10
+00:00:23,465 --> 00:00:26,870
+versions and check in history
+at any given point in time,
+
+11
+00:00:26,870 --> 00:00:29,795
+including who made the
+changes and what was changed.
+
+12
+00:00:29,795 --> 00:00:33,440
+Provide branching, which allows
+for work to be done in parallel
+
+13
+00:00:33,440 --> 00:00:36,810
+and in a distributed manner
+through merges and branches,
+
+14
+00:00:36,810 --> 00:00:39,595
+modern Dev teams can
+be pretty global.
+
+15
+00:00:39,595 --> 00:00:42,240
+In DevOps, both
+the Development Team and
+
+16
+00:00:42,240 --> 00:00:45,665
+the Operations Team should be
+using the same source control.
+
+17
+00:00:45,665 --> 00:00:47,735
+Everything should be
+source controlled,
+
+18
+00:00:47,735 --> 00:00:51,635
+including source code,
+environmental definitions,
+
+19
+00:00:51,635 --> 00:00:54,925
+infrastructure configuration,
+deployment scripts,
+
+20
+00:00:54,925 --> 00:00:57,320
+documentation, and tests such
+
+21
+00:00:57,320 --> 00:00:59,255
+as unit tests and
+integration tests etc.
+
+22
+00:00:59,255 --> 00:01:00,935
+In short, everything.
+
+23
+00:01:00,935 --> 00:01:03,065
+So that Dev and Ops
+can work together,
+
+24
+00:01:03,065 --> 00:01:04,520
+run a particular version through
+
+25
+00:01:04,520 --> 00:01:05,960
+the deployment pipeline and get what
+
+26
+00:01:05,960 --> 00:01:08,660
+you're expecting each
+time without error.
+
+27
+00:01:08,660 --> 00:01:11,730
+Some best practices for
+working with Version Control
+
+28
+00:01:11,730 --> 00:01:15,350
+include: Setting up
+an appropriate branching strategy.
+
+29
+00:01:15,350 --> 00:01:18,290
+A general role is to promote
+the simplest branching strategy
+
+30
+00:01:18,290 --> 00:01:21,655
+possible to keep maintenance
+low on sustainability high.
+
+31
+00:01:21,655 --> 00:01:23,220
+Connecting work to code.
+
+32
+00:01:23,220 --> 00:01:25,490
+An easy way to verify
+that the applied code has
+
+33
+00:01:25,490 --> 00:01:27,830
+value and is related to
+work on the backlog,
+
+34
+00:01:27,830 --> 00:01:30,860
+writing in code that does not
+tie back to any work items,
+
+35
+00:01:30,860 --> 00:01:34,040
+is by linking work items
+to code changes so that
+
+36
+00:01:34,040 --> 00:01:35,270
+metadata is kept with
+
+37
+00:01:35,270 --> 00:01:38,530
+the changes and then would
+build in deployment.
+

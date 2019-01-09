@@ -1,0 +1,283 @@
+1
+00:00:00,000 --> 00:00:01,680
+>> If you've ever
+received the middle of
+
+2
+00:00:01,680 --> 00:00:04,780
+the night emergency support call
+because of a crushed server,
+
+3
+00:00:04,780 --> 00:00:07,440
+you know the pain of searching
+through multiple spreadsheets,
+
+4
+00:00:07,440 --> 00:00:08,520
+or even your memory,
+
+5
+00:00:08,520 --> 00:00:09,840
+to access the manual steps of
+
+6
+00:00:09,840 --> 00:00:11,970
+setting up a new machine
+from scratch.
+
+7
+00:00:11,970 --> 00:00:14,580
+There's also an age-old
+difficulty of keeping
+
+8
+00:00:14,580 --> 00:00:17,610
+the development and production
+environments consistent.
+
+9
+00:00:17,610 --> 00:00:20,880
+An easier way to remove
+the possibility of human error when
+
+10
+00:00:20,880 --> 00:00:22,470
+initializing machines is to treat
+
+11
+00:00:22,470 --> 00:00:24,435
+environments and
+infrastructure like code,
+
+12
+00:00:24,435 --> 00:00:25,890
+so that they are stored up from
+
+13
+00:00:25,890 --> 00:00:30,075
+a single consistent definition
+termed infrastructure as code.
+
+14
+00:00:30,075 --> 00:00:33,060
+A common analogy for using
+infrastructure as code
+
+15
+00:00:33,060 --> 00:00:35,835
+is the distinction between
+owning pets and cattle.
+
+16
+00:00:35,835 --> 00:00:38,220
+When you own pets,
+you give them names,
+
+17
+00:00:38,220 --> 00:00:39,585
+you treat them individually,
+
+18
+00:00:39,585 --> 00:00:42,255
+and if something bad happens
+to them, you care a lot.
+
+19
+00:00:42,255 --> 00:00:43,920
+If you have a herd of cattle,
+
+20
+00:00:43,920 --> 00:00:45,040
+you might still name them,
+
+21
+00:00:45,040 --> 00:00:46,925
+but you treat them as a herd.
+
+22
+00:00:46,925 --> 00:00:50,770
+In infrastructure terms, without
+treating environments as code,
+
+23
+00:00:50,770 --> 00:00:53,730
+there might be severe implications
+of machine crashes,
+
+24
+00:00:53,730 --> 00:00:55,085
+and you need to replace it,
+
+25
+00:00:55,085 --> 00:00:56,830
+which can be thought of as pets.
+
+26
+00:00:56,830 --> 00:00:59,205
+If you use an infrastructure
+as code model,
+
+27
+00:00:59,205 --> 00:01:00,700
+if a machine goes down,
+
+28
+00:01:00,700 --> 00:01:03,050
+you can just spin up
+another machine with no issues,
+
+29
+00:01:03,050 --> 00:01:05,230
+which can be thought of as cattle.
+
+30
+00:01:05,230 --> 00:01:08,120
+A quick comparison of
+manual deployments
+
+31
+00:01:08,120 --> 00:01:10,460
+versus deployments through
+an infrastructure as code model
+
+32
+00:01:10,460 --> 00:01:13,010
+shows the benefits of using
+infrastructure as code as
+
+33
+00:01:13,010 --> 00:01:17,030
+including consistency
+of environments,
+
+34
+00:01:17,030 --> 00:01:20,545
+no snowflake servers,
+every snowflake being unique,
+
+35
+00:01:20,545 --> 00:01:23,350
+and thus difficult to
+reproduce manager maintain.
+
+36
+00:01:23,350 --> 00:01:25,450
+Environments being
+more easily degraded
+
+37
+00:01:25,450 --> 00:01:27,990
+and scalable with
+infrastructure as code.
+
+38
+00:01:27,990 --> 00:01:31,825
+Code being reusable across
+different deployment environments.
+
+39
+00:01:31,825 --> 00:01:34,005
+So, there's a reuse benefit.
+
+40
+00:01:34,005 --> 00:01:35,930
+The ability to implement
+
+41
+00:01:35,930 --> 00:01:38,210
+an immutable infrastructure
+model if you wish.
+
+42
+00:01:38,210 --> 00:01:41,405
+This is where servers are never
+modified after data applied.
+
+43
+00:01:41,405 --> 00:01:43,700
+If a server needs to be
+updated or modified,
+
+44
+00:01:43,700 --> 00:01:47,475
+a new server is built from
+a common image, with the changes.
+
+45
+00:01:47,475 --> 00:01:49,335
+That's provisioned and tested,
+
+46
+00:01:49,335 --> 00:01:50,880
+and then replaces the old server,
+
+47
+00:01:50,880 --> 00:01:53,285
+the old server being decommissioned.
+
+48
+00:01:53,285 --> 00:01:56,180
+An ability to use
+blue/green deployments,
+
+49
+00:01:56,180 --> 00:01:58,550
+sometimes referred to
+as A/B deployments.
+
+50
+00:01:58,550 --> 00:02:01,280
+This is where you run
+two identical environments,
+
+51
+00:02:01,280 --> 00:02:03,785
+only one of which is live,
+serving public traffic.
+
+52
+00:02:03,785 --> 00:02:06,080
+Updates are delivered to
+the idle environment,
+
+53
+00:02:06,080 --> 00:02:07,490
+not serving customer traffic.
+
+54
+00:02:07,490 --> 00:02:09,020
+Once updates have been tested and
+
+55
+00:02:09,020 --> 00:02:10,650
+verified, it is then pushed live,
+
+56
+00:02:10,650 --> 00:02:13,370
+and the original live environment
+becomes the idle environment,
+
+57
+00:02:13,370 --> 00:02:15,620
+where the process is being
+reversed for future updates.
+
+58
+00:02:15,620 --> 00:02:17,510
+So, we have a lot more control over
+
+59
+00:02:17,510 --> 00:02:19,700
+how we release
+when infrastructure as code.
+
+60
+00:02:19,700 --> 00:02:21,620
+Also, a quicker release cadence
+
+61
+00:02:21,620 --> 00:02:23,930
+is possible when treating
+infrastructure as code.
+

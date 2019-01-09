@@ -1,19 +1,22 @@
 
-*Configuration drift* is the process whereby a set of resources change their state over time, from what was the original state in which they were deployed. This can be because of changes made by people, processes or programs and can be a done manually or by automation.
+The process that affect change in the state of a set of resources, from the state in which they were originally deployed, is called *Configuration Drift*. Configuration Drift results from changes made by people, processes or programs, and it can occur from manual intervention or from automation.
 
-Over time, each environment may become a *snowflake*, or a unique configuration that cannot be reproduced automatically. Inconsistency among environments leads to more issues during deployment. With *snowflakes*, administration and maintenance of infrastructure involves manual processes, which are hard to track and contribute to errors. The more an environment drifts form its original state, the more likely it is that the application will encounter issues, and the longer it may take to troubleshoot and rectify those issues.
+Over time, an environment may become a *snowflake*. Snowflake is a term used to describe a unique configuration that cannot be reproduced automatically. Inconsistency among environments may lead to issues during deployment. With snowflakes, the administration and maintenance of infrastructure invariably involves manual processes, which can be hard to track and are often prone to human error. The more an environment drifts from its original state, the more likely it is for an application to encounter issues. The greater the degree of configuration drift, the longer it takes to troubleshoot and rectify issues.
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/configurationdrift.png" alt="An icon representing an application state, followed by an arrow and a clock representing time, pointing to an image representing a different application state, followed by another arrow and a clock, representing the continuation of time, pointing to another image representing yet another different application state, and how application state changes over time."></p>
+<p style="text-align:center;"><img src="../Linked_Image_Files/configurationdrift.png" alt="An image representing three states of an application changing over time. Each state is proceeded by an arrow icon, which points to the right. Each arrow is shown above a clock icon, which represents time."></p>
 
-### Security Considerations
-Configuration drift may also introduce security vulnerabilities into your environments, for example:
-- Ports being opened that were intended to be closed. 
-- Updates, security patches not being applied consistently across environments.
-- Software installed that does not meet compliance requirements.
+### Security considerations
 
-### Solutions
-While it can be difficult to completely eliminate configuration drift, there are many ways you can manage configuration drift in your environments using configuration management tools and products such as:
-- <a href="https://docs.microsoft.com/en-us/powershell/dsc/overview/overview" target="_blank"><span style="color: #0066cc;" color="#0066cc">Windows PowerShell Desired State Configuration</span></a>: A management platfom in PowerShell allowing you to manage and enforce reosurce configurations
-- <a href="https://azure.microsoft.com/en-us/services/azure-policy/" target="_blank"><span style="color: #0066cc;" color="#0066cc">Azure Policy</span></a>: Enforce policies and compliance standards for Azure resources.
+Configuration Drift may also introduce security vulnerabilities into your environments, for example:
 
-and many other non-Microsoft solutions that can be integrated with Microsoft Azure
+- Ports may become opened that were intended to be closed.
+- Updates, security patches may not be applied across environments consistently.
+- Software that does not meet compliance requirements may be installed.
+
+### Solutions for managing Configuration Drift
+
+It can be difficult to completely eliminate Configuration Drift. However, Configuration Drift in your environments can be managed with such configuration management tools and products as:
+
+- [Windows PowerShell Desired State Configuration](https://docs.microsoft.com/en-us/powershell/dsc/overview/overview). A management platform in PowerShell which allows you to manage and enforce resource configurations.
+- [Azure Policy](https://azure.microsoft.com/en-us/services/azure-policy/). A tool for enforcing policies and compliance standards for Azure resources.
+- Other non-Microsoft solutions which can be integrated with Microsoft Azure.

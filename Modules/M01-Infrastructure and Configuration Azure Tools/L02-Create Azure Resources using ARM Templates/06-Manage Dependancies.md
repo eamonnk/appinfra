@@ -1,14 +1,15 @@
+Certain combinations of resources sometimes need to be provisioned in a particular order. For example, it makes sense to create a SQL server before initializing a SQL database. In these kinds of relationships, one resource is *dependent* on another resource. You can define dependencies with the *dependsOn* key, within your template, or by using the *reference* function.
 
-For any given resource, there can be other resources that must exist before the resource is deployed. For example, a SQL server must exist before attempting to deploy a SQL database. You can define this relationship by marking one resource as *dependent* on the other resource. You define a dependency with the **dependsOn** element, or by using the **reference** function. 
+Azure Resource Manager can evaluate the dependencies between resources, and deploy them according to their dependent order. Azure Resource Manager otherwise deploys independent resources in parallel. You only need to define dependencies for resources that are deployed in the same template.
 
-Resource Manager evaluates the dependencies between resources, and deploys them in their dependent order. When resources aren't dependent on each other, Resource Manager deploys them in parallel. You only need to define dependencies for resources that are deployed in the same template.
+### The *dependsOn* element
 
-### The `dependsOn` element
-Within your template, the **dependsOn** element enables you to define one resource as a dependent on one or more resources. Its value can be a comma-separated list of resource names. 
+Within your template, the `dependsOn` key allows you to classify one resource as dependent on one or more resources. The value of the dependsOn key can be set with a comma-separated, list of resource names.
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/dependson.png" alt="A section of Resource manager template code with the dependOn section highlighted."></p>
+![Screenshot of a section of JSON from an Azure Resource Manager template with the dependOn key-value pair highlighted](../Linked_Image_Files/dependson.png) 
 
 ### Circular dependencies
-A circular dependency means there is a problem with dependency sequencing, preventing Resource manager deploying the resources, resulting in the deployment going around in a loop and unable to proceed. Resource Manager identifies circular dependencies during template validation. If you receive an error stating that a circular dependency exists, evaluate your template to see if any dependencies aren't needed and can be removed. 
 
-If removing dependencies doesn't work, you can avoid circular dependencies by moving some deployment operations into child resources that are deployed after the resources that have the circular dependency.
+*Circular Dependency* is a loop caused by deploying dependent resources in the wrong order. Circular Dependency prevents Azure Resource Manager from deploying resources successfully. Azure Resource Manager tries to identify Circular Dependencies during template validation.
+
+However, if you receive an error stating that a circular dependency exists, you should evaluate your template, reorder any incorrectly sequenced dependencies, and remove unnecessary dependencies. If removing dependencies doesn't work, you can resolve circular dependency errors by moving some deployment operations into child resources, so that they are deployed *after* the resources with circular dependency issues.

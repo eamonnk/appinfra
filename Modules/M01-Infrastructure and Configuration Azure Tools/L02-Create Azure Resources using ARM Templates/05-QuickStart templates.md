@@ -1,54 +1,56 @@
-**What are Azure Quickstart templates?**
+*Azure Quickstart Templates* are Azure Resource Manager Templates that have been are created by the Azure development community.
 
-Azure Quickstart templates are Resource Manager templates that are provided by the Azure community. Quickstart templates are accessible via <a href="https://azure.microsoft.com/en-us/resources/templates/" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://azure.microsoft.com/en-us/resources/templates/</span></a> or <a href="https://github.com/Azure/azure-quickstart-templates" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://github.com/Azure/azure-quickstart-templates</span>.</a>
+> :information_source: You can access Quickstart Templates via the [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/) page and from the [GitHub Azure Quickstart Template](https://github.com/Azure/azure-quickstart-templates) page.
 
-Many templates provide everything you need to deploy your solution. Others might serve as a starting point for your template. Either way, you can study these templates to learn how to best author and structure your own templates.
+There are many templates to provide you with everything you need to deploy your solution. Some templates may serve as a suitable starting point for developing your own templates. You can learn how to author and structure your own templates by studying existing templates.
 
-**Discover what's on the Quickstart template gallery**
+### Discover the Azure Quickstart Template gallery
 
-Let's say you want to find a Resource Manager template that brings up a basic VM configuration, one that includes a VM, basic network settings, and storage.
+Imagine a scenario where you need a Resource Manager template that can bring up a basic Virtual Machine (VM) configuration. You need the template to include a VM, basic network settings, and storage.
 
-1. Start by browsing to the [Quickstart template gallery](https://azure.microsoft.com/resources/templates?azure-portal=true) to see what's available.
+The following steps are a useful guide to help you find a suitable template.
 
-    You see a number of popular and recently updated templates. These templates work with both Azure resources and popular software packages.
+1. Start by browsing to the [Quickstart template gallery](https://azure.microsoft.com/resources/templates?azure-portal=true), to see what's available.
 
-    ![A portion of the Azure Quickstart template gallery web page.](../Linked_Image_Files/gallery-homepage.png)
+    You see a number of popular and recently updated templates. These templates work with both Azure resources and other popular software packages.
 
-2. Let's say you come across the <a href="https://azure.microsoft.com/resources/templates/101-vm-simple-windows?azure-portal=true" target="_blank"><span style="color: #0066cc;" color="#0066cc">Deploy a simple Windows VM</span></a> template.
+    ![Screenshot of a portion of the Azure Quickstart template gallery web page.](../Linked_Image_Files/gallery-homepage.png)
 
-    ![The gallery page for a Windows VM template](../Linked_Image_Files/gallery-page-windows.png)
+2. Let's say you come across the [Deploy a simple Windows VM](https://azure.microsoft.com/resources/templates/101-vm-simple-windows?azure-portal=true) template.
+
+    ![Screenshot of the gallery page for a Windows VM template](../Linked_Image_Files/gallery-page-windows.png)
 
     Let's take a closer look to see what this template accomplishes.
 
-    > Note: The **Deploy to Azure** button enables you to deploy the template directly through the Azure portal if you wish.
+    > :information_source: Note that the **Deploy to Azure** button allows you to deploy the template directly through the Azure Portal, if you wish.
 
-3. Click **Browse on GitHub** to navigate to the template's source code on GitHub.
+3. Choose **Browse on GitHub** to navigate to the template's source code on GitHub.
 
-    You see this.
+    You see the following:
 
-    ![The GitHub README for the Resource Manager template](../Linked_Image_Files/github-page-windows.png)
+    ![Screenshot of the GitHub README for the Resource Manager template](../Linked_Image_Files/github-page-windows.png)
 
-    The **Deploy to Azure** button enables you to deploy the template directly through the Azure portal, just like you saw on the gallery page.
+    > :information_source: Note that the **Deploy to Azure** button allows you to deploy the template directly through the Azure portal, just like on the gallery page.
 
-4. Click **Visualize** to navigate to the **Azure Resource Manager Visualizer**.
+4. Choose **Visualize** to navigate to the **Azure Resource Manager Visualizer**.
 
-    You see the resources that make up the deployment, including a VM, a storage account, and network resources.
+    This shows you the resources that make up the deployment, including a VM, a storage account, and network resources.
 
-    You can use your mouse to arrange the resources. You can also use your mouse's scroll wheel to zoom in an out.
+    You can rearrange the resources, if you need to or zoom in an out.
 
-    ![The Azure Resource Manager Visualizer showing Azure resources visually](../Linked_Image_Files/armviz-windows.png)
+    ![Screenshot of the Azure Resource Manager Visualizer showing Azure resources](../Linked_Image_Files/armviz-windows.png)
 
-5. Click on the **Virtual Machine** resource labeled **SimpleWinVM**.
+5. Select the **Virtual Machine** resource labeled **SimpleWinVM**.
 
-    You see the source code that defines the VM resource.
+    This displays the source code that defines the VM resource.
 
-    ![The Azure Resource Manager Visualizer showing the template's source code](../Linked_Image_Files/armviz-vm-windows.png)
+    ![Screenshot of the Azure Resource Manager Visualizer showing the template's source code](../Linked_Image_Files/armviz-vm-windows.png)
 
-    Review it briefly and you see that:
+    Review the code briefly shows that:
 
-    * The resource's type is `Microsoft.Compute/virtualMachines`.
-    * It's location, or Azure region, comes from the template parameter named `location`.
-    * The VM's size is **Standard_A2**.
-    * The computer name is read from a template variable and the username and password for the VM are read from template parameters.
+    - The resource's type is `Microsoft.Compute/virtualMachines`.
+    - It's location, or Azure region, comes from the template parameter named `location`.
+    - The VM's size is **Standard_A2**.
+    - The computer name is read from a template variable and the username and password for the VM are read from template parameters.
 
-In practice, you might review the **README.md** file on GitHub and further inspect the source code to see whether this template suits your needs.
+In practice, you might review the `README.md` file on GitHub and further inspect the source code to see whether this template suits your needs.

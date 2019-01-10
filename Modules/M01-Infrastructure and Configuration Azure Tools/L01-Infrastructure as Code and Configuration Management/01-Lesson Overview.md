@@ -1,5 +1,3 @@
-
-
 This lesson includes the following topics:
 
 - Environment Deployment

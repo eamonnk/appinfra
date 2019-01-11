@@ -1,78 +1,73 @@
-Let's install the Azure CLI on your local machine, and then run a command to verify your installation. The method you use for installing the Azure CLI depends on the operating system of your computer. Choose the steps listed below for your operating system.
+The following steps demonstrate how to install the *Azure Command Line Interface* (CLI) on your local machine, and how to verify your installation. The method you use to install the Azure CLI depends on your computer's Operating System. Follow set of the steps that correspond to your Operating System.
 
+### Linux
 
+You can install the Azure CLI for Linux using your Package Manager, Bash and a Terminal. The particular Package Manager you use to install Azure CLI depends on your Linux distribution. For example:
 
-## Linux
+- Ubuntu (Debian-based) uses the *Advanced Packaging Tool* (apt) via the *apt-get* command
+- Red Hat uses *yum*
+- OpenSUSE uses *zypper*
 
-Here you will install the Azure CLI on **Ubuntu Linux** using the Advanced Packaging Tool (**apt**) and the Bash command line.
+> :information_source: The following commands are for use with apt for Ubuntu version 18.04. Other Ubuntu versions and Linux distributions may require different instructions. Check the [official Azure CLI installation documentation](https://docs.microsoft.com/cli/azure/install-azure-cli) if you use a different version.
 
-The recommended package manager differs by OS and distribution:
+:one: . Modify your `sources` list by registering the Microsoft repository as a source. This will enable the Package Manager to locate the Azure CLI package.
 
-- Ubuntu: **apt-get** 
-- Red Hat: **yum** 
-- OpenSUSE: **zypper**
-
-> **Note**: The commands listed below are for Ubuntu version 18.04. Other versions and distributions of Linux have different instructions. Check the [official Azure CLI installation documentation](https://docs.microsoft.com/cli/azure/install-azure-cli) if you are using a different Linux version.
-
-1. Modify your sources list so that the Microsoft repository is registered, and the package manager can locate the Azure CLI package.
-
-    ```bash
+  ```bash
     AZ_REPO=$(lsb_release -cs)
     echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | \
     sudo tee /etc/apt/sources.list.d/azure-cli.list
-    ```
+  ```
+:two: . Import the encryption key for the Microsoft Ubuntu repository. This will allow the Package Manager to verify that the Azure CLI package you install comes from Microsoft.
 
-2. Import the encryption key for the Microsoft Ubuntu repository. This will allow the package manager to verify that the **Azure CLI** package you install comes from Microsoft.
-
-    ```bash
+  ```bash
     curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-    ```
+  ```
 
-3. Install the **Azure CLI**.
+:three: . Update your repositories, then retrieve and install `apt-transport-https` and `Azure CLI` using apt. The package `apt-transport-https` allows apt to use HTTPS.
 
-    ```bash
+  ```bash
+    sudo apt-get update
     sudo apt-get install apt-transport-https
-    sudo apt-get update && sudo apt-get install azure-cli
-    ```
+    sudo apt-get install azure-cli
+  ```
 
+### macOS
 
+You can install the Azure CLI on macOS using the *Homebrew Package Manager*.
 
-## macOS
+> :information_source: If the `brew` command is not available, you may need to install the Homebrew Package Manager. For details, see the [Homebrew Website](https://brew.sh/).
 
-Here you will install the Azure CLI on macOS using the **Homebrew** package manager.
+:one: . Update your brew repository, to make sure you get the latest Azure CLI package.
 
-> **Note**: If the **brew** command is unavailable, you may need to install the Homebrew package manager. For details see the [Homebrew website](https://brew.sh/).
-
-1. Update your brew repository to make sure you get the latest Azure CLI package.
-
-    ```bash
+  ```bash
     brew update
-    ```
+  ```
 
-2. Install the Azure CLI.
+:two: . Install the Azure CLI.
 
-    ```bash
+  ```bash
     brew install azure-cli
-    ```
+  ```
 
-## Windows
+### Windows
 
-Here you will install the Azure CLI on Windows using the MSI installer.
+You can install the Azure CLI on Windows using the *Microsoft Installer* (MSI).
 
-1. Go to [https://aka.ms/installazurecliwindows](https://aka.ms/installazurecliwindows), and in the browser security dialog box, click **Run**.
-1. In the installer, accept the license terms, and then click **Install**.
-1. In the **User Account Control** dialog, select **Yes**.
+:one: . Download the [Azure CLI installer for Windows](https://aka.ms/installazurecliwindows).
+
+:two: . Save the installer file or choose **Run** from the browser security dialog box.
+
+:three: . Run the installer, accept the license terms, and then choose **Install**.
+
+:four: In the **User Account Control** dialog box, select **Yes**.
 
 
-### Verify the Azure CLI installation
+### Starting and verifying the Azure CLI installation
 
-You run the Azure CLI by opening a bash shell (Linux and macOS), or from the command prompt or PowerShell (Windows).
+You can start the Azure CLI from a Terminal in Linux and macOS, or from Command Prompt or PowerShell in Windows. The following shows how to verify your installation of Azure CLI, by appending the *Version Check* command (`--version`) to the *Start Azure CLI* command (`az`).
 
-1. Start the Azure CLI and verify your installation by running the version check.
-
-    ```azurecli
+  ```azurecli
     az --version
-    ```
+  ```
 
-> **Note**: Running the Azure CLI from PowerShell has some advantages over running the Azure CLI from the Windows command prompt. PowerShell provides additional tab completion features over those available from the command prompt.
-
+> :information_source: Running the Azure CLI from PowerShell has some advantages over running the Azure CLI from the Windows Command Prompt. PowerShell provides additional tab completion features to those available from the Command Prompt.

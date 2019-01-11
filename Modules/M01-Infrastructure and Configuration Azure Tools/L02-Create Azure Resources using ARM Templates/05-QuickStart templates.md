@@ -1,4 +1,4 @@
-*Azure Quickstart Templates* are Azure Resource Manager Templates that have been are created by the Azure development community.
+*Azure Quickstart Templates* are Azure Resource Manager Templates that have been created by the Azure development community.
 
 > :information_source: You can access Quickstart Templates via the [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/) page and from the [GitHub Azure Quickstart Template](https://github.com/Azure/azure-quickstart-templates) page.
 

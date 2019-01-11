@@ -9,7 +9,7 @@ To complete these practical exercises you will require the following:
 
 
 
-<h3><span style="color: #0000CD;"> Setup </span></h3>
+### Setup
 
 1. If you already have a Microsoft account that has not already been used to sign up for a free Azure trial subscription, you’re ready to get started. If not, don’t worry, just [create a new Microsoft account](https://aka.ms/edx-devops200.4x-msa)
 
@@ -21,7 +21,7 @@ To complete these practical exercises you will require the following:
 
  
 
-<h3><span style="color: #0000CD;"> Updates to Azure  </span></h3>
+### Updates to Azure
 
 Like many other cloud infrastructure platforms today, Azure is being continuously developing updates to their services and components. If you've had your own subscriptions for any length of time, you are already aware that changes to services happen much more rapidly than with more traditional application deployment models.
 

@@ -1,6 +1,6 @@
 Resources are typically assigned to a Resource Group in your Azure subscription. You can use subscription-level deployments to create Resource Groups and resources that apply across your subscription.
 
-To create a Resource Group in an Azure Resource Manager template, define a `Microsoft.Resources/resourceGroups` resource with a name and location for the Resource Group. It is possible to create a Resource Group and deploy resources to that Resource Group within the same template.
+To create a Resource Group in an Azure Resource Manager template, define a `Microsoft.Resources/resourceGroups` resource with a name and location for the Resource Group. It is possible to create a Resource Group and deploy resources to that Resource Group, within the same template.
 
 There are some services that you may want to deploy across a subscription and make available to all Resource Groups, such as:
 

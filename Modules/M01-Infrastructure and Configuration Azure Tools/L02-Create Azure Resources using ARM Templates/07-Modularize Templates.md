@@ -65,7 +65,7 @@ The following three deployment mode options are available to you, when you deplo
 - *Incremental Mode (default)*. This is the default mode. Incremental mode only deploys whatever is defined in the template, and does *not* remove or modify any resources that are *not* defined in the template. For example, if you deploy a VM via a template, then rename the VM in the template, the first instance of the VM you deployed will still remain even after the template is run again.
 - *Complete Mode*. Azure Resource Manager will delete resources that exist in a resource group, but aren't specified in the template (i.e. only resources defined in the template will be present in the resource group after the template is deployed). It is best practice to use Complete Mode for production environments, where possible, to try to achieve idempotency in your deployment templates.
 
-When deploying with PowerShell, you can set the deployment mode using the `Mode` parameter (as per the *Nested Template* example mention previously).
+When deploying with PowerShell, you can set the deployment mode using the `Mode` parameter (as per the *Nested Template* example mentioned previously).
 
 > :information_source: It is best practice to use *one resource group per deployment*. Note that you can only use `incremental` deployment mode with Linked and Nested templates.
 

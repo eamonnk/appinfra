@@ -8,7 +8,7 @@ Resource Manager templates provide a common language for describing your deploym
 
 :two: **Templates help express complex deployments**
 
-Templates enable you to deploy multiple resources in the correct order. For example, you can create an OS Disk Image or Network Interface before you deploy a VM. Template map the dependent resources to each resource. Using the template, Azure Resource Manager begins by creating each of the dependent resources first. Dependency mapping helps ensure that your deployments occur in the correct order.
+Templates enable you to deploy multiple resources in the correct order. For example, you can create an OS Disk Image or Network Interface before you deploy a VM. Templates map the dependent resources to each resource. Using the template, Azure Resource Manager begins by creating each of the dependent resources first. Dependency mapping helps ensure that your deployments occur in the correct order.
 
 :three: **Templates reduce manual, error-prone tasks**
 

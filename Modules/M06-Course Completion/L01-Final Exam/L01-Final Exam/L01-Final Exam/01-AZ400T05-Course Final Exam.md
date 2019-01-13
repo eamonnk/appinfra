@@ -207,3 +207,93 @@ The Azure CLI lets you control many aspects of an Azure resource. Commands in th
 [explanation]
 
 ----
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_11; max_attempts:1; showanswer:never; weight:1>>
+
+>>True or false: Within Availability Sets, Update Domains provide for the physical separation of workloads across different hardware in a datacenter?<<
+
+( ) True
+(x) False
+
+[explanation]
+False is the correct answer.
+
+Within Availability Sets, Fault Domains provide for the physical separation of workloads across different hardware in a datacenter.
+
+Update Domains are a *logical* section of the datacenter, implemented by software and logic. When a maintenance event occurs (such as a performance update or critical security patch applied to the host), the update is sequenced through Update Domains. Sequencing updates by using Update Domains ensures that the entire datacenter does not fail during platform updates and patching.
+
+Fault Domains provide for the *physical* separation of your workload across different hardware in the datacenter. This includes power, cooling, and network hardware that supports the physical servers located in server racks. If the hardware that supports a server rack becomes unavailable, only that specific rack of servers would be affected by the outage.
+[explanation]
+
+----
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_12; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following Azure offerings is used for hosting web applications, REST APIs, and mobile back ends?<<
+
+( ) Azure Functions
+( ) Application Insights
+(x) Azure App Service
+( ) Visual Studio App Center
+
+[explanation]
+Azure App Service is the correct answer.
+
+The other answers are incorrect because:
+Azure Functions is used for processing events with serverless code.
+Application Insights. is used for detecting, triaging, and diagnosing issues in your web apps and services.
+Visual Studio App Center used is for building, testing, releasing, and monitoring your apps from within a single software application.
+
+Azure App Service is a Platform as Service offering on Azure, for hosting web applications, REST APIs, and mobile back ends. With Azure App Service you can create powerful cloud apps quickly within a fully managed platform. You can use Azure App Service to build, deploy, and scale enterprise-grade web, mobile, and API apps to run on any platform. Azure App Service ensures your application meet rigorous performance, scalability, security and compliance requirements, and benefit from using a fully managed platform for performing infrastructure maintenance.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_13; max_attempts:1; showanswer:never; weight:1>>
+
+>>Web App for Containers can provide an ideal environment for which of the following scenarios?<<
+
+( ) creating and managing groups of identical, load balanced VMs.
+(x) running web apps that do not require extensive infrastructure control.
+( ) running dedicated Azure VMs on dedicated Azure Virtual Networks
+( ) scaling resources up or down using triggers based on load or performance metrics, or using a scheduled date and time.
+
+[explanation]
+Running web apps that do not require extensive infrastructure control is the correct answer.
+
+The other answers are incorrect because:
+Creating and managing groups of identical, load balanced VMs is best performed by Azure Virtual Machine Scale Sets.
+Running dedicated Azure VMs on dedicated Azure Virtual Networks is performed using the Isolated Pricing Tier within you App Service plan.
+Scaling resources up or down using triggers based on load or performance metrics, or using a scheduled date and time, is performed by autoscaling.
+
+Web App for Containers provides an ideal environment to run web apps that do not require extensive infrastructure control. For Operations, Web App for Containers provide rich configuration features so developers can easily add custom domains, integrate with AAD authentication, add SSL certificates and more — all of which are crucial to web app development and management.
+
+Web App for Containers from the Azure App Service also allow customers to use their own containers, and deploy them to Azure App Service as a web app. Similar to the Azure Web App solution, Web App for Containers eliminates time-consuming infrastructure management tasks during container deployment, updating, and scaling to help developers focus on coding and getting their apps to their end users faster. Furthermore, Web App for Containers provides integrated CI/CD capabilities with DockerHub, Azure Container Registry, and VSTS, as well as built-in staging, rollback, testing-in-production, monitoring, and performance testing capabilities to boost developer productivity.
+[explanation]
+
+---
+##Checkbox##
+
+<<display_name:AZ400T05_CB_14; max_attempts:1; showanswer:never; weight:1>>
+
+>>In Azure Functions, which of the following can add state and data persistence to stateless functions?<<
+
+(choose two)
+
+[x] the Durable Functions Extension.
+[x] connecting to an Azure Storage service.
+[ ] Logic Apps.
+[ ] Event Grid.
+
+[explanation]
+The Durable Functions Extension, and connecting to an Azure Storage service are the correct answers.
+
+The other answers are incorrect because:
+Logic Apps automates access to, and use of, data across clouds.
+Event Grid facilitates event delivery at massive scale.
+
+Azure Functions are an implementation of the Functions-as-a-Service programming model on Azure, with additional capabilities. It is best practice to ensure that your functions are as stateless as possible. Stateless functions behave as if they have been restarted, every time they respond to an event. You should associate any required state information with your data instead. For example, an order being processed would likely have an associated state member. A function could process an order based on that state, update the data as required, while the function itself remains stateless. If you require stateful functions, you can use the Durable Functions Extension for Azure Functions or output persistent data to an Azure Storage service.
+[explanation]

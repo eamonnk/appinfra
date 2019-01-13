@@ -1,238 +1,122 @@
 # What are review questions? #
 
 ## About review questions ##
-End-of-module review questions are for practice only and are not included in your grade for the course.  The final assessment at the end of the course is graded.  
+End-of-module review questions are for practice only and are not included in your grade for the course.  The final assessment at the end of the course is graded. 
 
 ---
-##Checkbox##
+##Multiple choice##
 
 <<display_name:Review Question 1; partial_credit="EDC"; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
 
->>What benefits form the list below can be achieved by modularizing your infrastructure and configuration resources?<<
+>>Which of the following Azure products provides management capabilities for applications that run across multiple Virtual Machines, and allows for the automatic scaling of resources, and load balancing of traffic?<<
 
-(Choose three)
+( ) Azure Service Fabric
+(x) Virtual Machine Scale Sets
+( ) Azure Kubernetes Service
+( ) Virtual Network
 
-[x] Easy to re-use across different environments
-[X] Easier to manage and maintain your code
-[ ] More difficult to sub-divide up work and ownership responsibilities
-[x] Easier to troubleshoot 
-[x] Easier to extend and add to your existing infrastructure definitions
-
-
-[explanation]   
-The following answers ar correct:
-- Easy to re-use across different environments,
-- Easier to manage and maintain your code
-- Easier to troubleshoot 
-- Easier to extend and add to your existing infrastructure definitions
-
-More difficult to sub-divide up work and ownership responsibilities is incorrect. It is easier to sub-divide up work and ownership responsibilities.
 [explanation]
+Virtual Machine Scale Sets is the correct answer.
+
+All other answers are incorrect.
+
+Azure Service Fabric is for developing microservices and orchestrating containers on Windows or Linux.
+Azure Kubernetes Service (AKS) simplifies the deployment, management, and operations of Kubernetes.
+Virtual Network is for setting up and connecting virtual private networks.
+
+With Azure VMs, scale is provided for by Virtual Machine Scale Sets (VMSS). Azure VMSS let you create and manage groups of identical, load balanced VMs. The number of VM instances can increase or decrease automatically, in response to demand or a defined schedule. Azure VMSS provide high availability to your applications, and allow you to centrally manage, configure, and update large numbers of VMs. With Azure VMSS, you can build large-scale services for areas such as compute, big data, and container workloads.
+[explanation]
+
 ---
-##Multiple Choice##
+##Checkbox##
 
 <<display_name:Review Question 2; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
 
->>Which method of approach for implementing Infrastructure as Code states what the final state of an environment should be without defining how it should be achieved?<<
+>>Availability sets are made up of which of the following?<<
 
-( ) Scripted
-( ) Imperative
-( ) Object Orientated
-(X) Declarative
+(choose two)
 
-[explanation]
-Declarative is the correct answer.The declarative approach states “what” the final state should be. When run, the script or definition will initialize or configure the machine to have the finished state that was declared, without defining "how" that final state should be achieved.
-
-All other answers are incorrect.
-Scripted is not a methodology
-In the imperative approach, the script states the “how” for the final state of the machine by executing through the steps to get to the finished state. It defines what the final state needs to be but also includes how to achieve that final state.
-Object Orientated approach is a coding methodology, but does include methodologies for how states and outcomes are to be achieved.
-
+[x] Update Domains
+[ ] Azure AD Domain Services
+[x] Fault Domains
+[ ] Event Domains
 
 [explanation]
+Update Domains and Fault Domains are the correct answers.
+
+Azure AD Domain Services and Event Domains are incorrect answers.
+
+Azure AD Domain Service provides managed domain services to a Windows Server Active Directory in Azure. An event domain is a tool for managing and publishing information.
+
+Update Domains are a *logical* section of the datacenter, implemented by software and logic. When a maintenance event occurs (such as a performance update or critical security patch applied to the host), the update is sequenced through Update Domains. Sequencing updates by using Update Domains ensures that the entire datacenter does not fail during platform updates and patching.
+
+Fault Domains provide for the *physical* separation of your workload across different hardware in the datacenter. This includes power, cooling, and network hardware that supports the physical servers located in server racks. If the hardware that supports a server rack becomes unavailable, only that specific rack of servers would be affected by the outage.
+[explanation]
+
 ---
-##DropDown##
+##Dropdown##
 
 <<display_name:Review Question 3; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
 
->>Which term defines the ability to apply one or more operation against a resource, resulting in the same outcome every time?<<
+>>Complete the following sentence: Azure App Service is an Azure Platform-as-Service offering that is used for... ?<<
 
-[[      
-Declarative
-(Idempotency)
-Configuration drift
-Technical debt
+[[
+processing events with serverless code.
+detecting, triaging, and diagnosing issues in your web apps and services.
+building, testing, releasing, and monitoring your apps from within a single software application.
+(hosting web applications, REST APIs, and mobile back ends.)
 ]]
 
-[explanation]    
-Idempotency is the correct answer. Idempotence is a mathematical term that can be used in the context of infrastructure and configuration as code, where it is the ability to apply one or more operation against a resource, resulting in the same outcome
-
-All other answers are incorrect.
-- *Declarative* approach states “what” the final state should be. When run, the script or definition will initialize or configure the machine to have the finished state that was declared, without defining "how" that final state should be achieved.
-- *Configuration drift* is the process whereby a set of resources change their state over time, from what was the original state in which they were deployed. 
-- *Technical debt* is the set of problems in a development effort that make progress on customer value inefficient.
-
 [explanation]
+Hosting web applications, REST APIs, and mobile back ends, is the correct answer.
+
+The other answers are incorrect because:
+Processing events with serverless code is performed by Azure Functions.
+Detecting, triaging, and diagnosing issues in your web apps and services is performed by Application Insights.
+Building, testing, releasing, and monitoring your apps from within a single software application is performed by Visual Studio App Center.
+
+Azure App Service is a Platform as Service offering on Azure, for hosting web applications, REST APIs, and mobile back ends. With Azure App Service you can create powerful cloud apps quickly within a fully managed platform. You can use Azure App Service to build, deploy, and scale enterprise-grade web, mobile, and API apps to run on any platform. Azure App Service ensures your application meet rigorous performance, scalability, security and compliance requirements, and benefit from using a fully managed platform for performing infrastructure maintenance.
+[explanation]
+
 ---
 ##Checkbox##
 
-<<display_name:Review Question 4; partial_credit="EDC"; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+<<display_name:Review Question 4; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
 
->>Which of the following are possible causes of Technical debt ?<<
+>>Which of the following are features of Web App for Containers?<<
 
 (choose all that apply)
- 
-[x] Unplanned for localization of an application
-[x] Accessibility
-[x] changes made on the fly or directly to an application without using DevOps methodologies
-[x] Changing technologies or versions which are not accounted for as part of your dev process
+
+[x] Deploys containerized applications using Docker Hub, Azure Container Registry, or private registries.
+[x] Incrementally deploys apps into production with deployment slots and slot swaps.
+[x] Scales out automatically with auto-scale.
+[x] Uses the App Service Log Streaming feature to allow you to see logs from your application.
+[x] Supports PowerShell and Win-RM for remotely connecting directly into your containers.
 
 [explanation]
-All answers are correct.
+All of the answers are correct.
 
-- A product produced for the one particular market might be proposed for international release, instantly creating debt related to localizability
-- Not accounting for accessibility requirements in an application, which are a legal requirement in some countries
-- changes made on the fly or directly to an application without using DevOps methodologies
-- Changing technologies or versions which are not accounted for as part of your dev process
- 
+Web App for Containers from the Azure App Service allows customers to use their own containers, and deploy them to Azure App Service as a web app. Similar to the Azure Web App solution, Web App for Containers eliminates time-consuming infrastructure management tasks during container deployment, updating, and scaling to help developers focus on coding and getting their apps to their end users faster. Furthermore, Web App for Containers provides integrated CI/CD capabilities with DockerHub, Azure Container Registry, and VSTS, as well as built-in staging, rollback, testing-in-production, monitoring, and performance testing capabilities to boost developer productivity.
+
+For Operations, Web App for Containers also provides rich configuration features so developers can easily add custom domains, integrate with AAD authentication, add SSL certificates and more — all of which are crucial to web app development and management. Web App for Containers provides an ideal environment to run web apps that do not require extensive infrastructure control.
 [explanation]
----
-##Multiple Choice##
+
+----
+##Multiple choice##
 
 <<display_name:Review Question 5; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
 
->>Which term is the process whereby a set of resources change their state over time, from what was the original state in which they were deployed?<<
+>>Which of the following statements is best practice for Azure Functions?<<
 
-( ) Modularization
-( ) Technical debt 
-(X) Configuration drift
-( ) Imperative
+( ) Azure Functions should be stateful.
+(x) Azure Functions should be stateless.
 
 [explanation]
-Configuration drift is the correct answer.
+Azure Functions should be stateless is the correct answer.
 
-Configuration drift is the process whereby a set of resources change their state over time, from what was the original state in which they were deployed.
+Azure Functions should be stateful is an incorrect answer.
 
-All other answers are incorrect.
-- Modularization is the breaking your automation resources into their constituent parts
-- Technical debt is the set of problems in a development effort that make progress on customer value inefficient.
-- Imperative scripting approach defines what the final state needs to be but also includes how to achieve that final state
-
-[explanation]
----
-
-##Multiple Choice##
-
-<<display_name:Review Question 6; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
-
->>Which of the following is a method for running configuration scripts on a virtual machine either during or after deployment?<<
-
-(X) Using the Custom Script Extension (CSE)  
-( ) Using Quickstart templates
-( ) Using the dependsOn parameter
-( ) Using Azure key vault
-
-[explanation]
-Using the Custom Script Extension (CSE)  is the correct answer. he Custom Script Extension (CSE) is a way to download and run scripts on your Azure VMs
-
-All other answers are incorrect.
-
-Quickstart templates are publicly available starter templates to allow you get up and running quickly with resource manager templates.
-The dependOn parameter defines depend resources in a resource manager template
-Azure Key Vault is a secrets management service in Azure which allow you to store, certificates, keys, passwords, etc
-
-
-[explanation]
----
-
-## Multiple choice
-
-<<display_name:Review Question 7; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
-
->>When using Azure CLI whats the first action you need to take when looking to running a command or script ? <<
-
-( ) define the resource manager template
-( ) specify vm extension details
-( ) create a resource group
-(x) login into your azure subscription
-
-[explanation]
-login into your azure subscription is the correct answer. You can do so using the command az login.
-
-All other answers are incorrect.
-Yo do not need to define the resource manager template or specify the vm extension details and you cannot create a resource group without first logging into your Azure subscription.
-
-[explanation]
-
-
----
-
-## Multiple choice
-
-<<display_name:Review Question 8; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
-
->> Which Resource Manager deployment mode only deploys whatever is defined in the template and does not remove or modify any other resources not defined in the template?   <<
-
-( ) Validate
-(X) Incremental
-( ) Complete
-( ) Partial
-
-
-[explanation]
-Incremental is the correct answer.
-
-Validate mode only compiles the templates, validates the deployment ensures the template is functional i.e. there no circular dependencies and the syntax is correct.
-
-Incremental mode only deploys whatever is defined in the template, and does **not** remove or modify any resources that are **not** defined in the template. This is the *default* mode. i.e. if you have deployed a VM via  template, then renamed the VM in the template, the first VM deployed will still remain after the template is run again.
-
-complete mode**: Resource Manager deletes resources that exist in the resource group, but aren't specified in the template i.e. only resources defined in the template will be present in the resource group after the template is deployed. It is a best practice to try to use complete mode for production environments where possible to try to achieve *idempotency* in your deployment templates
-
+Azure Functions are an implementation of the Functions-as-a-Service programming model on Azure, with additional capabilities. It is best practice to ensure that your functions are as stateless as possible. Stateless functions behave as if they have been restarted, every time they respond to an event. You should associate any required state information with your data instead. For example, an order being processed would likely have an associated state member. A function could process an order based on that state, update the data as required, while the function itself remains stateless. If you require stateful functions, you can use the Durable Functions Extension for Azure Functions or output persistent data to an Azure Storage service.
 [explanation]
 
 ---
-
-## Multiple choice
-
-<<display_name:Review Question 9; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
-
->> Which package management tool is a software management solution for Windows, built on Powershell? "<<
-
-( ) Yum
-(x) Chocolatey
-( ) apt
-( ) maven
-
-[explanation]
-
-Chocolatey is the correct answer. Al other answers are incorrect.
-
-
-apt is the package manager for Debian linux environments.
-yum is the package manager for CentOS linux environments.
-maven is a build automation for build artifacts used as part of your build and release pipeline, with java based projects
-
-[explanation]
-
----
-
-##Checkbox##
-
-<<display_name:Review Question 10; partial_credit="EDC"; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
-
->>Which of the following version control tools are available for use with Azure DevOps?<<
-
-(choose all that apply)
- 
-[x] Subversion
-[x] Git
-[x] BitBucket
-[x] TFVC
-
-[explanation]
-All answers are correct.
-
-Subversion, Git, BitBucket and TFVC are all repository types that are available with Azure DevOps
- 
-[explanation]
-

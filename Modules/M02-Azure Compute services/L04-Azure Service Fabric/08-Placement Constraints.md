@@ -1,4 +1,9 @@
-*Placement Constraints* can be used to:
+*Placement Constraints* can control which nodes in a cluster that a service can run on. You can define any set of properties by node type, and then set constraints for them.
+
+> :information_source: More information on placement constraints and how to configure them can be found in [this article](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-resource-manager-cluster-description#node-properties-and-placement-constraints).
+
+Placement Constraints are primarily used to:
+
 - Isolate workloads from each other.
 - 'Lift and shift' an existing N-tier application into Azure Service Fabric.
 - Run services on specific server configurations.

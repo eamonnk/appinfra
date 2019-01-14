@@ -474,7 +474,87 @@ Closing your Azure Automation Account is incorrect because you need at least one
 Deactivating the 'Create Azure Run As account' option is incorrect because this option must be enabled to create an Azure Automation Account.
 Signing in without subscription-owner access privileges is incorrect because, as a safeguard, subscription-owner access is required to add an Azure Automation Account.
 
-To minimize risks, it is recommended that you create multiple Automation Accounts. Creating multiple Automation Accounts helps to segregate and limit the scope of access to the resources within your solution. For example, you might use one Automation Account for development, another for production, and another for your on-premises environment. To start using the Azure Automation service, you must first create an Azure Automation Account. You need at least one Azure Automation Account to use Azure Automation. As a safeguard, subscription-owner access is required to add an Azure Automation Account. The 'Create Azure Run As account' option must also be enabled to create an Azure Automation Account. 
+To minimize risks, it is recommended that you create multiple Automation Accounts. Creating multiple Automation Accounts helps to segregate and limit the scope of access to the resources within your solution. For example, you might use one Automation Account for development, another for production, and another for your on-premises environment. To start using the Azure Automation service, you must first create an Azure Automation Account. You need at least one Azure Automation Account to use Azure Automation. As a safeguard, subscription-owner access is required to add an Azure Automation Account. The 'Create Azure Run As account' option must also be enabled to create an Azure Automation Account.
+[explanation]
+
+---
+##Checkbox##
+
+<<display_name:AZ400T05_CB_23; max_attempts:1; showanswer:never; weight:1>>
+
+>>With Azure Automation Shared Resources, why you should try to create Global Assets?<<
+
+(choose all that apply)
+
+[ ] Global assets are specific to a single runbook.
+[x] Reusing global assets saves time.
+[x] Global assets can be used across your runbooks.
+[x] Global assets reduce the number of manual edits you need to perform on individual runbooks.
+
+[explanation]
+The three correct answers are: Reusing global assets saves time; Global assets can be used across your runbooks; Global assets reduce the number of manual edits you need to perform on individual runbooks.
+
+Global assets are specific to a single runbook, is an incorrect answer.
+
+Global assets are not specific to a single runbook. As a best practice, you should always try to create Global Assets. Global assets can be used across your runbooks. Reusing global assets will save time by reducing the number of manual edits you need to perform on individual runbooks.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_24; max_attempts:1; showanswer:never; weight:1>>
+
+>>True or false: You can convert a Graphical type runbook to a Textual type runbook, but not vice-versa?<<
+
+( ) True
+(x) False
+
+[explanation]
+False is the correct answer.
+
+True is an incorrect answer.
+
+You cannot convert a Graphical type runbook to a Textual type runbook, or vice-versa. Graphical type runbooks refer to Graphical and Graphical PowerShell Workflow runbooks. Graphical type runbooks are created and edited with the online graphical editor in Azure portal. Textual type runbooks are PowerShell, Windows PowerShell Workflow, and Python runbooks. Textual type runbooks are created and edited with the online text editor in Azure portal, or with an offline text editor.
+[explanation]
+
+---
+##Checkbox##
+
+<<display_name:AZ400T05_MC_25; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following statements about runbooks are correct?<<
+
+(choose all that apply)
+
+[x] With Azure Automation, a runbook must be published before you can start it.
+[ ] Runbooks must only be created in as PowerShell runbooks.
+[x] Publishing a runbook makes it available for starting.
+[x] Runbooks can also be combined to perform complex processes.
+
+[explanation]
+The correct answers are: With Azure Automation, a runbook must be published before you can start it; Publishing a runbook makes it available for starting; Runbooks can also be combined to perform complex processes.
+
+Runbooks must only be created in PowerShell is an incorrect answer. Runbooks can be created as PowerShell, Graphical, Graphical PowerShell Workflow, Windows PowerShell Workflow, or Python runbooks.
+
+With Azure Automation, a runbook must be published before you can start it. Publishing the runbook makes it available for starting. A runbook is a set of tasks that perform some automated process in Azure Automation. Processes within a runbook can be simple and runbooks can be combined to perform complex processes.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_26; max_attempts:1; showanswer:never; weight:1>>
+
+>>True or false: You can import directly from the Runbook Gallery using Windows PowerShell?<<
+
+( ) True
+(x) False
+
+[explanation]
+False is the correct answer.
+
+True is an incorrect answer.
+
+You cannot import directly from the Runbook Gallery using Windows PowerShell.
 [explanation]
 
 ---

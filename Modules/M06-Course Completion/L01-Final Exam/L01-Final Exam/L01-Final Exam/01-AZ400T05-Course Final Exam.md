@@ -433,3 +433,48 @@ Of the three cloud service models mentioned, FaaS provides simplicity, elastic s
 [explanation]
 
 ---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_21; max_attempts:1; showanswer:never; weight:1>>
+
+>>Within Azure Automation, which of the following is a PowerShell platform for managing your infrastructure using Configuration as Code?<<
+
+( ) System Center Configuration Manager
+( ) Azure Automation Utility
+(x) Desired State Configuration
+( ) Start/Stop VMs
+
+[explanation]
+Desired State Configuration is the correct answer.
+
+All other answers are incorrect because:
+System Center Configuration Manager is for managing devices and users, on-premises and in the cloud.
+Azure Automation Utility contains a package for authoring Python within Azure Automation
+Start/Stop VMs is a solution for starting and stopping Azure virtual machines according to user-defined schedules.
+
+Within Azure Automation, Desired State Configuration (DSC) is a PowerShell platform for managing your infrastructure using Configuration as Code. Configuration management is a key capability of the Azure Automation service. DSC facilitates configuration management by allowing you to write, manage, and compile PowerShell DSC configurations, import DSC Resources, and assign configurations to target nodes, in the cloud. Other key capabilities of the Azure Automation service include: Process automation; Update Management; Start/Stop VMs; Source control integration; Automate resources in Amazon Web Services (AWS); Manage Shared resources; Running backups; Cross-platform support.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_22; max_attempts:1; showanswer:never; weight:1>>
+
+>>How can you use Automation Accounts to segregate and limit the scope of access to resources within your solution?<<
+
+( ) By closing your Azure Automation Account.
+( ) By deactivating the "Create Azure Run As account" option.
+( ) By signing in without subscription-owner access privileges.
+(x) By creating multiple Automation Accounts.
+
+[explanation]
+By creating multiple Automation Accounts is the correct answer.
+
+Closing your Azure Automation Account is incorrect because you need at least one open Azure Automation Account to use Azure Automation.
+Deactivating the 'Create Azure Run As account' option is incorrect because this option must be enabled to create an Azure Automation Account.
+Signing in without subscription-owner access privileges is incorrect because, as a safeguard, subscription-owner access is required to add an Azure Automation Account.
+
+To minimize risks, it is recommended that you create multiple Automation Accounts. Creating multiple Automation Accounts helps to segregate and limit the scope of access to the resources within your solution. For example, you might use one Automation Account for development, another for production, and another for your on-premises environment. To start using the Azure Automation service, you must first create an Azure Automation Account. You need at least one Azure Automation Account to use Azure Automation. As a safeguard, subscription-owner access is required to add an Azure Automation Account. The 'Create Azure Run As account' option must also be enabled to create an Azure Automation Account. 
+[explanation]
+
+---

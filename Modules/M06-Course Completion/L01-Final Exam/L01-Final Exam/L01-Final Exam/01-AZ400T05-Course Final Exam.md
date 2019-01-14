@@ -297,3 +297,139 @@ Event Grid facilitates event delivery at massive scale.
 
 Azure Functions are an implementation of the Functions-as-a-Service programming model on Azure, with additional capabilities. It is best practice to ensure that your functions are as stateless as possible. Stateless functions behave as if they have been restarted, every time they respond to an event. You should associate any required state information with your data instead. For example, an order being processed would likely have an associated state member. A function could process an order based on that state, update the data as required, while the function itself remains stateless. If you require stateful functions, you can use the Durable Functions Extension for Azure Functions or output persistent data to an Azure Storage service.
 [explanation]
+---
+##Dropdown##
+
+<<display_name:AZ400T05_DD_15; max_attempts:1; showanswer:never; weight:1>>
+
+>>Complete the following sentence. Existing applications that you package and run as Service Fabric services (stateless) are called... ?<<
+
+[[
+Reliable Actor patterns
+Container processes
+Reliable Services
+(Guest Executables)
+]]
+
+[explanation]
+Guest Executables is the correct answer.
+
+All other answers are incorrect.
+
+Reliable Actors is a framework built on top of Reliable Services which implements the Virtual Actors design pattern. Containers can run in a similar way to guest executables, with an added capacity for restricting resource consumption per container. Reliable Services is a framework for creating services that use specific features provided by Azure Service Fabric.
+
+Guest Executables are existing applications that you package and run as Service Fabric services (stateless). This makes the applications highly available, as Service Fabric keeps the instances of your applications running. Applications can be upgraded with no downtime, and Service Fabric can automatically roll back deployments if needed.
+[explanation]
+
+----
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_16; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following may occur if Azure Service Fabric cannot comply with a Placement Constraint?<<
+
+(x) The service will not run.
+( ) Workloads become isolated from each other.
+( ) N-tier applications are 'Lifted and shifted' into Azure Service Fabric.
+( ) Services run on specific server configurations.
+
+[explanation]
+The service will not run is an correct answer.
+
+All other answers are incorrect answers because they describe primary uses of Placement Constraints with Azure Service Fabric.
+
+Placement Constraints can control which nodes in a cluster that a service can run on. Placement Constraints are primarily used to: Isolate workloads from each other; 'Lift and shift' an existing N-tier application into Azure Service Fabric; Run services on specific server configurations.
+
+Placement Constraints can restrict Service Fabric's ability to balance overall cluster resource consumption. Make sure that your Placement Constraints are not too restrictive. Otherwise, if Service Fabric cannot comply with a Placement Constraint, your service will not run.
+[explanation]
+
+---
+##Dropdown##
+
+<<display_name:AZ400T05_DD_17; max_attempts:1; showanswer:never; weight:1>>
+
+>>Complete the following sentence. With ____ Networking, the Azure Kubernetes Service (AKS) cluster is connected to existing virtual network resources and configurations.<<
+
+[[
+Basic
+(Advanced)
+]]
+
+[explanation]
+Advanced is the correct answer.
+
+Basic is an incorrect answer.
+
+In AKS, you can deploy a cluster to use either Basic Networking or Advanced Networking. With Basic Networking, the network resources are created and configured as the AKS cluster is deployed. With Advanced Networking, the AKS cluster is connected to existing virtual network resources and configurations.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_18; max_attempts:1; showanswer:never; weight:1>>
+
+>>True or false: The kubectl Command Line Interface (CLI) can be used to deploy an application to Kubernetes?<<
+
+(x) True
+( ) False
+
+[explanation]
+True is the correct answer.
+
+False in an incorrect answer.
+
+It is possible to deploy an application to Kubernetes using the kubectl CLI, which can also be used to manage the cluster. By running kubectl on your build agent, you can deploy Kubernetes pods from Azure DevOps.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_19; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following architecture models/ styles is generally considered to be best suited to IoT and real-time systems?<<
+
+( ) N-tier
+( ) Web-queue-worker
+( ) Microservices
+( ) CQRS
+(x) Event-driven
+( ) Big data
+( ) Big compute
+
+[explanation]
+Event-driven is the correct answer.
+
+All other answers are incorrect.
+
+Of all the architecture models/ styles listed, an Event-driven model is the most efficient for handling the real-time processing of data in high volumes data and at high velocity.
+
+Architecture styles don't require the use of particular technologies, but some technologies are well-suited for certain architectures. For example, an event-driven architecture is generally considered to be best suited to IoT and real-time systems.
+
+An N-tier architecture model is a natural fit for migrating existing applications that already use a layered architecture
+A Web-queue-worker architecture model is suitable for relatively simple domains with some resource-intensive tasks.
+The CQRS architecture model makes the most sense when it's applied to a subsystem of a larger architecture.
+The Microservices model is deemed a natural fit for working with containers.
+A Big data architecture model divides a very large dataset into chunks, performing paralleling processing across the entire set, for analysis and reporting.
+Finally, the Big compute architecture model, also called high-performance computing (HPC), makes parallel computations across a large number (thousands) of cores.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_20; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following cloud service models provides simplicity, elastic scale, and potential cost savings?<<
+
+( ) Infrastructure-as-a-Service (IaaS)
+(x) Functions-as-a-Service (FaaS)
+( ) Platform-as-a-Service (PaaS)
+
+[explanation]
+Functions-as-a-Service (FaaS) is the correct answer.
+
+Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS) are incorrect answers.
+
+Of the three cloud service models mentioned, FaaS provides simplicity, elastic scale, and potential cost savings, because you pay only for the time your code is running. IaaS provides the most control, flexibility, and portability. PaaS falls somewhere between the two.
+[explanation]
+
+---

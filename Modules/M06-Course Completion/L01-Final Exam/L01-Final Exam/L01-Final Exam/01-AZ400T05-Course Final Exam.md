@@ -588,7 +588,7 @@ The URL of the Webhook is a unique address. A client calls the URL with an HTTP 
 
 (x) Windows PowerShell Workflow
 ( ) Azure Automation State Configuration service
-( ) PowerShell ISE add-on
+( ) PowerShell Integrated Scripting Environment (ISE) add-on
 ( ) Azure Service Fabric
 
 [explanation]
@@ -597,10 +597,32 @@ Windows PowerShell Workflow is the correct answer.
 All other answers are incorrect answers.
 
 The Azure Automation State Configuration service is for creating and managing PowerShell Desired State Configurations (DSC).
-The PowerShell ISE add-on is for authoring Service Management Automation (SMA) runbooks in PowerShell ISE.
+The PowerShell Integrated Scripting Environment (ISE) add-on is for authoring Service Management Automation (SMA) runbooks in PowerShell ISE.
 Azure Service Fabric is a distributed systems platform for packaging, deploying, and managing microservices applications and container orchestration.
 
 Arranging activities into Windows PowerShell Workflows can leverage the power of the PowerShell scripting syntax. The automation capabilities of PowerShell enables Windows PowerShell Workflow to automate the distribution, orchestration, and completion of multi-device tasks, which frees users and administrators to focus on higher-level tasks.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_29; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following can highlight syntax errors, and distinguish between workflows and scripts, when writing workflows?<<
+
+( ) Cloud Shell
+( ) Language Understanding
+(x) Windows PowerShell Integrated Scripting Environment (ISE)
+( ) Azure Pipelines
+
+[explanation]
+Windows PowerShell Integrated Scripting Environment (ISE) is the correct answer.
+
+Cloud Shell is an Azure product for streamlining Azure administration with a browser-based shell.
+Language Understanding is an Azure, machine-based, learning service to build natural language understanding into apps.
+Azure Pipelines is a DevOps service for building, testing, and deploying to any platform and cloud.
+
+Windows PowerShell ISE auto compiles your workflow code, and allows you to save the artifact. The syntactic differences between scripts and workflows are significant, and Windows PowerShell ISE can distinguish workflows from scripts. Windows PowerShell ISE can also enforce strict adherence to the correct syntax, and highlight syntax errors. As a result, using Windows PowerShell ISE to write your workflows will save you significant coding and testing time. The key time-saving benefits to using Windows PowerShell IS for writing workflows are: Auto compiles your workflow code; Allows you to save the coded artifact; Enforces strict adherence to the correct workflow syntax; Highlights syntax errors; Supports workflows and scripts; Distinguishes between workflows and scripts.
 [explanation]
 
 ---

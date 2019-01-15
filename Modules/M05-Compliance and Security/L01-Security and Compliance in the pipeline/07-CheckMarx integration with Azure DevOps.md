@@ -1,0 +1,14 @@
+**Checkmarx CxSAST**  is another example of an extension yo can leverage from the **Azure DevOops Marketplace**.
+
+## Checkmarx CxSAST 
+The <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.cxsast" target="_blank"><span style="color: #0066cc;" color="#0066cc">Checkmarx CxSAST</span></a> is another example of an extension that is available on the Azure DevOps Marketplace that you can integrate with your CI/CD pipeline to address Rugged DevOps security related issues. Checkmarx is a powerful single unified security solution for Static Source Code Analysis (SAST) and Open Source Analysis (OSA) designed for identifying, tracking and fixing technical and logical security flaws.
+
+<p style="text-align:center;"><img src="../Linked_Image_Files/checkmarx1.png" alt="Screenshot of the the Add task pane in Azure DevOps with the Checkmarx CxSAST task listed and available to choose as tasks."></p>
+
+### CheckMarx functionality
+- *Best fix location* - highlights the best place to fix your code in order to minimize the time to remediate. This includes a visual chart of the data flow graph that indicates the ideal location in the code to address multiple vulnerabilities within the data flow in a single line of code
+- Quick and accurate scanning - Reduce false positives, adapt the rule set to minimize false positives, and understand the root cause for results
+- *Incremental scanning* -  Just test the parts of the code that have been changed since last code check-in to *reduce scanning time by more than 80%*. Enables incorporation of the security gate within your continuous integration pipeline
+- Seamless integration - Works with all IDEs, build management servers, bug tracking tools and source repositories
+- Protect Your Full Code Portfolio (Open Source and In-house Source Code) - Analyzing open source libraries, making sure licenses are being honored and weeding out any open source components which expose the application to known vulnerabilities, Checkmarx Open Source solution provides complete code portfolio coverage under a single unified solution and with no extra installations or administration required.
+- Easy to initiate Open Source Analysis  - Enhancing your code portfolio risk assessment coverage is merely a few mouse clicks away. With Checkmarx’s Open Source Analysis, there is no need for additional installations or multiple management interfaces. Simply turn it on and within minutes a detailed report is generated with clear results and detailed mitigation instructions. Analysis results are designed with the developer in mind. No time is wasted on trying to understand the required actions items to mitigate the detected security or compliance risk.

@@ -626,3 +626,29 @@ Windows PowerShell ISE auto compiles your workflow code, and allows you to save 
 [explanation]
 
 ---
+##Checkbox##
+
+<<display_name:AZ400T05_CB_30; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following are features of Azure Automation State configuration?<<
+
+(choose three)
+
+[x] Built-in DSC pull server.
+[x] Centralized management of DSC artifacts.
+[x] Enhanced reporting and analyzes capabilities.
+[ ] Supports WindowsOptionalFeature DSC resource in Windows 7.
+
+[explanation]
+The correct answers are: Built-in DSC pull server; Centralized management of DSC artifacts; Enhanced reporting and analyzes capabilities.
+
+Supports WindowsOptionalFeature DSC resource in Windows 7, is an incorrect answer. The WindowsOptionalFeature DSC resource requires the DISM module, and DISM cmdlets that are available starting in Windows 8 and newer releases of the Windows operating system.
+
+One of the main features of Azure Automation State configuration is a built-in DCS pull server. The built-in DSC pull server ensures that target nodes automatically receive configurations, conform to the desired state, and report back on their compliance. The built-in DSC pull server in Azure Automation eliminates the need to set up and maintain your own pull server.
+
+A second feature of Azure Automation State configuration is the provision of centralized management for DSC artifacts. With Azure Automation State configuration you can manage all your DSC configurations, resources, and target nodes, from the Azure portal, or from PowerShell.
+
+A third feature of Azure Automation State configuration is the provision of enhanced reporting and analyzes capabilities. Nodes that are managed with Azure Automation State Configuration send detailed reporting status data to the built-in pull server. You can configure Azure Automation State Configuration to send this data to your Log Analytics workspace.
+[explanation]
+
+---

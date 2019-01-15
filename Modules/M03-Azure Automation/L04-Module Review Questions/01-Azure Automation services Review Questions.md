@@ -173,3 +173,23 @@ Arranging activities into Windows PowerShell Workflows can leverage the power of
 [explanation]
 
 ---
+##Checkbox##
+
+<<display_name:Review Question 9; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>Which of the following are key time-saving benefits to using Windows PowerShell Integrated Scripting Environment (ISE) for writing workflows?<<
+
+(choose all that apply)
+
+[x] Auto compiles your workflow code.
+[x] Enforces strict adherence to the correct workflow syntax.
+[x] Highlights syntax errors.
+[x] Distinguishes between workflows and scripts.
+
+[explanation]
+All of the answer are correct.
+
+Windows PowerShell ISE auto compiles your workflow code, and allows you to save the artifact. The syntactic differences between scripts and workflows are significant, and Windows PowerShell ISE can distinguish workflows from scripts. Windows PowerShell ISE can also enforce strict adherence to the correct syntax, and highlight syntax errors. As a result, using Windows PowerShell ISE to write your workflows will save you significant coding and testing time.
+[explanation]
+
+---

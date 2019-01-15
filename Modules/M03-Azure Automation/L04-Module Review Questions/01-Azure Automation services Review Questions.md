@@ -193,3 +193,23 @@ Windows PowerShell ISE auto compiles your workflow code, and allows you to save 
 [explanation]
 
 ---
+##Multiple choice##
+
+<<display_name:Review Question 10; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>True or false: Azure Automation State Configuration features a built-in pull DSC server?<<
+
+(x) True
+( ) False
+
+[explanation]
+True is the correct answer.
+
+False is an incorrect answer.
+
+One of the main features of Azure Automation State configuration is a built-in DCS pull server. The built-in DSC pull server ensures that target nodes automatically receive configurations, conform to the desired state, and report back on their compliance. The built-in DSC pull server in Azure Automation eliminates the need to set up and maintain your own pull server.
+
+Two additional features of Azure Automation State configuration are: the provision of centralized management of DSC artifacts, and enhanced reporting and analyzes capabilities. With Azure Automation State configuration you can manage all your DSC configurations, resources, and target nodes, from the Azure portal, or from PowerShell. Nodes that are managed with Azure Automation State Configuration send detailed reporting status data to the built-in pull server. You can configure Azure Automation State Configuration to send this data to your Log Analytics workspace.
+[explanation]
+
+---

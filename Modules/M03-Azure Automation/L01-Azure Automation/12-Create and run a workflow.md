@@ -92,7 +92,7 @@ The runbook that you created is still in *Draft* mode. You need to publish runbo
 
 > :information_source: The following summarizes the key coding and testing time-saving benefits to using Windows PowerShell ISE for writing workflows.
 >
-> - Auto compiles your workflow code
+> - Auto compiles your workflow code.
 > - Allows you to save the coded artifact.
 > - Enforces strict adherence to the correct workflow syntax.
 > - Highlights syntax errors.

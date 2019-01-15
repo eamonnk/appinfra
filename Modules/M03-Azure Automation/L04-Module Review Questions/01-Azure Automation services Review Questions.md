@@ -128,3 +128,48 @@ The new Azure PowerShell `Az module` is not supported by Azure Automation. Scrip
 [explanation]
 
 ---
+##Checkbox##
+
+<<display_name:Review Question 7; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>Which of the following values need to be configured when you create a Webhook in Azure Portal?<<
+
+(choose all that apply)
+
+[x] Name
+[x] Enabled
+[x] Expires
+[x] URL
+
+[explanation]
+All of the answers are correct.
+
+When you create a Webhook in Azure Portal you need to configure the following values. 'Name' specifies the name you use for identifying the runbook in Azure Automation. 'Enabled' allows clients to use the Webhook. Webhooks are enabled by default when it is created. 'Expires' sets an expiration date for the Webhook, after which it can no longer be used. 'URL' is a unique address for the Webhook. A client calls the URL with an HTTP POST request to start a runbook that is linked to the Webhook. The Webhook URL is generated automatically when you create the Webhook. You cannot specify a custom URL. The Webhook URL contains a security token that allows the runbook to be invoked by a third-party systems with no further authentication. For this reason, the URL should be treated like a password. For security reasons, you can only view the Webhook URL in the Azure portal at the time the Webhook is created. You should note the Webhook URL and store it in a secure location for future use with your runbooks.
+[explanation]
+
+---
+##Checkbox##
+
+<<display_name:Review Question 8; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>Which of the following can be achieved by arranging activities into Windows PowerShell Workflows?<<
+
+(choose two)
+
+[x] Leverage the automation capabilities of the PowerShell scripting syntax.
+[x] Automate the distribution, orchestration, and completion of multi-device tasks.
+[ ] Compile PowerShell Desired State Configuration (DSC) configurations.
+[ ] Author Service Management Automation (SMA) runbooks.
+
+[explanation]
+The correct answers are: Leverage the automation capabilities of the PowerShell scripting syntax; Automate the distribution, orchestration, and completion of multi-device tasks.
+
+Compile PowerShell Desired State Configuration (DSC) configurations, and Author Service Management Automation (SMA) runbooks are incorrect answers.
+
+PowerShell DSC configurations are compiled by the Azure Automation State Configuration service.
+SMA runbooks are authored in Azure portal, with the Windows Azure Pack portal, or within PowerShell ISE through the PowerShell ISE add-on.
+
+Arranging activities into Windows PowerShell Workflows can leverage the power of the PowerShell scripting syntax. The automation capabilities of PowerShell enables Windows PowerShell Workflow to automate the distribution, orchestration, and completion of multi-device tasks, which frees users and administrators to focus on higher-level tasks.
+[explanation]
+
+---

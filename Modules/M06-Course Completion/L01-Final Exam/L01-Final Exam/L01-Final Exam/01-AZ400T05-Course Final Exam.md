@@ -520,7 +520,7 @@ You cannot convert a Graphical type runbook to a Textual type runbook, or vice-v
 ---
 ##Checkbox##
 
-<<display_name:AZ400T05_MC_25; max_attempts:1; showanswer:never; weight:1>>
+<<display_name:AZ400T05_CB_25; max_attempts:1; showanswer:never; weight:1>>
 
 >>Which of the following statements about runbooks are correct?<<
 
@@ -555,6 +555,52 @@ False is the correct answer.
 True is an incorrect answer.
 
 You cannot import directly from the Runbook Gallery using Windows PowerShell.
+[explanation]
+
+---
+##Checkbox##
+
+<<display_name:AZ400T05_CB_27; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following statements about starting runbooks with Webhook URLs in Azure Automation are correct?<<
+
+(choose two)
+
+[ ] You can provide custom a URL for a Webhook.
+[x] A Webhook URL contains a security token for authenticating the client to start the runbook.
+[x] You can only view a Webhook URL in the Azure portal at the time the Webhook is created.
+[ ] You can edit a Webhook URL in the Azure portal.
+
+[explanation]
+The correct answers are: A Webhook URL contains a security token for authenticating the client to start the runbook; You can only view a Webhook URL in the Azure portal at the time the Webhook is created.
+
+The other answers are incorrect because you *cannot* provide custom a URL for a Webhook, or edit a Webhook URL in the Azure portal.
+
+The URL of the Webhook is a unique address. A client calls the URL with an HTTP POST request to start a runbook that is linked to the Webhook. The Webhook URL is generated automatically when you create the Webhook. You cannot specify a custom URL. The Webhook URL contains a security token that allows the runbook to be invoked by a third-party systems with no further authentication. For this reason, the URL should be treated like a password. For security reasons, you can only view the Webhook URL in the Azure portal at the time the Webhook is created. You should note the Webhook URL and store it in a secure location for future use with your runbooks.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_28; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following helps automate the distribution, orchestration, and completion of multi-device tasks, by arranging activities and leveraging the power of the PowerShell scripting syntax.<<
+
+(x) Windows PowerShell Workflow
+( ) Azure Automation State Configuration service
+( ) PowerShell ISE add-on
+( ) Azure Service Fabric
+
+[explanation]
+Windows PowerShell Workflow is the correct answer.
+
+All other answers are incorrect answers.
+
+The Azure Automation State Configuration service is for creating and managing PowerShell Desired State Configurations (DSC).
+The PowerShell ISE add-on is for authoring Service Management Automation (SMA) runbooks in PowerShell ISE.
+Azure Service Fabric is a distributed systems platform for packaging, deploying, and managing microservices applications and container orchestration.
+
+Arranging activities into Windows PowerShell Workflows can leverage the power of the PowerShell scripting syntax. The automation capabilities of PowerShell enables Windows PowerShell Workflow to automate the distribution, orchestration, and completion of multi-device tasks, which frees users and administrators to focus on higher-level tasks.
 [explanation]
 
 ---

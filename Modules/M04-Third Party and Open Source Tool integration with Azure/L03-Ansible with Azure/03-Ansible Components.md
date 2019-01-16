@@ -22,7 +22,7 @@ The following is a summary of the main features of playbooks.
 
 The following is a summary of Ansible's core components
 
-- *Control Machine* is the machine for running configurations. The Control Machine can be any machine with Ansible installed.  You must have Python 2 or Python 3 installed on the Control Machine.
+- *Control Machine* is the machine for running configurations. The Control Machine can be any machine with Ansible installed. :information_source: You must have Python 2 or Python 3 installed on the Control Machine.
 
 - *Managed Nodes* are the devices and/or machines and environments managed by Ansible. Managed nodes can also be referred to as *hosts*. Ansible is not installed on nodes.
 

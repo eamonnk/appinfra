@@ -678,7 +678,7 @@ Chef has the following main architectural components. 'Chef Server' is the Chef 
 ---
 ##Multiple choice##
 
-<<display_name:AZ400T05_DD_32; max_attempts:1; showanswer:never; weight:1>>
+<<display_name:AZ400T05_MC_32; max_attempts:1; showanswer:never; weight:1>>
 
 >>Complete the following sentence. In Chef Automate, you can define desired states, conduct violation detection audits, and generate reports, using... ?<<
 
@@ -695,6 +695,26 @@ Habitat, Facts and Console Services are incorrect answers.
 In Chef Automate, Habitat is for creating platform-independent build artifacts called 'habitats' for your applications. Facts are metadata used to determine the state of resources managed by the Puppet automation tool. Console Services is a web-based user interface for managing your system with the Puppet automation tool.
 
 In Chef Automate, you can define desired states, conduct violation detection audits, and generate reports, using InSpec. InSpec is an open-source product that is integrated into the Chef Automate image available from Azure Marketplace. InSpec allows you to define desired states for your applications and infrastructure. InSpec can conduct audits to detect violations against your desired state definitions, and generate reports from its audit results.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_33; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following components of the Puppet automation platform provides a toolset for managing and configuring resources?<<
+
+( ) Puppet Master
+( ) Puppet Agent
+(x) Console Services
+(x) Facts
+
+[explanation]
+Console Services is the correct answer.
+
+All other answers are incorrect because they refer to components of Puppet which do not provide a toolset for managing and configuring resources.
+
+In the Puppet automation platform, Console Services is a toolset for managing user permissions (RBAC), and for configuring managed resources. It also includes a web-based user interface for managing your systems, i.e. the Puppet Enterprise (PE) Console UI. Puppet consists of the following additional core components. 'Puppet Master' acts as a center for Puppet activities and processes. 'Puppet Agent' runs on machines managed by Puppet, to facilitate management.  'Facts' are metadata used to determine the state of resources managed by Puppet. 'Console Services' provides a toolset for managing and configuring resources.
 [explanation]
 
 ---

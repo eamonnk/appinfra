@@ -676,3 +676,25 @@ Chef has the following main architectural components. 'Chef Server' is the Chef 
 [explanation]
 
 ---
+##Multiple choice##
+
+<<display_name:AZ400T05_DD_32; max_attempts:1; showanswer:never; weight:1>>
+
+>>Complete the following sentence. In Chef Automate, you can define desired states, conduct violation detection audits, and generate reports, using... ?<<
+
+( ) Habitat.
+(x) InSpec.
+( ) Facts.
+( ) Console Services.
+
+[explanation]
+InSpec is the correct answer.
+
+Habitat, Facts and Console Services are incorrect answers.
+
+In Chef Automate, Habitat is for creating platform-independent build artifacts called 'habitats' for your applications. Facts are metadata used to determine the state of resources managed by the Puppet automation tool. Console Services is a web-based user interface for managing your system with the Puppet automation tool.
+
+In Chef Automate, you can define desired states, conduct violation detection audits, and generate reports, using InSpec. InSpec is an open-source product that is integrated into the Chef Automate image available from Azure Marketplace. InSpec allows you to define desired states for your applications and infrastructure. InSpec can conduct audits to detect violations against your desired state definitions, and generate reports from its audit results.
+[explanation]
+
+---

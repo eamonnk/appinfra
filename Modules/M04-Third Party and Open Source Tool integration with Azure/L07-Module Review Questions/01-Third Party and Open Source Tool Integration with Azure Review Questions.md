@@ -122,3 +122,21 @@ Puppet and Chef use Agents to communicate with target machines. With Puppet and 
 [explanation]
 
 ---
+##Multiple choice###
+
+<<display_name:Review Question 6; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>True or false: The Control Machine in Ansible must have Python installed?<<
+
+(x) True
+( ) False
+
+[explanation]
+True is the correct answer.
+
+False in an incorrect answer.
+
+A Control Machine in Ansible must have Python installed. Control Machine is one of the core components of Ansible. Control Machine is for running configurations. The other core components of Ansible are Managed Nodes, Playbooks, Modules, Inventory, Roles, Facts, and Plug-ins. Managed Nodes are resources managed by Ansible. Playbooks are ordered lists of Ansible tasks. Modules are small blocks of code within a Playbook that perform specific tasks. Inventory is list of managed nodes. Roles allow for the automatic and sequenced loading of variables, files, tasks and handlers. Facts are data points about the remote system which Ansible is managing. Plug-ins supplement Ansible's core functionality.
+[explanation]
+
+---

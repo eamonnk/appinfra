@@ -29,3 +29,25 @@ Chef has the following main architectural components. 'Chef Server' is the Chef 
 [explanation]
 
 ---
+##Checkbox##
+
+<<display_name:Review Question 2; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>Which of the following are open-source products that are integrated into the Chef Automate image available from Azure Marketplace?<<
+
+[x] Habitat
+[ ] Facts
+[ ] Console Services
+[x] InSpec
+
+[explanation]
+The correct answers are Habitat and InSpec.
+
+Facts and Console Services are incorrect answers.
+
+Facts are metadata used to determine the state of resources managed by the Puppet automation tool. Console Services is a web-based user interface for managing your system with the Puppet automation tool.
+
+Habitat and InSpec are two open-source products that are integrated into the Chef Automate image available from Azure Marketplace. Habitat makes the application and its automation the unit of deployment, by allowing you to create platform-independent build artifacts called 'habitats' for your applications. InSpec allows you to define desired states for your applications and infrastructure. InSpec can conduct audits to detect violations against your desired state definitions, and generate reports from its audit results.
+[explanation]
+
+---

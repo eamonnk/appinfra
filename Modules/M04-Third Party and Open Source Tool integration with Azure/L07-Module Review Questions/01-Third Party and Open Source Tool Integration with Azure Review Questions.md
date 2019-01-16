@@ -105,7 +105,7 @@ The main elements of a Puppet Program (PP) Manifest file are Class, Resource and
 
 >>Which of the following platforms use Agents to communicate with target machines?<<
 
-(chose all that apply)
+(choose all that apply)
 
 [x] Puppet
 [x] Chef
@@ -120,3 +120,5 @@ Ansible is agentless because you do not need to install an Agent on each of the 
 
 Puppet and Chef use Agents to communicate with target machines. With Puppet and Chef, you install an Agent on each target machine managed by the platform. Agents typically run as a background service and facilitate communication with a Master, which runs on a server. The Master uses information provided by Agents to conduct compliance checks and perform corrective actions automatically.
 [explanation]
+
+---

@@ -740,3 +740,25 @@ The main elements of a Puppet Program (PP) Manifest file are Class, Resource and
 [explanation]
 
 ----
+##Checkbox##
+
+<<display_name:AZ400T05_CB_35; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following statements about the Ansible platform are correct?<<
+
+[ ] Ansible uses agents to communicate with target machines.
+[x] Ansible is agent-less.
+[x] Ansible uses SSH to communicate with target machines.
+[ ] Ansible is closed source.
+
+[explanation]
+The correct answers are: Ansible is agent-less, and Ansible uses SSH to communicate with target machines.
+
+Ansible uses agents to communicate with target machines, and Ansible is closed source, are incorrect answers.
+
+Ansible is agent-less and does not use agents to communicate with target machines. Ansible is also open source, not closed source.
+
+Ansible is agentless because you do not need to install an Agent on each of the target machines it manages. Ansible uses the Secure Shell (SSH) protocol to communicate with target machines. You choose when to conduct compliance checks and perform corrective actions, instead of using Agents and a Master to perform these operations automatically. With platforms that use agents, such as Puppet and Chef, you install an Agent on each target machine managed by the platform. Agents typically run as a background service and facilitate communication with a Master, which runs on a server. The Master uses information provided by Agents to conduct compliance checks and perform corrective actions automatically.
+[explanation]
+
+---

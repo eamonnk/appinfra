@@ -718,3 +718,25 @@ In the Puppet automation platform, Console Services is a toolset for managing us
 [explanation]
 
 ---
+##Checkbox##
+
+<<display_name:AZ400T05_CB_34; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following are main elements of a Puppet Program (PP) Manifest file?<<
+
+(choose three)
+
+[x] Module
+[ ] Recipes
+[x] Class
+[x] Resource
+
+[explanation]
+The correct answers are: Class, Resource and Module.
+
+Recipes is an incorrect answer as recipes are used by the Chef automation platform.
+
+The main elements of a Puppet Program (PP) Manifest file are Class, Resource and Module. Classes define related resources according to their classification, to be reused when composing other workflows. Resources are single elements of your configuration which you can specify parameters for. Modules are collection of all the classes, resources and other elements in a single entity.
+[explanation]
+
+----

@@ -4,11 +4,11 @@
 End-of-module review questions are for practice only and are not included in your grade for the course.  The final assessment at the end of the course is graded. 
 
 ---
+##Checkbox##
+
 <<display_name:Review Question 1; partial_credit="EDC"; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
 
 >>Which of the following are main architectural components of Chef?<<
-
-##Checkbox##
 
 (choose all that apply)
 

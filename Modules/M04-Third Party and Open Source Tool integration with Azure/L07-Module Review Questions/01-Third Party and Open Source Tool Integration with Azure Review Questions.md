@@ -51,3 +51,27 @@ Habitat and InSpec are two open-source products that are integrated into the Che
 [explanation]
 
 ---
+##Checkbox##
+
+<<display_name:Review Question 3; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>Which of the following are core components of the Puppet automation platform?<<
+
+(chose all that apply)
+
+[x] Master
+[x] Agent
+[x] Facts
+[ ] Habitat
+
+[explanation]
+The correct answers are Master, Agent and Facts.
+
+Habitat is an incorrect answer.
+
+Habitat is used with Chef for creating platform-independent build artifacts called for your applications.
+
+Master, Agent and Facts are core components of the Puppet automation platform. Another core component is 'Console Services'. Puppet Master acts as a center for Puppet activities and processes. Puppet Agent runs on machines managed by Puppet, to facilitate management. Console Services is a toolset for managing and configuring resources managed by Puppet. Facts are metadata used to determine the state of resources managed by Puppet.
+[explanation]
+
+---

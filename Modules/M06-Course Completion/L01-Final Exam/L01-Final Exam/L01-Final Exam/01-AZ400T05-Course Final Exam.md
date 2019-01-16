@@ -762,3 +762,24 @@ Ansible is agentless because you do not need to install an Agent on each of the 
 [explanation]
 
 ---
+##Checkbox##
+
+<<display_name:AZ400T05_CB_36; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following are core components of Ansible?<<
+
+(choose all that apply)
+
+[x] Control Machine
+[x] Managed Nodes
+[x] Playbooks
+[x] Modules#
+
+[explanation]
+All answers are correct.
+
+Control Machine, Managed Nodes, Playbooks, and Modules, are core components of Ansible. Other core components are Inventory, Roles, Facts, and Plug-ins. Control Machine is for running configurations, with Ansible and Python installed.
+Managed Nodes are resources managed by Ansible. Playbooks are ordered lists of Ansible tasks. Modules are small blocks of code within a Playbook that perform specific tasks. Inventory is list of managed nodes. Roles allow for the automatic and sequenced loading of variables, files, tasks and handlers. Facts are data points about the remote system which Ansible is managing. Plug-ins supplement Ansible's core functionality.
+[explanation]
+
+---

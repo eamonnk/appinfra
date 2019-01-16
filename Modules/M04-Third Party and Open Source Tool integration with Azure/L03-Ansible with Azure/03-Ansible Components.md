@@ -38,6 +38,6 @@ The following is a summary of Ansible's core components
 
 - *Plug-ins* are code that supplements Ansible's core functionality.
 
-> :information_source: The core components of Ansible can be listed as followings: Control Machine, Managed Nodes, Playbooks, Modules, Inventory, Roles, Facts, and Plug-ins.
+> :information_source: The core components of Ansible can be listed as follows: Control Machine, Managed Nodes, Playbooks, Modules, Inventory, Roles, Facts, and Plug-ins.
 >
 > For a complete list of available Ansible Modules see the page [All modules](https://docs.ansible.com/ansible/latest/modules/list_of_all_modules.html). For details about Ansible Modules available for Azure see the [Ansible GitHub page](https://github.com/ansible/ansible/tree/devel/lib/ansible/modules/cloud/azure).

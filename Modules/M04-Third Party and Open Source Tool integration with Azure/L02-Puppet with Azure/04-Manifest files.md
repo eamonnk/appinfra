@@ -1,26 +1,26 @@
-
-Puppet uses a declarative file syntax to define state. It defines what the infrastructure state should be but not how it should be achieved, so you tell it you want to install a package, not how you want to install the package. 
-
+Puppet uses a declarative file syntax to define state. In other words, it defines *what* the infrastructure state should be, but not *how* it should be achieved. You tell it you want to install a package, not how you want to install the package.
 
 ### Manifest files
-Configuration, or State, is defined in manifest files known as **Puppet Program** file. These files have the file extension `.pp`. It is these configuration files that determine the state of the application.  Puppet program files have element which include:
 
-- **class** -  a bucket to allow you put resources into. For example, we might have an *Apache* class with all the things required to run *Apache*, i.e. the package, the config file the running server and any users that need ot be created. That class then becomes an entity that we can ship around an use to compose other workflows.
+With Puppet, *Configuration*, or *State*, is defined in manifest files known as *Puppet Program* files. These files have the file extension `.pp`. The Puppet Program are used to determine the state of an application.
 
-- resources - single elements of your configuration which you cna specify parameters for.
+Puppet Program files include the following elements:
 
+- *Class* define related resources according to their classification. For example, we might have an `Apache` class for all the things required to run `Apache`, i.e. the package, the config file, the running server, and any users that need to be created. That class then acts as an entity that we can ship around and reuse to compose other workflows.
 
+- *Resource* is a single element of your configuration which you can specify parameters for, such as a user, a package, a file, etc.
 
-A **Module** is the collection of all the classes, resources and other elements of the Puppet program file into a single entity.
+- *Module* is the collection of all the classes, resources and other elements of the Puppet program file in a single entity.
 
-
+> :information_source: The main elements of a Puppet Program (PP) Manifest file are Class, Resource and Module.
 
 ### Sample Manifest file
-The following is a sample .pp file.
 
-We can see the classes being defined, and within that, resources and package details.
+The following is a sample `.pp` file.
 
-The -> notation is an “ordering arrow”: it tells Puppet that it must apply the “left” resource before invoking the “right” resource. This allows us to specify order when necessary
+We can see the classes defined, and within that, resources and package details.
+
+The `->` notation is an 'ordering arrow': it tells Puppet that it must apply the 'left' resource before invoking the 'right' resource. This allows us to specify order, when necessary.
 
 ```ruby
 
@@ -59,6 +59,6 @@ class configurejava {
 }
 ```
 
-
-
-> **Note**: You can download customer Puppet modules that have been created by Puppet and the Puppet community on <a href="https://forge.puppet.com/" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://forge.puppet.com/</span></a>. **Puppetforge** is a community repository that contains 1000s of modules that you can download and use or modify as you need, so you do not have to create modules from scratch yourself.
+> :information_source: You can download modules for Puppet that have been created by Puppet and the Puppet community from [Puppetforge](https://forge.puppet.com/).
+>
+> Puppetforge is a community repository that contains lots of modules for download, reuse and modification. Reusing modules can save you coding and testing time.

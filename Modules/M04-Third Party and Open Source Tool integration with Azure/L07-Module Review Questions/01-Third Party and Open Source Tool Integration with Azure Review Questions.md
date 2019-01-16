@@ -75,3 +75,27 @@ Master, Agent and Facts are core components of the Puppet automation platform. A
 [explanation]
 
 ---
+##Dropdown##
+
+<<display_name:Review Question 4; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>Complete the following sentence. The main elements of a Puppet Program (PP) Manifest file are Class, Resource and...?<<
+
+[[
+(Module)
+Habitat
+InSpec
+Cookbooks
+]]
+
+[explanation]
+Module is the correct answer.
+
+All other answers are incorrect answers.
+
+Habitat, InSpec and Cookbooks are incorrect because they relate to the Chet automation platform.
+
+The main elements of a Puppet Program (PP) Manifest file are Class, Resource and Module. Classes define related resources according to their classification, to be reused when composing other workflows. Resources are single elements of your configuration which you can specify parameters for. Modules are collection of all the classes, resources and other elements in a single entity.
+[explanation]
+
+---

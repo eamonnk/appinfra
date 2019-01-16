@@ -652,3 +652,27 @@ A third feature of Azure Automation State configuration is the provision of enha
 [explanation]
 
 ---
+##Dropdown##
+
+<<display_name:AZ400T05_DD_31; max_attempts:1; showanswer:never; weight:1>>
+
+>>Complete the following sentence. Chef's main architectural components are Chef Server, Chef Client and... ?<<
+
+[[
+Chef Facts
+Chef Master
+Chef Console Services
+(Chef Workstation)
+]]
+
+[explanation]
+Chef Workstation is the correct answer.
+
+All other answers are incorrect answers.
+
+Chef Facts, Chef Master, and Chef Console Services are not architectural components of Chef. Chef Facts, Chef Master, and Chef Console Services misrepresent terms used by the Puppet automation tool.
+
+Chef has the following main architectural components. 'Chef Server' is the Chef management point. The two options for the Chef Server are 'hosted' and 'on-premises'. 'Chef Client (node)' is an agent that sits on the servers you are managing. 'Chef Workstation' is an Administrator workstation where you create Chef policies and execute management commands. You run the Chef 'knife' command from the Chef Workstation to manage your infrastructure.
+[explanation]
+
+---

@@ -8,7 +8,7 @@ The <a href="https://github.com/azsk/DevOpsKit-docs" target="_blank"><span style
 
 - Enable secure development: During the coding and early development stages, developers should have the ability to write secure code and to test the secure configuration of their cloud applications. Just like build verification tests (BVTs), we introduce the concept of security verification tests (SVTs) which can check for security of various resource types in Azure.
 
-- Integrate security into CI/CD: Test automation is a core tenet of devops. We emphasize this by providing the ability to run SVTs as part of the Azure DevOps CICD pipeline. These SVTs can be used to ensure that the target subscription used to deploy a cloud application and the Azure resources the application is built upon are all setup in a secure manner.
+- Integrate security into CI/CD: Test automation is a core tenet of devOps. We emphasize this by providing the ability to run SVTs as part of the Azure DevOps CICD pipeline. These SVTs can be used to ensure that the target subscription used to deploy a cloud application and the Azure resources the application is built upon are all setup in a secure manner.
 
 - Continuous Assurance: In the constantly changing dev ops environment, it is important to move away from the mindset of security being a milestone. We have to treat security as a continuously varying state of a system. This is made possible through capabilities that enable continuous assurance using a combination of automation runbooks, schedules, etc.
 

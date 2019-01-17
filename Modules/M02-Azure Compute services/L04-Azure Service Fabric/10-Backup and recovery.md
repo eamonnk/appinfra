@@ -1,15 +1,15 @@
 
 
 
-Creating backups requires development effort, and it requires a method to be called within a Reliable Service. This causes the data to be copied to a local backup folder. 
+Creating backups requires development effort, and it requires a method to be called within a Reliable Service. This causes the data to be copied to a local backup folder.
 
-After that, it's possible to copy that data to a central storage location. This location should in a different fault domain, for example, in a different cloud. Because data is sharded between partitions, every primary replica of your Stateful Reliable Services needs to create its own backups.
+After that, it's possible to copy that data to a central storage location. This location should in a different fault domain, for example, in a different cloud. Because data is shared between partitions, every primary replica of your Stateful Reliable Services needs to create its own backups.
 
 ``` csharp
 
 public async Task BeginCreateBackup()
 {
-	
+
 	var backupDescription = new BackupDescription(BackupOption.Full, PostBackupCallbackAsync);
 	await BackupAsync(backupDescription);
 }
@@ -58,8 +58,7 @@ or by using PowerShell:
 
 Again, the implementation of ```_centralBackupStore``` is omitted.
 
-### Fire drills 
+### Fire drills
 Consider your backup strategy carefully. The amount of data loss that is acceptable is different for every service. The size of the central store will grow quickly when you create many full backups.
 
 Make sure to gain hands on experience with creating and restoring backups by practicing it, so you know that your solution works. This way, you don't need to find out that your backup strategy is insufficient during a real disaster-recovery situation.
-

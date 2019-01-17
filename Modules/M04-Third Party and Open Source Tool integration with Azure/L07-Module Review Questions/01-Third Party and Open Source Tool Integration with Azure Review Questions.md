@@ -140,3 +140,41 @@ A Control Machine in Ansible must have Python installed. Control Machine is one 
 [explanation]
 
 ---
+##Multiple choice##
+
+<<display_name:Review Question 7; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>Which of the following statements describes a common use for the cloud-init package?<<
+
+(x) cloud-init is used to apply custom configurations to a Linux VM, as it boots for the first time.
+( ) cloud-init is used to add support for multiple key types and algorithms.
+( ) cloud-init is used to manage access to Hardware Security Modules (HSM).
+( ) cloud-init is used to manage keys associated with an Azure Storage account.
+
+[explanation]
+The correct answer is: cloud-init is used to apply custom configurations to a Linux VM, as it boots for the first time.
+
+All other answers are incorrect answers because they describe uses for Azure Key Vault.
+
+Cloud-init is a package that is often used to add custom configurations to a Linux VM, as it boots for the first time. Cloud-init works across Linux distributions. In Azure, you can add custom configurations to a Linux VM with cloud-init and a configuration file (.txt). Any provisioning configuration information contained in the specified configuration file (.txt) is applied to the new VM, when the VM is created.
+[explanation]
+
+---
+##Checkbox##
+
+<<display_name:Review Question 8; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
+
+>>Which of the following statements about the cloud-init package are correct?<<
+
+[x] The --custom-data parameter passes the name of the configuration file (.txt).
+[x] Configuration files (.txt) are encoded in base64.
+[x] The YML syntax is used within the configuration file (.txt).
+[x] cloud-init works across Linux distributions.
+
+[explanation]
+All of the answers are correct answers.
+
+In Azure, you can add custom configurations to a Linux VM with cloud-init by appending the --custom-data parameter, and passing the name of a configuration file (.txt), to the az vm create command. The --custom-data parameter passes the name of the configuration file (.txt) as an argument to cloud-init. Then, cloud-init applies Base64 encoding to the contents of the configuration file (.txt), and sends it along with any provisioning configuration information that is contained within the configuration file (.txt). Any provisioning configuration information contained in the specified configuration file (.txt) is applied to the new VM, when the VM is created. The YML syntax is used within the configuration file (.txt) to define any provisioning configuration information that needs to be applied to the VM.
+[explanation]
+
+---

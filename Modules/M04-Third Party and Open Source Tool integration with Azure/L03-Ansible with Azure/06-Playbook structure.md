@@ -1,7 +1,7 @@
 
-Playbooks are the language of Ansible's configurations, deployments, and orchestrations. They can be used to manage configurations of and deployments to remote machines. Playbooks are structured with YAML, a data serialization language, and support variables. 
+Playbooks are the language of Ansible's configurations, deployments, and orchestrations. They can be used to manage configurations of and deployments to remote machines. Playbooks are structured with YAML, a data serialization language, and support variables.
 
-Playbooks are declarative and include detailed information regarding the number of machines to configure at a time. 
+Playbooks are declarative and include detailed information regarding the number of machines to configure at a time.
 
 ### YML structure
 Yaml is based around the structure of key value pairs i.e. Key could be `name` and the name `myvaluename` for example
@@ -10,19 +10,19 @@ Yaml is based around the structure of key value pairs i.e. Key could be `name` a
 name: mynamevalue
 ```
 
-Identation and new lines are used to separate key : value pairs.
+Indentation and new lines are used to separate key : value pairs.
 
-In the **YAML** syntax there is no definition on how indentation is to be spaced. You can indent a smany spaces as you wish, however it must be uniform throughout the file and commands must occur at the same level, or identation spaces.
+In the **YAML** syntax there is no definition on how indentation is to be spaced. You can indent as many spaces as you wish, however it must be uniform throughout the file and commands must occur at the same level, or indentation spaces.
 
-Every occasion when you there is indentation in **YAML**, that idented value is the value for the parent key. If your parent key already has a value you cant indent.
+Every occasion when you there is indentation in **YAML**, that indented value is the value for the parent key. If your parent key already has a value you cant indent.
 
 ### Playbook components
 The following are some of the playbook components:
 - `name` - the name of the playbook, can be any name you wish.
-- `hosts` - lists where the configuration applied, or machines we ar targetting. It can be a list of one or more groups or host patterns, separated by colons. It could also  contain groups, such as web servers, dbs if you defined these groups in your inventory.
+- `hosts` - lists where the configuration applied, or machines we are targeting. It can be a list of one or more groups or host patterns, separated by colons. It could also  contain groups, such as web servers, dbs if you defined these groups in your inventory.
 - `connection` - specifies the connection type.
 - `remote_user` - the user to use to connect to complete the tasks.
-- `var` - allows you to define variables that can be used throughout yur playbook
+- `var` - allows you to define variables that can be used throughout your playbook
 - `gather_facts` - determines whether to gather node data or not. Can be `yes` or `no`
 - `tasks` - indicates the start of the modules, where the actual configuration is defined.
 
@@ -35,7 +35,7 @@ The following are some of the playbook components:
 ansible-playbook < playbook name >
 
 ```
-- You can also check the syntax of a playbook using the below command. This will run the playbook file through the parser to ensure its included files, roles, etc. have no syntax problems. You can also use the `--verbose` 
+- You can also check the syntax of a playbook using the below command. This will run the playbook file through the parser to ensure its included files, roles, etc. have no syntax problems. You can also use the `--verbose`
 
 ```yml
 ansible-playbook --syntax-check

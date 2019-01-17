@@ -833,3 +833,48 @@ In Azure, you can add custom configurations to a Linux VM with cloud-init by app
 [explanation]
 
 ---
+
+##Checkbox##
+
+<<display_name:AZ400T05_CB_39; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following file extensions are used for Terraform configuration files?<<
+
+(choose two)
+
+[ ] .tac
+[x] .tf
+[x] .tf.json
+[ ] .tfc
+
+[explanation]
+The correct answers are .tf and .tf.json
+
+All other answers are incorrect answers.
+
+The .tac and .tfc file type extensions are arbitrary file type extensions, and are not supported Terraform configuration file type extensions.
+
+Terraform configuration files are text based configuration files that allow you to define infrastructure and application configurations. Terraform uses the file extension .tf for Terraform format configuration files, and the file extension .tf.json for Terraform JSON format configuration files. Terraform supports configuration files in either .tf or .tf.json format. The Terraform .tf format is more human-readable, supports comments, and is the generally recommended format for most Terraform files. The JSON format .tf.json is meant for use by machines, but you can write your configuration files in JSON format if you prefer.
+[explanation]
+
+---
+##Checkbox##
+
+<<display_name:AZ400T05_CB_40; max_attempts:1; showanswer:never; weight:1>>
+
+>>Which of the following are core components of the Terraform configuration tool?<<
+
+(choose all that apply)
+
+[x] Configuration files
+[x] Overrides
+[x] Execution plan
+[x] Resource graph
+
+[explanation]
+All answers are correct answers.
+
+Configuration files, in .tf or .tf.json format, allow you to define your infrastructure and application configurations with Terraform. Execution plan defines what Terraform will do when a configuration is applied. Resource graph builds a dependency graph of all Terraform managed resources. Overrides modify Terraform behavior without having to edit the Terraform configuration. Overrides can also be used to apply temporary modifications to Terraform configurations without having to modify the configuration itself.
+[explanation]
+
+---

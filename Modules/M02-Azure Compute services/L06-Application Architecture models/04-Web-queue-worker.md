@@ -26,4 +26,4 @@ Consider an this architecture for:
 - Easy to deploy and manage.
 - Clear separation of concerns.
 - The front end is decoupled from the worker using asynchronous messaging.
-- The front end and the worker can be scaled independentl
+- The front end and the worker can be scaled independently

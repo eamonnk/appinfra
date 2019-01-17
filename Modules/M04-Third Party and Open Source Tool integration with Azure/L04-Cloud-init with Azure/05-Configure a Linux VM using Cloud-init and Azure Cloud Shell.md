@@ -75,3 +75,4 @@ The following steps demonstrate how to create a Linux VM using Azure CLI, and th
 >
 > - The `--custom-data` parameter passes the name of the configuration `.txt` file as an argument to `cloud-init`. Then `cloud-init` applies Base64 encoding to the contents of the file, and sends it along with any provisioning configuration information.
 > - any provisioning configuration information contained in the specified `.txt` is applied to the new VM.
+> - provisioning configuration information is expressed using the YML syntax within the configuration `.txt` file

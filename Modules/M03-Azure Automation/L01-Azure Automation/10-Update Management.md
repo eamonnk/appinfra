@@ -12,6 +12,6 @@ Computers that are managed by Update Management use the following configurations
 The following diagram shows a conceptual view of the behavior and data flow with how the solution assesses and applies security updates to all connected Windows Server and Linux computers in a workspace:
 
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/updatemanagement.png" alt="Workflow diagram of Update management process with Azure Automation startig with review update and define deployment schedule, with an arrow pointing to a process and two arrows also pointing tpo the same process from a box containing the process for updating using pre-steps, updates using package managers and post steps, as well as hybrid runbook worker and windows agent or OMS linux agent."></p>
+<p style="text-align:center;"><img src="../Linked_Image_Files/updatemanagement.png" alt="Workflow diagram of Update management process with Azure Automation starting with review update and define deployment schedule, with an arrow pointing to a process and two arrows also pointing to the same process from a box containing the process for updating using pre-steps, updates using package managers and post steps, as well as hybrid runbook worker and windows agent or OMS Linux agent."></p>
 
 Update Management can be used to natively onboard machines in multiple subscriptions in the same tenant

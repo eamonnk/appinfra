@@ -1,32 +1,30 @@
-There are a number of ways you can use Ansible in Azure
+There are a number of ways you can use Ansible in Azure.
 
 ### Azure marketplace
-- **Azure Marcketplace** - You can use an image available as part of the Azure Marketplace. 
-    - **Red Hat Ansible on Azure** - is available as animage on Azure Marketplace and it provides a fully configured version in Azure Marketplace. This enables easier adoption for those looking to use **Ansible** as their provisioning and configuration management tool. This solution template will install Ansible on a Linux VM along with tools configured to work with Azure. This includes
-        - Ansible (latest by default. You also could specify version number.)
-        - Azure CLI 2.0
-        - Managed Service Identity (MSI) VM Extension
-        - apt-transport-https
 
-    - **Ansible Tower (by Red Hat)** - **Ansible Tower** by **Red Hat** helps organizations scale IT automation and manage complex deployments across physical, virtual, and cloud infrastructures. Ansible Tower includes capabilities that provide additional levels of visibility, control, security, and efficiency necessary for today's enterprises. Ansible Tower Highlights:
-        - Provision Azure environments with ease using pre-built Ansible playbooks
-        - Role-based access control for secure, efficient management
-        - Centralized logging for complete auditability and compliance
-        - Built on the proven open source Ansible automation engine
-        - Large community of content available on Ansible Galaxy
-    
-        This offering requires the use of an available Ansible Tower subscription eligible for use in Azure. If you don't currently have a subscription, you can obtain one directly from **Red Hat**. 
+The following Ansible images are available from Azure Marketplace.
 
+- *Red Hat Ansible on Azure* is available as fully configured image from Azure Marketplace. This image is intended to make it easy to set up Ansible as your provisioning and configuration management tool. The image installs Ansible in a Linux VM along with tools configured to work with Azure. The Red Hat Ansible on Azure image includes the following:
+  - The latest version of Ansible, by default. You can also specify a particular version.
+  - Azure CLI 2.0.
+  - Managed Service Identity (MSI) VM Extension.
+  - apt-transport-https for installing packages over HTTPS.
+
+- *Ansible Tower* (by Red Hat) helps organizations scale IT automation and manage complex deployments across physical, virtual, and cloud infrastructures. Ansible Tower adds the levels of visibility, control, security, and efficiency that contemporary enterprises need. The highlights of Ansible Tower include:
+  - Provision Azure environments with ease using pre-built Ansible playbooks
+  - Role-based Access Control for secure, efficient management.
+  - Centralized logging for complete auditability and compliance.
+  - Built on the proven open source Ansible automation engine.
+  - Large community of content available on Ansible Galaxy.
+
+    Using Ansible Tower in Azure requires a subscription. If you do not have a subscription, you can obtain one directly from Red Hat.
 
 ### Azure Virtual Machines
-You can also deploy a Linux virtual machine in Azure virtual machines IaaS service, install ansible and the relevant components and use that as you control machine.
 
-NOTE: Windows is not supported as a control machine, However you can run Ansible from a windows machine by utilzing other services and products such as **Windows Subsystem for Linux** , **Azure Cloud Shell** and **Visual Studio Code**.
+You can deploy a Linux VM in the Azure Virtual Machines IaaS service. You use the VM as your Control Machine by installing Ansible and the required components in the VM.
 
-
-> **Note**: More details about running Ansible in Azure is available on the <a href="https://docs.microsoft.com/en-us/azure/ansible/?ocid=AID754288&wt.mc_id=CFID0352" target="_blank"><span style="color: #0066cc;" color="#0066cc">Ansible on Azure documentation</span></a> documentation site. There is also a documentation site on the Ansible docs site at <a href="https://docs.microsoft.com/en-us/azure/ansible/?ocid=AID754288&wt.mc_id=CFID0352" target="_blank"><span style="color: #0066cc;" color="#0066cc">Microsoft Azure Guide</span></a>.
-
-> **Note**: You can also preview Ansible Azure modules on the <a href="https://galaxy.ansible.com/Azure/azure_preview_modules" target="_blank"><span style="color: #0066cc;" color="#0066cc">azure_preview_modules </span></a> page.
-
-
-
+> :information_source: Control Machine can be set up on Windows. However, you can run Ansible from a Windows machine by utilizing other services and products such as the Windows Subsystem for Linux , Azure Cloud Shell and Visual Studio Code.
+>
+> For information about running Ansible in Azure see the [Ansible on Azure documentation](https://docs.microsoft.com/en-us/azure/ansible/?ocid=AID754288&wt.mc_id=CFID0352).
+>
+> You can preview Ansible Azure modules on the page [Azure Preview Modules](https://galaxy.ansible.com/Azure/azure_preview_modules).

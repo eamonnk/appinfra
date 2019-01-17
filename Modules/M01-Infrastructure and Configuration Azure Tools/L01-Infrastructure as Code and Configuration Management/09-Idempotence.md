@@ -4,7 +4,7 @@ With idempotency, using a script or template to apply a deployment to a set of r
 
 > :information_source: For example, idempotency requires that running a script on a system should result in the same outcome, regardless of the number of times the script is executed, without erroring out or performing duplicate actions, and despite the environment’s starting state.
 
-![An image depicting the cyclical process from the execution of a script to the final state of a software application, with symbols representing scripts and software applications located at fixed intervals around a circle.](../Linked_Image_Files/idempotency.png)
+<p style="text-align:center;"><img src="../Linked_Image_Files/idempotency.png" alt="An image depicting the cyclical process from the execution of a script to the final state of a software application, with symbols representing scripts and software applications located at fixed intervals around a circle.."></p>
 
 Idempotency can be achieved by either *one* of the following:
 

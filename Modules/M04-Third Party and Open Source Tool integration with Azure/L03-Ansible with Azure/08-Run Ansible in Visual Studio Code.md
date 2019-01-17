@@ -97,17 +97,17 @@ You can also run **Ansible** playbooks on a Windows machine using Visual Studio 
         version: latest
 ```
 
-9. Right click on the file name in the tab at the top of Visual Studio Code and notice th options available to run the Ansible playbook.i.e. 
+9. Right click on the file name in the tab at the top of Visual Studio Code and notice the options available to run the Ansible playbook .i.e.
     - Run Ansible Playbook in Docker
     - Run Ansible Playbook in Local Ansible
     - Run Ansible Playbook Cloud Shell
     - Run Ansible Playbook Remotely via ssh
 
 We will select the third option, **Run Ansible Playbook Cloud Shell**
-    
+
 <p style="text-align:center;"><img src="../Linked_Image_Files/vsc6.png" alt="Screenshot of Visual Studio Code with the options to run the file in Ansible in the file context menu."></p>
 
-10. A notice may appear in the bottom left hand side, informing you of th action and that it may incur a small charge as it will use some storage when the playbook is uploaded to cloud shell. Click **Confirm & Don't show this message again**
+10. A notice may appear in the bottom left hand side, informing you of the action and that it may incur a small charge as it will use some storage when the playbook is uploaded to cloud shell. Click **Confirm & Don't show this message again**
 
 <p style="text-align:center;"><img src="../Linked_Image_Files/vsc7.png" alt="Screenshot of the dialogue with the message informing you of a potential charged incurred and asking if you wish to proceed."></p>
 

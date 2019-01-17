@@ -64,7 +64,7 @@ You can use the following sample script to set those variables:
     export ARM_CLIENT_SECRET=your_password
     export ARM_TENANT_ID=your_tenant_id
 
-    # Not needed for public, required for usgovernment, german, china
+    # Not needed for public, required for US government, Germany, and China
     export ARM_ENVIRONMENT=public
 ```
 

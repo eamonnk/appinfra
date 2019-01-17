@@ -21,7 +21,7 @@ If you prefer working with PowerShell code directly, you can use PowerShell or P
 
 - *Graphical runbooks*. Graphical and Graphical PowerShell Workflow runbooks are created and edited with the graphical editor in the Azure portal. You can export them to a file and then import them into another automation account, but you *cannot* create or edit them with another tool.
 
-- *PowerShell runbooks*. Based on Windows PowerShell. You directly edit the code of the runbook using the text editor in the Azure portal. You can also use any offline text editor and import the runbook into Azure Automation. Powershell runbooks do not use parallel processing.
+- *PowerShell runbooks*. Based on Windows PowerShell. You directly edit the code of the runbook using the text editor in the Azure portal. You can also use any offline text editor and import the runbook into Azure Automation. PowerShell runbooks do not use parallel processing.
 
 - *PowerShell Workflow runbooks*. Text runbooks based on *Windows PowerShell Workflow*. You directly edit the code of the runbook using the text editor in the Azure portal. You can also use any offline text editor and import the runbook into Azure Automation. PowerShell workflow runbooks use parallel processing to allow completion of multiple tasks at the same time. Workflow runbooks take longer to start than PowerShell runbooks since it needs to be compiled before running
 

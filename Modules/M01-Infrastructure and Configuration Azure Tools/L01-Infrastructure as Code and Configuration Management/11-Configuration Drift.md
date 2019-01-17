@@ -3,7 +3,7 @@ The process that affects changes in the state of a set of resources, from the st
 
 Over time, an environment may become a *snowflake*. Snowflake is a term used to describe a unique configuration that cannot be reproduced automatically. Inconsistency among environments may lead to issues during deployment. With snowflakes, the administration and maintenance of infrastructure invariably involves manual processes, which can be hard to track and are often prone to human error. The more an environment drifts from its original state, the more likely it is for an application to encounter issues. The greater the degree of configuration drift, the longer it takes to troubleshoot and rectify issues.
 
-![An image representing three states of an application changing over time. Each state is proceeded by an arrow icon, which points to the right. Each arrow is shown above a clock icon, which represents time](../Linked_Image_Files/configurationdrift.png)
+<p style="text-align:center;"><img src="../Linked_Image_Files/configurationdrift.png" alt="An image representing three states of an application changing over time. Each state is proceeded by an arrow icon, which points to the right. Each arrow is shown above a clock icon, which represents time."></p>
 
 ### Security considerations
 

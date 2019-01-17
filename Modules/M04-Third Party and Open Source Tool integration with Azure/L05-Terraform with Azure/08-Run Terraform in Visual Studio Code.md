@@ -1,4 +1,4 @@
-You can also run **Terraform** configuuration files using Visual Studio Code. This leverages other services which can be integrated with Visual Studio Code
+You can also run **Terraform** configuration files using Visual Studio Code. This leverages other services which can be integrated with Visual Studio Code
 
 There are two Visual Studio extensions required.
 - Azure Account

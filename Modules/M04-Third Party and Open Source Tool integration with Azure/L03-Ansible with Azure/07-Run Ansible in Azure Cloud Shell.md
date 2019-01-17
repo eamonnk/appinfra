@@ -13,8 +13,8 @@ You can also use the editor included with Azure Cloud Shell to view, open and ed
 
 <p style="text-align:center;"><img src="../Linked_Image_Files/ansibelcloudshelleditor.png" alt="Hybrid cloud icon"></p>
 
-### Create a resource group in Azure using Ansible in Azure Cloud Shell wth bash
-The following steps outline how to create a resource group in Azure using Ansible in Azure Cloud Shell wth bash
+### Create a resource group in Azure using Ansible in Azure Cloud Shell with bash
+The following steps outline how to create a resource group in Azure using Ansible in Azure Cloud Shell with bash
 
 1. Go to the Azure Cloud Shell at https://shall.azure.com or launch Azure Cloud Shell from within the Azure Portal by clicking on the Azure PowerShell icon in the top left.
 2. Authenticate to Azure, entering your credentials if prompted.
@@ -43,7 +43,7 @@ The following steps outline how to create a resource group in Azure using Ansibl
 7. Exit **insert** mode by selecting the **Esc** key.
 
 8. Save the file and exit the **vi** editor by entering the following command:
- 
+
     ```
     :wq
     ```
@@ -57,13 +57,13 @@ The following steps outline how to create a resource group in Azure using Ansibl
 
     ```yml
     PLAY [localhost] *********************************************************************************
-    
+
     TASK [Gathering Facts] ***************************************************************************
     ok: [localhost]
-    
+
     TASK [Create resource group] *********************************************************************
     changed: [localhost]
-    
+
     TASK [debug] *************************************************************************************
     ok: [localhost] => {
         "rg": {
@@ -79,7 +79,7 @@ The following steps outline how to create a resource group in Azure using Ansibl
             }
         }
     }
-    
+
     PLAY RECAP ***************************************************************************************
     localhost                  : ok=3    changed=1    unreachable=0    failed=0
     ```

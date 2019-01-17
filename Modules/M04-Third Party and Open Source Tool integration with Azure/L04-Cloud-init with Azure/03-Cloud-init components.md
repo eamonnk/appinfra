@@ -1,9 +1,8 @@
-Cloud-init is run on Azure by using a configuration definition file, known as `cloud-config`. This file  is in the form of a `.txt` file and uses yml file structure.
+In Azure you can run `Cloud-init` using a `cloud-config` configuration definition file. `cloud-config` files use the `.txt` file extension, and YML syntax.
 
+You can apply a `cloud-config.txt` file using the Azure CLI by appending `--custom-data` and the cloud-config file name to the `az` command.
 
-The `.txt` cloud-config file is applied using Azure CLI az command's using the `--custom-data` parameter and then specifying the .`txt` cloud-config file. 
-
-If we crate a file named `cloud-init.txt` and place the below configuration detail into it.
+As an example, create a file named `cloud-init.txt` and place the following configuration details into the file.
 
 ```yml
 #cloud-config
@@ -12,7 +11,7 @@ packages:
   - httpd
 ```
 
-We can then run this configuration file by running the Azure CLI command as below, specifying the `--custom-data` switch and the `.txt` file name
+You can run this configuration file with the following Azure CLI command. Note the use of the `--custom-data` switch and `.txt` file name.
 
 ```cli
 az vm create \
@@ -21,6 +20,4 @@ az vm create \
   --image OpenLogic:CentOS:7-CI:latest \
   --custom-data cloud-init.txt \
   --generate-ssh-keys
-
-
 ```

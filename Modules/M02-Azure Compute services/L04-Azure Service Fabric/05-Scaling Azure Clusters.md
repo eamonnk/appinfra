@@ -37,7 +37,7 @@ Before we talk about scaling, let's briefly explain some concepts:
 
 ### Boundaries
 
-You can grow or shrink the number of servers that define the cluster by changing the size of a VM scale set. There are some restrictions that apply. 
+You can grow or shrink the number of servers that define the cluster by changing the size of a VM scale set. There are some restrictions that apply.
 
 #### Lower boundary
 Earlier in this module, you learned that one of the platform services of Service Fabric is a distributed data store. Data stored on one node is replicated to a quorum (majority) of secondary nodes. This means that to work properly, you'll need to have multiple healthy nodes in your cluster. The precise number needed depends on the desired reliability of your services.
@@ -74,18 +74,17 @@ Scaling up a standalone cluster must be done by also using PowerShell scripts. R
 #### Removing nodes in Azure
 
 Although adding nodes to an Azure cluster is a matter of increasing the scale set capacity, removing them can be more complicated. Removing nodes from a cluster has implications for the distributed data store that holds the Reliable Collections of your services. Decreasing the instance count of your VM scale set results in the removal of cluster nodes. The impact of this depends on the durability level.
-​     
-If you're using the Bronze durability level, you must notify Service Fabric beforehand about your intention to remove a node. This instructs Service Fabric to move services and data away from the node. In other words, it drains the node. 
+​
+If you're using the Bronze durability level, you must notify Service Fabric beforehand about your intention to remove a node. This instructs Service Fabric to move services and data away from the node. In other words, it drains the node.
 
 Next, you need to remove that node from the cluster. You must run the PowerShell script `Disable-ServiceFabricNode` for each node that you want to remove, and wait for Service Fabric to complete the operation.
 
 If you don't properly remove the node from the cluster, Service Fabric will assume that the nodes have simply failed and will return later, after reporting them as having the status *Down*.
 
-![In the Service Fabric Cluster blade, five nodes display with two of the nodes reporting with a status of down.](../../Linked_Image_Files\3.5.2_Scale_down.png)
+![In the Service Fabric Cluster blade, five nodes display with two of the nodes reporting with a status of down.](../Linked_Image_Files\3.5.2_Scale_down.png)
 
 Of course, this can also be done by using code.
 
 #### Removing nodes from standalone clusters.
 
 Removing nodes is somewhat different from the process in Azure clusters. Instead of executing `Disable-ServiceFabricNode`, you execute the script `RemoveNode.ps1` on the server that you want to remove.
-

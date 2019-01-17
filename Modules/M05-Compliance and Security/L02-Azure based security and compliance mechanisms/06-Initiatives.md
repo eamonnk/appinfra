@@ -26,6 +26,4 @@ Like a policy assignment, an *initiative assignment* is an initiative definition
 
 
 
-> **Note**: You can read more about policy definitoin and structure on the <a href="https://docs.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure" target="_blank"><span style="color: #0066cc;" color="#0066cc">Azure Policy definition structure</span></a> page.
-
-
+> **Note**: You can read more about policy definition and structure on the <a href="https://docs.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure" target="_blank"><span style="color: #0066cc;" color="#0066cc">Azure Policy definition structure</span></a> page.

@@ -18,11 +18,11 @@ The following describes some of Terraform's core components.
 
 > :information_source:  The following is a list of Terraform's core components.
 >
-> - Configuration files (in `.tf` or `.tf.json` format)
-> - Terraform CLI
-> - Modules
-> - Providers
-> - Overrides
-> - Resources
-> - Execution plan
-> - Resource graph
+> - Configuration files (in `.tf` or `.tf.json` format) allow you to define infrastructure and application configuration.
+> - Terraform CLI is a Command Line Interface (CLI) that you run Terraform configurations from.
+> - Modules are self-contained packages of Terraform configurations that are managed as a group.
+> - Providers interpret API interactions and expose resources.
+> - Overrides modify Terraform behavior without having to edit the Terraform configuration.
+> - Resources are sections of a configuration file that define components of your infrastructure.
+> - Execution plan defines what Terraform will do when a configuration is applied.
+> - Resource graph builds a dependency graph of all Terraform managed resources.

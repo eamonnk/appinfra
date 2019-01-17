@@ -783,3 +783,53 @@ Managed Nodes are resources managed by Ansible. Playbooks are ordered lists of A
 [explanation]
 
 ---
+##Dropdown##
+
+<<display_name:AZ400T05_DD_37; max_attempts:1; showanswer:never; weight:1>>
+
+>>Complete the following sentence. To apply custom configurations to a Linux VM in Azure, as it boots for the first time, you can use... ?<<
+
+[[
+az configure
+(the cloud-init package)
+az policy
+az deployment
+]]
+
+[explanation]
+The correct answer is cloud-init.
+
+All other answers are incorrect answers because they are commands used with the Azure Command Line Interface (CLI).
+
+az configure is used with the Azure CLI for managing Azure CLI configurations.
+az policy is for managing resource policies with the Azure CLI.
+az deployment is used with the Azure CLI for managing Azure Resource Manager deployments at subscription scope.
+
+Cloud-init is a package that is often used to add custom configurations to a Linux VM, as it boots for the first time. Cloud-init works across Linux distributions. In Azure, you can add custom configurations to a Linux VM with cloud-init and a configuration file (.txt). Any provisioning configuration information contained in the specified configuration file (.txt) is applied to the new VM, when the VM is created.
+[explanation]
+
+---
+##Multiple choice##
+
+<<display_name:AZ400T05_MC_38; max_attempts:1; showanswer:never; weight:1>>
+
+>>With the cloud-init package, which of the following parameters passes the name of a configuration file (.txt)?<<
+
+( ) --service-principal
+( ) --use-device-code
+(x) --custom-data
+( ) --identity
+
+[explanation]
+The correct answer is --custom-data.
+
+All other answers are incorrect answers because they are parameters that are appended to the az login command for logging in to Azure with the Azure Command Line Interface (CLI).
+
+The --service-principal parameter specifies a credential, representing a service principal, for logging in to Azure with the Azure CLI and az login command.
+The --use-device-code parameter tells the az login command to use CLI's old authentication flow based on device code, when logging in to Azure with the Azure CLI.
+The --identity parameter is used to log in to Azure using a VM's system assigned identity, with the Azure CLI and az login command.
+
+In Azure, you can add custom configurations to a Linux VM with cloud-init by appending the --custom-data parameter, and passing the name of a configuration file (.txt), to the az vm create command. The --custom-data parameter passes the name of the configuration file (.txt) as an argument to cloud-init. Then, cloud-init applies Base64 encoding to the contents of the configuration file (.txt), and sends it along with any provisioning configuration information that is contained within the configuration file (.txt). Any provisioning configuration information contained in the specified configuration file (.txt) is applied to the new VM, when the VM is created. The YML syntax is used within the configuration file (.txt) to define any provisioning configuration information that needs to be applied to the VM.
+[explanation]
+
+---

@@ -8,7 +8,7 @@ The following is a sample terraform .tf file. It performs the following actions 
 - creates a network security group and rule
 - creates a virtual network interface card
 - creates a random text for a unique storage account name
-- creates a storage account for diagnotics
+- creates a storage account for diagnostics
 - creates a virtual machine
 
 

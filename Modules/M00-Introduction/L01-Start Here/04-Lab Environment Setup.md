@@ -1,33 +1,29 @@
-We highly recommend that you complete the assigned hands-on lab work. To do the labs, you will need to complete the following steps.
+We highly recommend that you complete the assigned hands-on lab work. To do the hands-on labs, To complete these lab exercises you will require the following items:
 
-1. Sign up for a free [Azure DevOps account](https://www.azuredevopslabs.com/). Use the **Sign up for free now** button to create your account. If you already have a Azure DevOps account proceed to the next step.
+- a Microsoft account
+- an Azure subscription
 
-2. Sign up for a free [Azure Account](https://azure.microsoft.com/en-us/free/). If you already have an Azure account proceed to the next step.
+### Setup 
 
-3. The [Azure DevOps Generator Demo](https://azuredevopsdemogenerator.azurewebsites.net/) system makes it easier to work with Azure DevOps labs. To use the system, select the **Sign In** button and then sign in with your Azure DevOps account.
+1. If you already have a Microsoft account that you have not already used to sign up for a free Azure trial subscription, you’re ready to get started. If not, don’t worry, you can create a new [Microsoft account](https://aka.ms/edx-devops200.4x-msa).
 
-    ![Screenshot of the Azure DevOps Demo Generator Home Page.](../Linked_Image_Files/DevOps_IAI_Image_001.png)
+2. After you’ve created a Microsoft account, create your free [Microsoft Azure](https://aka.ms/edx-devops200.4x-az2) account. (If you’re not already signed into your Microsoft account, you'll need to sign in now.) 
+	- Enter your cellphone number and have Microsoft send you a text message to verify your identity.
+    - Enter the code you have been sent to verify your number.
+    - Provide valid payment details. This is required for verification purposes only; your credit card won’t be charged for any services you use during the trial period, and the account is automatically deactivated at the end of the trial unless you explicitly decide to keep it active. For more information, see the [Azure Free Account FAQ](https://azure.microsoft.com/en-us/free/free-account-faq/) page.
 
-4. You will be asked give the generator site permission to create objects in your Azure DevOps account.
+### Updates to Azure 
 
-    ![Screenshot of the Accept Permissions page.](../Linked_Image_Files/DevOps_IAI_Image_002.png)
+Like many other cloud infrastructure platforms today, Azure is continuously developing updates to their services and components. If you've had your own subscriptions for any length of time, you're already aware that changes to services happen much more rapidly than with more traditional application deployment models.
 
-5. If you agree, choose the **Accept** button and you should be greeted by the **Create New Project** screen:
+Every effort will be made to update course content when there are major changes to product functionality. However, there will be occasions where course content does not exactly match the latest version of the product. In most cases, you should still be able to understand and complete the tasks. The general guidance from the Azure documentation teams is to check the documentation frequently to see what upcoming notifications have been posted or where documentation has been updated to reflect the latest changes.
 
-    ![Screenshot of the Create New Project page.](../Linked_Image_Files/DevOps_IAI_Image_003.png)
+ We encourage you to consult [Azure updates](https://azure.microsoft.com/en-us/updates/) for the latest information. From there, you can research blogs and other provided resources to help you stay current in a cloud-enabled world.
 
-6. Select the appropriate organization (if you have more than one) and enter **Parts Unlimited** as the **New Project Name**, then select the ellipsis to view the available templates. The display may change over time, but you should see a screen similar to the following:
+### Lab Steps
+Steps for the labs are available on **GitHub** at the below sites under the **Infrastructure as Code** sections. 
 
-    ![Screenshot of the Choose A Template page.](../Linked_Image_Files/DevOps_IAI_Image_004.png)
+- <p><a href="https://microsoft.github.io/PartsUnlimited" title="" target="_blank">https://microsoft.github.io/PartsUnlimited</a></p>
+- <p><a href="https://microsoft.github.io/PartsUnlimitedMRP" title="" target="_blank">https://microsoft.github.io/PartsUnlimitedMRP</a></p>
 
-7. From the **General** tab, choose **PartsUnlimited**, then **Select Template**.
-
-    ![Screenshot of the Create New Project Completed page.](../Linked_Image_Files/DevOps_IAI_Image_005.png)
-
-8. Now that the Create New Project screen is completed, choose **Create Project** to begin the project creation phase.
-
-    ![Screenshot of the Successful New Project Creation page.](../Linked_Image_Files/DevOps_IAI_Image_006.png)
-
-9. When the project is successfully completed, follow the provided hyperlink to go to your team project within Azure DevOps.
-
-> :information_source: Note that because Azure DevOps was previously called VSTS (Visual Studio Team Services), some of the existing hands-on labs might refer to VSTS rather than Azure DevOps.
+There are many different labs present on these pages, not all of which are relevant or intended for this course. Each Module has a link/s out to the appropriate lab for that module. Click on the link/s for the lab in each module and follow the steps outlined there for each lab task.

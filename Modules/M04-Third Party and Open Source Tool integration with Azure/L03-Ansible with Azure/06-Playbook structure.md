@@ -1,53 +1,56 @@
 
-Playbooks are the language of Ansible's configurations, deployments, and orchestrations. They can be used to manage configurations of and deployments to remote machines. Playbooks are structured with YAML, a data serialization language, and support variables.
-
-Playbooks are declarative and include detailed information regarding the number of machines to configure at a time.
+Playbooks are the language of Ansible's configurations, deployments, and orchestrations. You use them to manage configurations of and deployments to remote machines. Playbooks are structured with YAML (a data serialization language), and support variables. Playbooks are declarative and include detailed information regarding the number of machines to configure at a time.
 
 ### YML structure
-Yaml is based around the structure of key value pairs i.e. Key could be `name` and the name `myvaluename` for example
+Yaml is based around the structure of key value pairs. In the following example, Key is `name`, and the name is `mynamevalue`:
 
 ```yaml
 name: mynamevalue
 ```
 
-Indentation and new lines are used to separate key : value pairs.
+Indentations and new lines are used to separate key value pairs.
 
-In the **YAML** syntax there is no definition on how indentation is to be spaced. You can indent as many spaces as you wish, however it must be uniform throughout the file and commands must occur at the same level, or indentation spaces.
+In the YAML syntax there is no definition on how to space indentation. You can indent as many spaces as you want. However, the indentations must be uniform throughout the file, and commands must occur at the same level of indentation spaces.
 
-Every occasion when you there is indentation in **YAML**, that indented value is the value for the parent key. If your parent key already has a value you cant indent.
+When there is indentation in YAML, that identified value is the value for the parent key. If your parent key already has a value, then you cannot indent.
 
 ### Playbook components
-The following are some of the playbook components:
-- `name` - the name of the playbook, can be any name you wish.
-- `hosts` - lists where the configuration applied, or machines we are targeting. It can be a list of one or more groups or host patterns, separated by colons. It could also  contain groups, such as web servers, dbs if you defined these groups in your inventory.
-- `connection` - specifies the connection type.
-- `remote_user` - the user to use to connect to complete the tasks.
-- `var` - allows you to define variables that can be used throughout your playbook
-- `gather_facts` - determines whether to gather node data or not. Can be `yes` or `no`
-- `tasks` - indicates the start of the modules, where the actual configuration is defined.
+The following list is of some of the playbook components:
+
+- `name`. The name of the playbook, can be any name you wish.
+- `hosts`. Lists where the configuration is applied, or machines being targeted. Hosts can be a list of one or more groups or host patterns separated by colons. It can also contain groups such as web servers or databases, providing you defined these groups in your inventory.
+- `connection`. Specifies the connection type.
+- `remote_user`. Specifies the user to use to connect to complete the tasks.
+- `var`. Allows you for the definition of variables that can be used throughout your playbook.
+- `gather_facts`. Determines whether to gather node data or not. Can be `yes` or `no`.
+- `tasks`. Indicates the start of the modules where the actual configuration is defined.
 
 
 ### Running a playbook
 
-- You run a playbook with the command
+You run a playbook using the following command:
 
 ```pyhton
 ansible-playbook < playbook name >
-
 ```
-- You can also check the syntax of a playbook using the below command. This will run the playbook file through the parser to ensure its included files, roles, etc. have no syntax problems. You can also use the `--verbose`
+
+You can also check the syntax of a playbook using the following command.  
 
 ```yml
 ansible-playbook --syntax-check
 ```
-- To see what hosts would be affected by running a playbook you can run below command:
+
+This will run the playbook file through the parser to ensure its included items such as files and roles, and it has no syntax problems. You can also use the `--verbose` command.
+
+- To see what hosts would be affected by running a playbook you can run the command:
 
 ```yml
 ansible-playbook playbook.yml --list-hosts
 ```
 
 ### Sample Playbook
-The following is a sample playbook that will create a Linux virtual machine in Azure.
+
+The following code is a sample playbook that will create a Linux virtual machine in Azure:
 
 ```yml
 - name: Create Azure VM
@@ -116,8 +119,7 @@ The following is a sample playbook that will create a Linux virtual machine in A
         publisher: OpenLogic
         sku: '7.5'
         version: latest
-
 ```
 
 
-> **Note**: Ansible Playbook samples for Azure are available on GitHub on the <a href="https://github.com/Azure-Samples/ansible-playbooks" target="_blank"><span style="color: #0066cc;" color="#0066cc">Ansible Playbooks for Azure</span></a> page.
+> **Note**: Ansible Playbook samples for Azure are available on GitHub on the <a href="https://github.com/Azure-Samples/ansible-playbooks" target="_blank"><span style="color: #0066cc;" color="#0066cc">Ansible Playbook Samples for Azure</span></a> page.

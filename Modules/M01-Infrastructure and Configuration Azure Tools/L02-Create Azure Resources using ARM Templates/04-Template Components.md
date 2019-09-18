@@ -1,14 +1,14 @@
-Azure Resource Manager templates are written in *JavaScript Object Notation* (JSON).
 
-JSON can be used to store and exchange descriptions of data objects in text format. JSON uses key-value pairs to describe data, and a JSON file can contain collections of key-value pairs to describe data objects. Each key is a string, and its corresponding value can be:
 
-- a string
-- a number
-- a Boolean expression
-- a list of values
-- an object (which is a collection of other key-value pairs)
+Azure Resource Manager templates are written in JSON, which allows you to express data stored as an object (such as a virtual machine) in text. A JSON document is essentially a collection of key-value pairs. Each key is a string, that's value can be:
 
-A Resource Manager template can contain the following key-value pair sections:
+- A string
+- A number
+- A Boolean expression
+- A list of values
+- An object (which is a collection of other key-value pairs)
+
+A Resource Manager template can contain sections that are expressed using JSON notation, but are not related to the JSON language itself:
 
 ```json
 {
@@ -21,13 +21,14 @@ A Resource Manager template can contain the following key-value pair sections:
     "outputs": {  }
 }
 ```
-Let's look at each of these key-value pair sections in a little more detail.
+
+Let's look at each of these sections in a little more detail.
 
 ### Parameters
 
-This is where you specify which values are configurable when the template runs. For example, you might allow users of your template to specify a username, password, or domain name.
+This section is where you specify which values are configurable when the template runs. For example, you might allow users of your template to specify a username, password, or domain name.
 
-The following example illustrates how the parameters section can be used. The example shows two configurable parameters, one for a VM's username and one for its password.
+Here's an example that illustrates two parameters: one for a virtual machine's (VM's) username, and one for its password:
 
 ```json
 "parameters": {
@@ -48,9 +49,9 @@ The following example illustrates how the parameters section can be used. The ex
 
 ### Variables
 
-This is where you define values that are used throughout the template. Variables can help make your templates easier to maintain. For example, you might define a storage account name within variable once and then reuse that variable throughout the template. If the storage account name changes, you only update the value within the variable.
+This section is where you define values that are used throughout the template. Variables can help make your templates easier to maintain. For example, you might define a storage account name one time as a variable, and then use that variable throughout the template. If the storage account name changes, you need to only update the variable once.
 
-The following example illustrates using variables to describe networking features for a VM.
+Here's an example that illustrates a few variables that describe networking features for a VM:
 
 ```json
 "variables": {
@@ -65,9 +66,9 @@ The following example illustrates using variables to describe networking feature
 
 ### Functions
 
-This is where you define procedures that you do not want to be repeated throughout the template. Like variables, functions can help make your templates easier to maintain.
+This section is where you define procedures that you don't want to repeat throughout the template. Similar to variables, functions can help make your templates easier to maintain. 
 
-The following example defines a function which outputs a unique name. The name can then be applied to resources that require a globally unique name.
+Here's an example that creates a function to create a unique name, for use when creating resources that have globally unique naming requirements:
 
 ```json
 "functions": [
@@ -95,7 +96,7 @@ The following example defines a function which outputs a unique name. The name c
 
 This section is where you define the Azure resources that make up your deployment.
 
-In the following example, the value of the 'name' key is an array of Public IP Address names.
+Here's an example that creates a public IP address resource:
 
 ```json
 {
@@ -112,15 +113,15 @@ In the following example, the value of the 'name' key is an array of Public IP A
 }
 ```
 
-In this example, the type of resource is `Microsoft.Network/publicIPAddresses`. The value of *name* is read from the variables array and the value of *location*, which actually refers to an Azure region, is read from the *parameters* array.
+Here, the type of resource is `Microsoft.Network/publicIPAddresses`. The **name** is read from the variables section, and the **location**, or *Azure region*, is read from the **parameters** section.
 
-The example illustrates how templates can be used to manage changing resource types, whereby `apiVersion` refers to a specific version of the resource type you want to use. As your resource types change over time, you can easily modify your templates to reference the specific resource type versions you need.
+Because resource types can change over time, `apiVersion` refers to the version of the resource type you want to use. As resource types evolve, you can modify your templates to work with the latest features.
 
 ### Outputs
 
-This is where you define any information you would like to receive when the template runs. For example, you might want to receive your VM's IP address or FQDN, i.e. information you do not know until after the deployment runs successfully.
+This section is where you define any information you'd like to receive when the template runs. For example, you might want to receive your VM's IP address or fully qualified domain name (FQDN), information you do not know until the deployment runs.
 
-The following illustrates shows an output named *hostname*. The FQDN is read from the VM's public IP address settings and assigned to the 'value' key.
+Here's an example that illustrates an output named **hostname**. The FQDN value is read from the VM's public IP address settings:
 
 ```json
 "outputs": {

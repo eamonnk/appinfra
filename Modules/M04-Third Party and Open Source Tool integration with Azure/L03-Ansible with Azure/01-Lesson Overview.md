@@ -3,7 +3,7 @@
 This lesson includes the following topics:
 
 - What is Ansible
-- Ansible Components
+- Ansible components
 - Installing Ansible
 - Ansible on Azure
 - Playbook structure

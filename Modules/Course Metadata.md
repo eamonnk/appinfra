@@ -37,7 +37,7 @@ cert_html_view_enabled:true
 #### Certificates Display Behavior	
 ###### Use 'end', 'early_with_info', or 'early_no_info'. After certificate generation, students who passed see a link to their certificates on the dashboard and students who did not pass see information about the grading configuration. The default is end, which displays this certificate information to all students after the course end date. To display this certificate information to all students as soon as certificates are generated, enter early_with_info. To display only the links to passing students as soon as certificates are generated, enter early_no_info.
 ```
-certificates_display_behavior:"early_with_info"
+certificates_display_behavior:"early_no_info"
 ```
 ---
 #### Course About Page Image	
@@ -50,7 +50,7 @@ course_image:"images_course_image.jpg"
 ###### It indicates what name will be used as the name in the course list
 ###### the $CourseTitle$ is a placeholder of Course Title, code will use the real course title to replace it
 ```
-display_name:"$CourseTitle$"
+display_name:"Implementing Application Infrastructure"
 ```
 ---
 #### Course Number Display String	
@@ -62,7 +62,7 @@ display_coursenumber:""
 #### Course Visibility In Catalog
 ###### Defines the access permissions for showing the course in the course catalog. This can be set to one of three values: 'both' (show in catalog and allow access to about page), 'about' (only allow access to about page), 'none' (do not show in catalog and do not allow access to an about page).
 ```
-catalog_visibility:"both"
+catalog_visibility:"about"
 ```
 
 ---
@@ -88,17 +88,10 @@ GRADE_CUTOFFS: {
 GRADER: [
         {
             "drop_count": 0, 
-            "min_count": 4, 
-            "short_label": "KC", 
-            "type": "Knowledge Check", 
-            "weight": 0.6
-        }, 
-        {
-            "drop_count": 0, 
             "min_count": 1, 
             "short_label": "Final", 
             "type": "Final Exam", 
-            "weight": 0.4
+            "weight": 1.0
         }
     ]
 ```

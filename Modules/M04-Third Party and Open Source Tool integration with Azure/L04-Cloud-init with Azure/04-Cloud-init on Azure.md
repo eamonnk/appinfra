@@ -1,35 +1,30 @@
-If `cloud-init` is already installed in the Linux image you are using, you do not need to do anything else to begin using `cloud-init`.
 
-Microsoft are actively working with Linux distribution partners to make more `cloud-init`-enabled images available in Azure marketplace. These images will make `cloud-init` deployments and configurations work seamlessly with VMs and VM Scale Sets (VMSS) in Azure.
+If cloud-init is already installed in the Linux image, you need not do anything else to use cloud-init because it works as soon as it is installed.
 
-The following table outlines the current availability of `cloud-init`-enabled images on the Azure platform.
+Microsoft is actively working with endorsed Linux distribution partners to have cloud-init enabled images available in the Azure marketplace. These images will make cloud-init deployments and configurations work seamlessly with VMs and VM Scale Sets. 
 
-|Publisher | Offer| SKU | Version | cloud-init ready|
+The following table outlines the current cloud-init enabled images available on the Azure platform.
+
+|Publisher|Offer|SKU|Version|cloud-init ready|
 |---|---|---|---|---|
-| Canonical | UbuntuServer |18.04-LTS | latest| yes |
-| Canonical | UbuntuServer |17.10 | latest| yes |
-| Canonical | UbuntuServer |16.04-LTS | latest | yes |
-| Canonical | UbuntuServer |14.04.5-LTS | latest | yes |
-| CoreOS | CoreOS | Stable | latest | yes |
-| OpenLogic | CentOS | 7-CI | latest | yes |
-| RedHat | RHEL | 7-RAW-CI | latest | yes |
+|Canonical|Ubuntu Server|18.04-LTS|latest|yes|
+|Canonical|Ubuntu Server|17.10|latest|yes|
+|Canonical|Ubuntu Server|16.04-LTS|latest|yes|
+|Canonical|Ubuntu Server|14.04.5-LTS|latest|yes|
+|CoreOS|CoreOS|Stable|latest|yes|
+|OpenLogic|CentOS|7-CI|latest|yes|
+|RedHat|RHEL|7-RAW-CI|latest|yes|
 
-> :information_source: Currently Azure Stack does not support the provisioning of RHEL 7.4 and CentOS 7.4 using cloud-init.
+> **Note**: Currently, Azure Stack does not support provisioning of Red Hat Enterprise Linux 7.4 and CentOS 7.4 using cloud-init.
 
-### Deploying a cloud-init-enabled Virtual Machine
-
-Deploying a `cloud-init`-enabled virtual machine is as simple as referencing a `cloud-init`-enabled distribution during deployment. Linux distribution maintainers have to choose to enable and integrate `cloud-init` into their base images published on Azure. Once you confirm that the image you want to deploy is `cloud-init`-enabled, you can use the Azure CLI to deploy the image.
+### Deploying a cloud-init enabled VM
+Deploying a cloud-init enabled VM is as simple as referencing a cloud-init enabled distribution during deployment. Linux distribution maintainers have to choose to enable and integrate cloud-init into their base Azure published images. After you've confirmed the image you want to deploy is cloud-init-enabled, you can use the Azure CLI to deploy the image. 
 
 ### Run a bash script with cloud-init
+With cloud-init, you don't need to convert your existing scripts into a cloud-config file; cloud-init accepts multiple input types, one of which is a Bash script. If you've been using the Linux Custom Script Azure Extension to run your scripts, you can migrate them to use cloud-init. However, while Azure extensions have integrated reporting to alert you if scripts fail, a cloud-init image deployment will not fail if the script fails.
 
-With `cloud-init` you do not need to convert your existing scripts into a cloud-config. `cloud-init` accepts multiple input types, including bash script.
+### What is the difference between cloud-init and the Windows Azure Linux Agent?
+Windows Azure Linux Agent (WALinuxAgent) is an Azure platform-specific agent that you use to provision and configure VMs, and manage Azure extensions.To allow existing cloud-init customers to use their current cloud-init scripts, Microsoft is enhancing the task of configuring VMs to use cloud-init instead of the Linux Agent. If you have existing investments in cloud-init scripts for configuring Linux systems, there are no additional settings required to enable them. 
 
-If you use the Linux Custom Script Azure Extension to run your scripts, you can migrate them to use `cloud-init`. However, Azure Extensions have integrated reporting to provide alerts on script failures. A `cloud-init` image deployment will NOT fail if the script fails.
+If you don't include the Azure CLI **--custom-data** switch at provisioning time, WALinuxAgent takes the minimal VM provisioning parameters required to provision the VM and complete the deployment with default settings. If you do reference the cloud-init **--custom-data** switch, whatever is contained in your custom data (individual settings or full script) overrides the WALinuxAgent defaults. 
 
-### What is the difference between cloud-init and the Linux Agent (WALA)?
-
-WALA is an Azure platform-specific agent used to provision and configure VMs, and handle Azure extensions. To allow existing `cloud-init` customers to use their current `cloud-init` scripts, Microsoft are working on configuring VMs to use `cloud-init` instead of the Linux Agent.
-
-If you have existing investments in `cloud-init` scripts for configuring Linux systems, there are no additional settings required to enable them.
-
-If you do not include the Azure CLI `--custom-data` switch at provisioning time, WALA takes the minimal VM provisioning parameters required to provision the VM and completes the deployment with the defaults. If you reference the `cloud-init` `--custom-data` switch, whatever is contained in your custom data (individual settings or full script) overrides the WALA defaults.

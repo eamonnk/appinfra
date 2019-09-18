@@ -1,13 +1,14 @@
-*Terraform* by Hashicorp is an open-source tool that allows you to provision, manage and version cloud infrastructure. It codifies infrastructure in configuration files that describe the topology of cloud resources, such as virtual machines, storage accounts, and networking interfaces.
+*HashiCorp Terraform* is an open-source tool that allows you to provision, manage, and version cloud infrastructure. It codifies infrastructure in configuration files that describes the topology of cloud resources such as VMs, storage accounts, and networking interfaces. 
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/terraformicon.png" alt="Icon representing Terraform which shows a stylized uppercase letter 'T' made up of segmented squares."></p>
+<p style="text-align:center;"><img src="../Linked_Image_Files/terraform-icon.png" alt="Terraform icon"></p>
 
-Terraform's Command-Line Interface (CLI) provides a simple mechanism to deploy and version your configuration files to Azure or any other supported cloud. The Terraform CLI also allows for the validation and preview of infrastructure changes before they are deployed.
+Terraform's command-line interface (CLI) provides a simple mechanism to deploy and version the configuration files to Azure or any other supported cloud service. The CLI also allows you to validate and preview infrastructure changes before you deploy them. 
 
-Terraform also supports multi-cloud scenarios. Multi-cloud support enables developers to use the same tools and configuration files to manage infrastructure on multiple cloud providers.
+Terraform also supports multi-cloud scenarios. This means it enables developers to use the same tools and configuration files to manage infrastructure on multiple cloud providers.
 
-Terraform can be run interactively form the CLI with individual commands or non-interactively as part of a Continuous Integration Pipeline.
+You can run Terraform interactively from the CLI with individual commands, or non-interactively as part of a continuous integration pipeline.
 
-There is also an enterprise version of Terraform available, called *Terraform Enterprise*.
+There is also an enterprise version of Terraform available, **Terraform Enterprise**.
 
-> :information_source: You can view more details about Terraform on the page [Hashicorp Terraform](https://www.terraform.io/).
+
+> **Note**: You can view more details about Terraform on the <a href="https://www.terraform.io/" target="_blank"><span style="color: #0066cc;" color="#0066cc">HashiCorp Terraform</span></a> website.

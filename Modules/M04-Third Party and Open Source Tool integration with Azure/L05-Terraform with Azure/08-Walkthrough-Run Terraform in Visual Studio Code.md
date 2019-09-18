@@ -1,0 +1,243 @@
+You can also run Terraform configuration files using Visual Studio Code. This leverages other Terraform services that you can integrate with Visual Studio Code. Two Visual Studio extensions that are required, are Azure Account, and Terraform.
+
+In this walkthrough you will create a VM in Visual Studio Code using Terraform
+
+### Prerequisites
+- You require Visual Studio Code
+- You require an Azure subscription to perform these steps. If you don't have one you can create one by following the steps outlined on the <a href="https://azure.microsoft.com/en-us/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio" target="_blank"><span style="color: #0066cc;" color="#0066cc">Create your Azure free account today</span></a> webpage.
+
+### Steps 
+
+1. If Visual Studio Code is not already installed, you will need to install it. You can download it from the <a href="https://code.visualstudio.com/" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://code.visualstudio.com/</span></a> website, and can install it on Windows, Linux, or macOS.
+
+2. In Visual Studio Code, select **File** > **Preferences** > **Extensions**.
+
+3. Search for and install the extension **Azure Account**.
+
+    <p style="text-align:center;"><img src="../Linked_Image_Files/vsc1.png" alt="Screenshot of Visual Studio Code with the extensions pane present and Azure Account extension listed and highlighted."></p>
+
+4. Search for and install the extension **Terraform**. Ensure that you select the extension authored by Microsoft, as there are a few available by other authors.
+
+   <p style="text-align:center;"><img src="../Linked_Image_Files/vscterraform1.png" alt="Screenshot of Visual Studio with the Terraform extension highlighted."></p>
+
+   You can view more details of this extension at the Visual Studio Marketplace on the <a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureterraform" target="_blank"><span style="color: #0066cc;" color="#0066cc">Azure Terraform</span></a> page.
+
+5. In Visual Studio Code, open the command palette by selecting **View** > **Command Palette**. You can also access the command palette by selecting the **settings** (cog) icon on the bottom, left side of the **Visual Studio Code** window, and then selecting **Command Palette**.
+
+    <p style="text-align:center;"><img src="../Linked_Image_Files/vsc3.png" alt="Screenshot of Visual Studio Code with view menu and command palette highlighted."></p>
+
+6. In the Command Palette search field, type **Azure:**, and from the results, select Azure: Sign In.
+
+    <p style="text-align:center;"><img src="../Linked_Image_Files/vsc5.png" alt="Screenshot of Visual Studio Code command palette with the Azure: command entered and Azure: Sign in command highlighted."></p>
+
+7. When a browser launches and prompts you to sign in to Azure, select your Azure account. The message *You are signed in now and can close this page.*, should display in the browser.
+
+    <p style="text-align:center;"><img src="../Linked_Image_Files/vsc4.png" alt="Screenshot of a browser with the message, You are signed in now and can close this page ."></p>
+ 
+8. Verify that your Azure account now displays at the bottom of the Visual Studio Code window.
+
+9. Create a new file and paste it in the following config file: 
+
+    ```yml
+    # Create a resource group if it doesn’t exist
+    resource "azurerm_resource_group" "myterraformgroup" {
+        name     = "terraform-rg2"
+        location = "eastus"
+    
+        tags {
+            environment = "Terraform Demo"
+        }
+    }
+    
+    # Create virtual network
+    resource "azurerm_virtual_network" "myterraformnetwork" {
+        name                = "myVnet"
+        address_space       = ["10.0.0.0/16"]
+        location            = "eastus"
+        resource_group_name = "${azurerm_resource_group.myterraformgroup.name}"
+    
+        tags {
+            environment = "Terraform Demo"
+        }
+    }
+    
+    # Create subnet
+    resource "azurerm_subnet" "myterraformsubnet" {
+        name                 = "mySubnet"
+        resource_group_name  = "${azurerm_resource_group.myterraformgroup.name}"
+        virtual_network_name = "${azurerm_virtual_network.myterraformnetwork.name}"
+        address_prefix       = "10.0.1.0/24"
+    }
+    
+    # Create public IPs
+    resource "azurerm_public_ip" "myterraformpublicip" {
+        name                         = "myPublicIP"
+        location                     = "eastus"
+        resource_group_name          = "${azurerm_resource_group.myterraformgroup.name}"
+        public_ip_address_allocation = "dynamic"
+    
+        tags {
+            environment = "Terraform Demo"
+        }
+    }
+    
+    # Create Network Security Group and rule
+    resource "azurerm_network_security_group" "myterraformnsg" {
+        name                = "myNetworkSecurityGroup"
+        location            = "eastus"
+        resource_group_name = "${azurerm_resource_group.myterraformgroup.name}"
+    
+        security_rule {
+            name                       = "SSH"
+            priority                   = 1001
+            direction                  = "Inbound"
+            access                     = "Allow"
+            protocol                   = "Tcp"
+            source_port_range          = "*"
+            destination_port_range     = "22"
+            source_address_prefix      = "*"
+            destination_address_prefix = "*"
+        }
+    
+        tags {
+            environment = "Terraform Demo"
+        }
+    }
+    
+    # Create network interface
+    resource "azurerm_network_interface" "myterraformnic" {
+        name                      = "myNIC"
+        location                  = "eastus"
+        resource_group_name       = "${azurerm_resource_group.myterraformgroup.name}"
+        network_security_group_id = "${azurerm_network_security_group.myterraformnsg.id}"
+    
+        ip_configuration {
+            name                          = "myNicConfiguration"
+            subnet_id                     = "${azurerm_subnet.myterraformsubnet.id}"
+            private_ip_address_allocation = "dynamic"
+            public_ip_address_id          = "${azurerm_public_ip.myterraformpublicip.id}"
+        }
+    
+        tags {
+            environment = "Terraform Demo"
+        }
+    }
+    
+    # Generate random text for a unique storage account name
+    resource "random_id" "randomId" {
+        keepers = {
+            # Generate a new ID only when a new resource group is defined
+            resource_group = "${azurerm_resource_group.myterraformgroup.name}"
+        }
+    
+        byte_length = 8
+    }
+    
+    # Create storage account for boot diagnostics
+    resource "azurerm_storage_account" "mystorageaccount" {
+        name                        = "diag${random_id.randomId.hex}"
+        resource_group_name         = "${azurerm_resource_group.myterraformgroup.name}"
+        location                    = "eastus"
+        account_tier                = "Standard"
+        account_replication_type    = "LRS"
+    
+        tags {
+            environment = "Terraform Demo"
+        }
+    }
+    
+    # Create virtual machine
+    resource "azurerm_virtual_machine" "myterraformvm" {
+        name                  = "myVM"
+        location              = "eastus"
+        resource_group_name   = "${azurerm_resource_group.myterraformgroup.name}"
+        network_interface_ids = ["${azurerm_network_interface.myterraformnic.id}"]
+        vm_size               = "Standard_DS1_v2"
+    
+        storage_os_disk {
+            name              = "myOsDisk"
+            caching           = "ReadWrite"
+            create_option     = "FromImage"
+            managed_disk_type = "Premium_LRS"
+        }
+    
+        storage_image_reference {
+            publisher = "Canonical"
+            offer     = "UbuntuServer"
+            sku       = "16.04.0-LTS"
+            version   = "latest"
+        }
+    
+        os_profile {
+            computer_name  = "myvm"
+            admin_username = "azureuser"
+            admin_password = "Password0134!"
+        }
+    
+        os_profile_linux_config {
+            disable_password_authentication = false
+            }
+        }
+    
+        boot_diagnostics {
+            enabled = "true"
+            storage_uri = "${azurerm_storage_account.mystorageaccount.primary_blob_endpoint}"
+        }
+    
+        tags {
+            environment = "Terraform Demo"
+        }
+    }
+    ```
+
+10. Test .tf, then save it locally, and call it `terraform-createvm.tf`.
+
+11. Save the file, and then select **View** > **Command Palette**. Search for the command **terraform**, and then select the following command:
+
+    ```yml
+    Azure Terraform: apply
+    ```
+
+    <p style="text-align:center;"><img src="../Linked_Image_Files/vscterraform2.png" alt="Screenshot of Visual Studio Code with the command palette open and the command Azure Terraform: apply selected."></p>
+
+12. If Azure cloud shell is not open in Visual Studio Code, a message might appear in the bottom, left corner asking you if you want to open the cloud shell. Accept, and select **Yes**.
+
+
+13. Wait for the Azure Cloud Shell pane to appear in the bottom of Visual Studio Code window, and start running the `.tf` file. When you are prompted to apply the plan or cancel, type **Yes**, and then press **Enter**.
+
+    <p style="text-align:center;"><img src="../Linked_Image_Files/vscterraform3.png" alt="Screenshot of the Visual Studio Code Azure Cloud shell pane running the terraform-createvm.tf config file. At the bottom, a prompt displays asking if you want to continue with the resultant plan, and the value Yes."></p>
+
+
+14. After the command completes successfully, review the list of resources created.
+
+   <p style="text-align:center;"><img src="../Linked_Image_Files/vscterraform4.png" alt="Screenshot of the deployed resources in Azure Cloud Shell pane, with the terraform apply command completed."></p>
+
+
+15. Open Azure and verify the resource group, resources, and VM has been created. If you have time, sign in with the user name and password specified in the .tf config file to verify.
+
+<p style="text-align:center;"><img src="../Linked_Image_Files/vscterraform5.png" alt="Screenshot of deployed resources in Microsoft Azure."></p>
+
+> **Note**: If you wanted to use a public or private key pair to connect to the Linux VM instead of a user name and password, you could use the **os_profile_linux_config** module, set the **disable_password_authentication** key value to **true** and include the ssh key details, as  in the following code. 
+
+```yml
+    os_profile_linux_config {
+        disable_password_authentication = true
+        ssh_keys {
+            path     = "/home/azureuser/.ssh/authorized_keys"
+            key_data = "ssh-rsa AAAAB3Nz{snip}hwhqT9h"
+        }
+    }
+```
+
+You'd also need to remove the password value in the **os_profile module** that present in the example above.
+
+> **Note**: You could also embed the Azure authentication within the script. In that case, you would not need to install the Azure account extension, as in the following example:
+
+```yml
+    provider "azurerm" {
+        subscription_id = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        client_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        client_secret   = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        tenant_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    }
+```

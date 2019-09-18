@@ -1,11 +1,13 @@
+
+
 This lesson includes the following topics:
 
-- Azure Resource Manager (ARM) Templates
+- Azure Resource Manager templates
 - Template Components
 - Quickstart Templates
 - Manage Dependencies
 - Modularize Templates
 - Managing Secrets in Templates
 - Template Extensions
-- Subscription Level Resources
+- Subscription-level Resources
 - Why Use ARM Templates

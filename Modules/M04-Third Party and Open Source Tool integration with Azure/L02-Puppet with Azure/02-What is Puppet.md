@@ -1,24 +1,16 @@
-*Puppet* is a platform that provides you with enterprise-ready automation tools, for deployment and configuration management. With Puppet you can automate an entire lifecycle on your Azure infrastructure, and add consistency and transparency to changes in your infrastructure.
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/puppet1.png" alt="Icon representing the Puppet automation platform. The icon depicts a lowercase 'p' character below three linked squares, which represent nodes."></p>
+*Puppet* is a deployment and configuration management toolset that provides you with enterprise tools that you need to automate an entire lifecycle on your Azure infrastructure. It also provides consistency and transparency into infrastructure changes.
 
-Puppet includes open source configuration management tools and projects, and *Puppet Enterprise*. Puppet Enterprise allows you to maintain state in your infrastructure and application deployments.
+Puppet provides a series of open-source configuration management tools and projects. It also provides Puppet Enterprise, which is a configuration management platform that allows you to maintain state in both your infrastructure and application deployments.
+
+<p style="text-align:center;"><img src="../Linked_Image_Files/puppet-logo.png" alt="Puppet icon"></p>
+
+
 
 ### Puppet architectural components
+Puppet operates using a client server model, and consists of the following core components:
 
-Puppet implements a client-server model and consists of the following core components.
-
-- *Puppet Master* acts as a center for activities and processes. Puppet Master is where code is compiled to create agent catalogs, and where SSL certificates are verified and signed. The Puppet Master always contains a *Compile Master* and a *Puppet Server*. As your installation grows, you can add additional compile masters to distribute the catalog compilation workload.
-
-- *Puppet Agent* is an application that runs on the resources (machines) managed by the Puppet Master, and allows the resources to be managed.
-
-- *Console Services* is a toolset for managing user permissions (RBAC), and for configuring managed resources. It also includes a web-based user interface for managing your systems, i.e. the Puppet Enterprise (PE) Console UI.
-
-- *Facts* - are metadata used to determine the state of the resources managed by Puppet. Puppet Agents collect facts and submit them to the Puppet Master, to track the state of resources.
-
-> :information_source: The following is a summary of the core architectural components of Puppet.
->
-> - Puppet Master acts as a center for Puppet activities and processes.
-> - Puppet Agent runs on machines managed by Puppet, to facilitate management.
-> - Console Services is a toolset for managing and configuring resources managed by Puppet.
-> - Facts are metadata used to determine the state of resources managed by Puppet.
+- Puppet Master. The *Puppet Master* is responsible for compiling code to create agent catalogs. It's also where Secure Sockets Layer (SSL) certificates are verified and signed. Puppet Enterprise infrastructure components are installed on a single node, the master. The master always contains a compile master and a Puppet Server. As your installation grows, you can add additional compile masters to distribute the catalog compilation workload.
+- Puppet Agent. *Puppet Agent* is the machine (or machines) managed by the Puppet Master. An agent that is installed on those managed machines allows them to be managed by the Puppet Agent.
+- Console Services. *Console Services* are the  web-based user interface for managing your systems. 
+- Facts. *Facts* are metadata related to state. Puppet will query a node and determine a series of facts, which it then uses to determine state.

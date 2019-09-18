@@ -1,4 +1,4 @@
-# What are review questions? #
+
 
 ## About review questions ##
 End-of-module review questions are for practice only and are not included in your grade for the course.  The final assessment at the end of the course is graded. 
@@ -140,6 +140,8 @@ A Control Machine in Ansible must have Python installed. Control Machine is one 
 [explanation]
 
 ---
+
+---
 ##Multiple choice##
 
 <<display_name:Review Question 7; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>
@@ -178,6 +180,7 @@ In Azure, you can add custom configurations to a Linux VM with cloud-init by app
 [explanation]
 
 ---
+
 ##Multiple choice##
 
 <<display_name:Review Question 9; weight:1; max_attempts:2; rerandomize:never; showanswer:finished; show_reset_button:false>>

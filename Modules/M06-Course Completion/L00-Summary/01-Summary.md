@@ -1,0 +1,2 @@
+
+ **This course is not eligible for a Certificate of Completion**. We encourage you to explore Microsoft [Role-based Certifications](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Flearning%2Fcertification-overview.aspx&data=02%7C01%7Cv-qixue%40microsoft.com%7C1bddcc213fcd4781758908d6f0e41e45%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636961259914010157&sdata=W17S9%2FINOGMkcxyZ%2Fv98Z9tCCkoc3GDISwmfJutt1ug%3D&reserved=0) for relevant technical roles and requirements. 

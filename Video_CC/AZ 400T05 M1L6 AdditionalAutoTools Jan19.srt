@@ -1,0 +1,224 @@
+1
+00:00:00,000 --> 00:00:02,430
+>> There are a number of
+ways to interact with Azure
+
+2
+00:00:02,430 --> 00:00:05,565
+and automate the building and
+configuration of services.
+
+3
+00:00:05,565 --> 00:00:07,590
+There are Azure SDKs,
+
+4
+00:00:07,590 --> 00:00:09,870
+Azure provides a number of
+software development kits,
+
+5
+00:00:09,870 --> 00:00:11,580
+SDKs to help you get up and
+
+6
+00:00:11,580 --> 00:00:14,355
+running on developing on
+Azure as quickly as possible.
+
+7
+00:00:14,355 --> 00:00:16,800
+Such as for,.NET, Java,
+
+8
+00:00:16,800 --> 00:00:19,620
+Node, Python, PHP and Go.
+
+9
+00:00:19,620 --> 00:00:21,570
+And there are many
+more development tools
+
+10
+00:00:21,570 --> 00:00:23,250
+details of which are available
+
+11
+00:00:23,250 --> 00:00:27,990
+on azure.microsoft.com
+or in github.com/azure.
+
+12
+00:00:27,990 --> 00:00:33,120
+There are also REST APIs,
+Representational State Transfer.
+
+13
+00:00:33,120 --> 00:00:36,480
+REST APIs are service
+endpoints that support
+
+14
+00:00:36,480 --> 00:00:40,215
+sets of HTTP operations or
+methods which provide Create,
+
+15
+00:00:40,215 --> 00:00:45,190
+Review, Update, or Delete Access
+to the service's resources.
+
+16
+00:00:45,190 --> 00:00:47,870
+Azure provides a comprehensive set of
+
+17
+00:00:47,870 --> 00:00:51,770
+REST APIs for Azure services
+which are available to use.
+
+18
+00:00:51,770 --> 00:00:55,715
+Azure Cloud Shell is also available
+as a management interface.
+
+19
+00:00:55,715 --> 00:00:57,800
+Azure Cloud Shell is a browser based
+
+20
+00:00:57,800 --> 00:01:00,185
+scripting environment for
+interacting with Azure.
+
+21
+00:01:00,185 --> 00:01:02,090
+It provides the
+flexibility of choosing
+
+22
+00:01:02,090 --> 00:01:04,360
+the shell experience that
+best suits the way you work.
+
+23
+00:01:04,360 --> 00:01:06,200
+And it's accessible from anywhere
+
+24
+00:01:06,200 --> 00:01:08,600
+using the latest versions
+of the following browsers,
+
+25
+00:01:08,600 --> 00:01:11,370
+Microsoft Edge, Microsoft
+Internet Explorer,
+
+26
+00:01:11,370 --> 00:01:14,685
+Chrome, Firefox, or Safari.
+
+27
+00:01:14,685 --> 00:01:17,610
+Linux users can opt
+for a Bash experience,
+
+28
+00:01:17,610 --> 00:01:20,210
+while Windows users can
+opt for PowerShell.
+
+29
+00:01:20,210 --> 00:01:22,580
+You can access
+the Cloud Shell from within
+
+30
+00:01:22,580 --> 00:01:28,355
+the Azure Portal or via
+https//shell.azure.com.
+
+31
+00:01:28,355 --> 00:01:30,290
+Azure also supports the use of
+
+32
+00:01:30,290 --> 00:01:32,885
+Package Management Solutions
+with Azure resources.
+
+33
+00:01:32,885 --> 00:01:35,810
+Package Management allows you to
+install all the software you need
+
+34
+00:01:35,810 --> 00:01:38,735
+into your VM during or
+after its deployment.
+
+35
+00:01:38,735 --> 00:01:40,400
+It's possible to manage all aspects
+
+36
+00:01:40,400 --> 00:01:41,930
+of software such as Installation,
+
+37
+00:01:41,930 --> 00:01:44,015
+Configuration, Upgrade,
+and Uninstall.
+
+38
+00:01:44,015 --> 00:01:46,700
+And there's a wide range of
+packaged software available for you
+
+39
+00:01:46,700 --> 00:01:50,400
+to install and use using
+the Package Managers.
+
+40
+00:01:50,840 --> 00:01:52,440
+There are a number of
+
+41
+00:01:52,440 --> 00:01:54,110
+Package Management Solutions
+available for you to
+
+42
+00:01:54,110 --> 00:01:57,755
+use depending on your environment
+and needs some of which are,
+
+43
+00:01:57,755 --> 00:01:59,720
+APT is the Package Management
+
+44
+00:01:59,720 --> 00:02:02,110
+Solution for Debian
+Linux environments.
+
+45
+00:02:02,110 --> 00:02:03,810
+YUM is the Package Management
+
+46
+00:02:03,810 --> 00:02:06,255
+Solution for CentOS
+Linux environments.
+
+47
+00:02:06,255 --> 00:02:08,700
+And Chocolatey is
+a Package Management Solution
+
+48
+00:02:08,700 --> 00:02:10,960
+for Windows built on PowerShell.
+

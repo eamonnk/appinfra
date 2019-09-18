@@ -1,16 +1,17 @@
-The following is a sample terraform .tf file. It performs the following actions on Azure:
+Take a moment to skim through the below sample terraform **.tf** file and try to identify the different elements within it. The file performs the below following on Azure:
 
-- authenticates
-- creates a resource group
-- creates a virtual network
-- creates a subnet
-- creates a public IP address
-- creates a network security group and rule
-- creates a virtual network interface card
-- creates a random text for a unique storage account name
-- creates a storage account for diagnostics
-- creates a virtual machine
+- Authenticates
+- Creates a resource group
+- Creates a virtual network
+- Creates a subnet
+- Creates a public IP address
+- Creates a network security group and rule
+- Creates a virtual network interface card
+- Creates a random text for a unique storage account name
+- Creates a storage account for diagnostics
+- Creates a virtual machine
 
+### Sample Terraform .tf file
 
 ```yml
 # Configure the Microsoft Azure Provider

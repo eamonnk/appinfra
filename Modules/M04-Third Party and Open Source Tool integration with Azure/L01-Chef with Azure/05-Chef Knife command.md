@@ -1,34 +1,31 @@
-With Chef, the `knife` command is a available from the command line. The Chef Development Kit contains the `knife` command, and you can use the command to for a variety of tasks.  The following describes some command line uses for Chef and the `knife` command.
 
-- Use the Chef to generate a cookbook template by running the following command.
 
-  ```ruby
+*Knife* is a command that's available from the command line. It's made available as part of the Chef Development Kit installation. You can use the **Knife** command to complete a wide variety of tasks, such as:
+
+- Generate a cookbook template. You do this by running the following command:
+
+    ```ruby
     chef generate cookbook < cookbook name >
-  ```
+    ```
 
-- The following shows how to use the `knife` command to upload a cookbook to the Chef Automate server.
+- Upload your cookbooks and recipes to the Chef Automate server using the following command:
 
-  ```ruby
+    ```ruby
     knife cookbook upload < cookbook name> --include-dependencies
+    ```
 
-  ```
+- Create a role to define a baseline set of cookbooks and attributes that you can apply to multiple servers. Use the following command to create this role:
 
-- Use `knife` to create a role by running the following command. Roles can define a baseline set of cookbooks and attributes that can be applied to multiple servers.
-
-  ```ruby
+    ```ruby
     knife role create < role name >
-  ```
+    ```
 
-- Running the following the `knife` command bootstraps the MRP app server and assigning the MRP application role.
+- Bootstrap the a node or client and assign a role using the following command:
 
-  ```ruby
-    knife bootstrap < FQDN-for-App-VM > --ssh-user <app-admin-username> --ssh-password <mrp-app-admin-password> --node-name  < node name > --run-list role[ < role you defined > ] --sudo --verbose
-  ```
+    ```ruby
+     knife bootstrap < FQDN-for-App-VM > --ssh-user <app-admin-username> --ssh-password <app-vm-admin-password> --node-name  < node name > --run-list role[ < role you defined > ] --sudo --verbose
+    ```
 
->:information_source: In addition to provisioning virtual machines in Azure using `knife`, it is possible to bootstrap Chef VM Extensions for Windows and Linux. For more information see the `cloud-api` bootstrap option in the [Knife plugin documentation](https://github.com/chef/knife-azure).
->
-> It is also possible to install the `Chefextension` to an azure virtual machine using PowerShell.
->
-> You can even manage your Chef server configuration and node deployments, via a browser by installing the *Chef Management Console*.
->
-> For more information about using Chef with Azure virtual machines see the page [Automating Azure virtual machine deployment with Chef](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/chef-automation).
+You can also bootstrap Chef VM extensions for the Windows and Linux operating systems, in addition to provisioning them in Azure using the **Knife** command. For more information, look up the ‘cloud-api’ bootstrap option in the Knife plugin documentation at <a href="https://github.com/chef/knife-azure" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://github.com/chef/knife-azure</span></a>.
+
+> **Note**: You can also install the Chef extensions to an Azure VM using Windows PowerShell. By installing the Chef Management Console, you can manage your Chef server configuration and node deployments via a browser window.

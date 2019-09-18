@@ -1,21 +1,21 @@
-Chef is available to deploy on Azure from the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/chef-software.chef-automate?tab=Overview) using the *Chef Automate* image.
 
-Chef Automate is a Chef product that allows you to package and test your applications. With Chef Automate you can provision and update your infrastructure, and manage it with compliance and security checks and dashboards that give you visibility into your entire stack.
 
-The Chef Automate image available from Azure Marketplace includes Chef Server. It provides all the functionality of the legacy Chef Compliance server and allows you to build, deploy and manage your applications and infrastructure on Azure. The Chef Automate image on Azure Marketplace is available to try without a license for up to 30 days. Using the image beyond the 30 day trail period requires a software license from Chef.
+You can deploy Chef on Microsoft Azure from the Azure Marketplace using the Chef Automate image. *Chef Automate* is a Chef product that allows you to package and test your applications, and provision and update your infrastructure. Using Chef, you can manage all of it with compliance and security checks, and dashboards that give you visibility into your entire stack.
 
-### Chef Automate structure and function
+The Chef Automate image is available on the Azure Chef Server and has all the functionality of the legacy Chef Compliance server. You can build, deploy, and manage your applications and infrastructure on Azure. Chef Automate is available from the Azure Marketplace, and you can try it out with a free 30-day license. You can deploy it in Azure straight away.
 
-Chef Automate integrates with the open-source products *Chef*, *InSpec* and *Habitat*, as well as associated tools, such as *Chef-client*, *ChefDK*, etc. The following image provides an overview of Chef Automate, how it is structured, and how it functions.
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/chefautomate.png" alt="Diagram representing a high-level overview of the Chef Automate architecture. The diagram shows three rows. Each row contains different components of the Chef Automate architecture. Collectively, the rows and their contents illustrate the various components that comprise the Chef Automate architecture."></p>
+### Chef Automate structure and Function
+Chef Automate integrates with the open-source products Chef, InSpec, and Habitat, and their associated tools, including chef-client and ChefDK. The following image is an overview of the structure of Chef Automate, and how it functions.
 
-- [Habitat](https://docs.microsoft.com/en-us/azure/chef/chef-habitat-overview) is an open-source project that offers a new approach to application management. Habitat makes the application and its automation the unit of deployment. Habitat implements this novel approach by creating platform-independent build artifacts. Artifacts can run on traditional servers and virtual machines, or be exported into your preferred container platform, which allows you to deploy your applications in any environment. Applications are wrapped in a lightweight 'habitat', so that the runtime environment, whether it is a container, bare metal, or PaaS, is no longer the main focus. The result is that the runtime environment does not constrain the application.
+<p style="text-align:center;"><img src="../Linked_Image_Files/chefautomate.png" alt="The high-level Chef Automate architecture contains a box labeled Collaborate, which sits on top of three boxes labeled Build, deploy and Manage. These three boxes are over a box labeled OSS Automation Engines, which in turn sits over boxes labeled Chef, habitat and InSpec."></p>
 
-- [InSpec](https://docs.microsoft.com/en-us/azure/chef/chef-inspec-overview) is a free and open-source framework for testing and auditing your applications and infrastructure. InSpec works by comparing the actual state of your system with the desired state. You can define desired states in easy-to-read and easy-to-write InSpec code. InSpec detects violations and displays its findings in the form of reports, but InSpec puts you in control of remediation. You can use InSpec to validate the state of the virtual machines you have running in Azure. You can also use InSpec to scan and validate the state of resources and resource groups inside of a subscription.
+- Habitat. Habitat  is an open-source project that offers an entirely new approach to application management. It makes the application and its automation the unit of deployment by creating platform-independent build artifacts that can run on traditional servers and virtual machines (VMs). They also can be exported into your preferred container platform, enabling you to deploy your applications in any environment. When applications are wrapped in a lightweight “habitat” (the runtime environment), whether the habitat is a container, a bare metal machine, or platform as a service (PaaS) is no longer the focus and does not constrain the application.
 
-> :information_source: *Habitat* and *InSpec* are two open-source products that are integrated into the Chef Automate image available from Azure Marketplace.
->
-> - Habitat makes the application and its automation the unit of deployment, by allowing you to create platform-independent build artifacts called 'habitats' for your applications.
->
-> - InSpec allows you to define desired states for your applications and infrastructure. InSpec can conduct audits to detect violations against your desired state definitions, and generate reports from its audit results.
+For more information about Habitat, see the <a href="https://docs.microsoft.com/en-us/azure/chef/chef-habitat-overview" target="_blank"><span style="color: #0066cc;" color="#0066cc">Use Habitat to deploy your application to Azure</span></a> page.
+
+- InSpec. InSpec is a free and open-source framework for testing and auditing your applications and infrastructure. InSpec works by comparing the actual state of your system with the desired state that you express in easy-to-read and easy-to-write InSpec code. InSpec detects violations and displays findings in the form of a report, but puts you in control of remediation. 
+
+You can use InSpec to validate the state of your VMs running in Azure. You can also use InSpec to scan and validate the state of resources and resource groups inside a subscription.
+
+More information about InSpec is available at <a href="https://docs.microsoft.com/en-us/azure/chef/chef-inspec-overview" target="_blank"><span style="color: #0066cc;" color="#0066cc">Use InSpec for compliance automation of your Azure infrastructure</span></a>.

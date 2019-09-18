@@ -2,8 +2,8 @@
 
 This lesson includes the following topics:
 
-- Additional Automation Tools
+- Additional automation tools
 - Azure SDKs
 - Azure REST APIs
 - Azure Cloud Shell
-- Package Management
+- Package management

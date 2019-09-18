@@ -1,7 +1,9 @@
+
+
 This lesson includes the following topics:
 
-- Installing Azure CLI
 - What is Azure CLI
-- Run Templates using Azure CLI
-- Extensions
+- Walkthrough-Installing Azure CLI
 - Working with Azure CLI
+- Walkthrough-Run Templates using Azure CLI
+- Extensions

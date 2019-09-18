@@ -1,0 +1,21 @@
+
+Manually executing environment provisioning and configuration management is both laborious and error prone. Microsoft Azure DevOps advocates automation to reduce the probability of errors introduced through manual execution. Automation also delivers the added advantage of carrying out the work more quickly without relying on subject experts. 
+
+Microsoft Azure is built to support automation from the ground up. <a href="https://azure.microsoft.com/en-us/documentation/articles/automation-intro/" target="_blank"><span style="color: #0066cc;" color="#0066cc">Azure Automation</span></a> is an Azure service that provides a way for users to automate the manual, long-running, error-prone, and frequently repeated tasks that are commonly performed in a cloud and enterprise environment. Azure  Automation saves time and increases the reliability of regular administrative tasks. You can even schedule the tasks to be automatically performed at regular intervals. You can automate processes using runbooks, or automate configuration management by using Desired State Configuration (DSC).
+
+<p style="text-align:center;"><img src="../Linked_Image_Files/azureautomation.png" alt="Azure Automation icon"></p>
+
+Azure Automation is not the only way to automate within Azure. You can also use open-source tools to perform some of these operations, but the integration hooks available to Azure Automation remove much of the integration complexity that you would have to manage if you performed these operations manually.
+
+Some Azure Automation capabilities are:
+
+- Process automation: Azure Automation provides you the ability to automate frequent, time-consuming, and error-prone cloud management tasks. 
+- Azure Automation State Configuration. This is an Azure service that allows you to write, manage, and compile Windows PowerShell DSC configurations, import DSC Resources, and assign configurations to target nodes, all in the cloud. For more information, visit <a href="https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview" target="_blank"><span style="color: #0066cc;" color="#0066cc">Azure Automation State Configuration Overview</span></a>.  
+- Update management. Get update compliance visibility across Azure, on-premises, and for other cloud services. You can create schedule deployments to orchestrate update installations within a defined maintenance window. For more information, visit <a href="https://docs.microsoft.com/en-us/azure/automation/automation-update-management" target="_blank"><span style="color: #0066cc;" color="#0066cc">Update Management solution in Azure</span></a>.
+- Start and stop virtual machines (VMs). Azure Automation provides an integrated Start/Stop VM–related resource that enables you to start and stop VMs on user-defined schedules. It also provides insights through Azure Log Analytics, and can send emails by using action groups. For more information, see <a href="https://docs.microsoft.com/en-us/azure/automation/automation-solution-vm-management" target="_blank"><span style="color: #0066cc;" color="#0066cc">Start/Stop VMs during off-hours solution in Azure Automation</span></a>.
+-  Integration with Github, Azure DevOps Git, or Team Foundation Version Control (TFVC) repositories. For more information, see <a href="https://docs.microsoft.com/en-us/azure/automation/source-control-integration" target="_blank"><span style="color: #0066cc;" color="#0066cc">Source control integration in Azure Automation</span></a>
+- Automate common tasks. Automate common tasks with resources in Amazon Web Services (AWS) using Automation runbooks in Azure. For more information, see <a href="https://docs.microsoft.com/en-us/azure/automation/automation-config-aws-account" target="_blank"><span style="color: #0066cc;" color="#0066cc">Authenticate Runbooks with Amazon Web Services (AWS)</span></a>.
+- Manage Shared resources. Azure Automation consists of a set of shared resources (such as connections, credentials, modules, schedules, and variables) that make it easier to automate and configure your environments at scale.
+- Running backups. Azure Automation a very helpful for running regular backups of non-database systems, such as backing up Blob storage at certain intervals.
+
+Azure Automation works across hybrid cloud environments in addition to Windows and Linux operating systems.

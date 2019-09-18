@@ -1,15 +1,15 @@
-In software development, release schedules are often prioritized. As a result, development projects include provisions for revisiting any non-optimal implementations. For example, development teams may need to postpone fixing non-critical bugs, or skip meeting localization and accessibility criteria, until the end of a release cycle. As this pattern emerges, teams inevitably begin building up outstanding work, called *Technical Debt*, which will need to be completed at a future time (i.e. like a debt that needs to be paid back).
 
-Coded scripts, templates and definition files can be hard to understand, fragile, time-consuming to change, and difficult to validate. Accruing too much technical debt can undermine productivity by creating unforeseen workloads that will eventually impede progress. Without proper planning and management, technical debt can place huge demands on an organization’s resources which may subsequently cause problems for the organization.
+*Technical debt* is a set of problems in a development effort that make progress on customer value inefficient. We think of our scripts, templates, and definition files as code; technical debt undermines productivity by making this code fragile, hard to understand, time-consuming to change, and difficult to validate. This in turn creates unplanned work that blocks progress. 
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/technicaldebt.png" alt="Image showing a graph with a vertical axis representing cost, and a horizontal axis representing time. Within the graph, there is a box containing icons. The icons represent code, complexity and work. A second box, further along the time axis, which is shown becoming larger over time, contain the previous three icons, but each icon is larger to indicate greater associated costs."></p>
+Technical debt saps an organization’s strength because of high customer-support costs. Eventually, some combination of these issues produces larger problems.
 
-Technical debt is *insidious*. In other words, technical debt starts small and grows over time as a result of rushed changes or a lack of context and discipline. It can materialize from nowhere, even for projects that are seemingly manageable, due to unanticipated changes during a project's lifecycle. For example, a product produced for a particular market might be proposed for international release, which creates technical debt relating to localization. The technical debt introduced to your application has repercussions that need to be addressed.
+Technical debt is insidious, meaning it starts small and grows over time as a result of rushed changes, and lack of context and discipline. It can seemingly materialize out of nowhere (even for a project regarded as clean), because of changes in project circumstances. For example, a product produced for  one particular market might be considered for international release. This instantly creates debt related to its ability to localize. The technical debt introduced to the application will have repercussions later on, and will need to be addressed at some stage.
 
-### Examples of Technical Debt
+<p style="text-align:center;"><img src="../Linked_Image_Files/technicaldebt.png" alt="A graph with a horizontal axis representing money, and a vertical axis representing time. Within the graph is a box containing icons for code, complexity, and work. A second, larger box further along the time axis contains the same three icons, but they are larger, representing a larger cost."></p>
 
-Technical debt includes anything the team must do to deploy production quality code and to keep it running in production. Some examples of technical debt are:
 
+### Examples of technical debt
+Technical debt includes anything the team must do to deploy production quality code and keep it running in production. Examples of technical debt can be:
 - Bugs
 - Performance issues
 - Operational issues
@@ -17,17 +17,30 @@ Technical debt includes anything the team must do to deploy production quality c
 - Manual updates or configurations not implemented using infrastructure or configuration as code methodologies, such as version control
 - Changes made 'on-the-fly', or directly to an application, without using DevOps methodologies
 - Switching to technologies or versions not accounted for in your development process
+- Updates to platform or services that you were not aware of or have not accounted for.
 
-### How to deal with Technical Debt
 
-Technical debt is not necessarily something to be eliminated, rather it needs to be properly planned for and managed effectively. The following are considerations for managing technical debt.
+#### Consider the following:
+- Question? Can Azure Resource Manager templates contain technical debt?
 
-- Try to understand, locate and identify the technical debt within the code.
-- Evaluate remediation costs and non-remediation costs. Fixing technical debt has a cost. Not fixing it also has a cost. The latter costs may be greater, and more complex to evaluate.
-- Implement policies that avoid building up unnecessary technical debt, and that push debt down. For example, create policies to prohibit manual configurations or require periodic updates to Azure Resource Manager Templates, for new API versions, as part of your development process.
-- Foster an environment where developers are encouraged to tackle technical debt as part of their day-to-day work. This avoids positing technical debt as a hugely overwhelming, time-consuming or tiresome 'chore'.
-- Track technical debt over time to ensure that it trends in the right direction and meets your defined policies.
-- Remediate technical debt as efficiently and automatically as possible.
-- Prioritize technical debt along with new application features and desired functionality.
+- Answer: Yes. Azure resource Manage templates deploy and configure resources in Azure. Azure is a cloud based platform and is continually changing and evolving. When deploying resources using templates, you frequently need to retrieve information about the resource providers and types. As a resource provider enables new features, it releases a new version of the REST API. As such components within your resource manager templates which rely on API versions to provision and configure resources may need periodic updating.
 
-> :information_source: A good first step towards dealing with technical debt is to try to quantify it. This can be done using such tools as [SonarQube](https://www.sonarqube.org/).
+    A solution to address this could be to validate API versions in your templates to ensure they are current and not deprecated, as part of your general work development work.
+
+
+### How to manage technical debt
+Technical debt is not necessarily eliminated, rather it is managed. Some considerations when managing technical debt include:
+
+- Understanding and identifying the debt and where in the code it is located.
+- Evaluating the costs of remediation and non-remediation. Fixing technical debt has a cost. But not fixing it also has a cost, which may be larger and complex to evaluate.
+- Putting policies in place that focus on preventing debt from becoming worse, and managing it down. This may include: 
+	- Allowing for periodic updates to Microsoft Azure Resource Manager templates for new API versions as part of your general development work.
+	- Ensuring that no manual configurations are allowed.
+- Exposing developers in a non-overwhelming way to the debt required to meet the policies, so they can regard it as a natural part of their day-to-day development process and not as a time-consuming and tiresome chore.
+- Tracking debt over time to ensure that it’s trending in the right direction and meeting defined policies.
+- Remediating debt as efficiently and automatically as possible.
+- Prioritizing debt along with new application features and desired functionality.
+
+
+> **Note**: A first step when working with technical debt is to try to quantify it. You can do this using a tool such as<a href="https://www.sonarqube.org/" target="_blank"><span style="color: #0066cc;" color="#0066cc"> SonarQube</span></a>. 
+

@@ -1,73 +1,79 @@
-Chef uses a *cookbook* to define a set of commands that you want to execute on your managed client.
 
-A cookbook is a set of tasks for configuring an application or feature. It defines a scenario and everything required to support that scenario. Within a cookbook, there are a series of *recipes* that define a set of actions to perform. Cookbooks and recipes are written in the Ruby language.
 
-You can assign a *role* to cookbooks. Roles define a baseline set of cookbooks and attributes that can be applied to multiple servers.
+Chef uses a cookbook to define a set of commands that you execute on your managed client. A *cookbook* is a set of tasks that you use to configure an application or feature. It defines a scenario and everything required to support that scenario. Within a cookbook, there are a series of *recipes*, which define a set of actions to perform. Cookbooks and recipes are written in the Ruby language.
 
-### Creating cookbooks
+After you create a cookbook, you can then create a  Role. A *Role* defines a baseline set of cookbooks and attributes that you can apply to multiple servers. To create a cookbook, you use the **chef generate cookbook** command.
 
-Cookbooks are created with the `chef generate cookbook` command.
 
-Before creating a cookbook, you should first configure your Chef Workstation by setting up the *Chef Development Kit* on your local workstation. You connect to and manage your Chef server from the Chef Workstation.
+### Creating a cookbook
+Before creating a cookbook, you first configure your Chef Workstation by setting up the Chef Development Kit on your local workstation. You'll use the Chef workstation to connect to and manage your Chef server.
 
-1. Download and install the [Chef Development Kit](https://downloads.chef.io/chefdk). Be sure to choose the version of the Chef Development Kit appropriate to your environment's operating system. It is important that you select the correct version, i.e. Linux Debian, Red Hat Enterprise Linux, macOS, SUSE Linux Enterprise Server, Ubuntu or Windows. The following steps use the Chef Development Kit for Windows.
+> **Note**: You can download and install the Chef Development Kit from <a href="https://downloads.chef.io/chefdk" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://downloads.chef.io/chefdkt</span></a>.
+>
+> Choose the Chef Development Kit that is appropriate to your operating system and version. For example:
+> - macOSX/macOS
+> - Debian
+> - Red Hat Enterprise Linux SUSE
+> - Linux Enterprise Server
+> - Ubuntu
+> - Windows
 
-2. Chef is installed under the `C:\Chef` directory. This directory is created during installation of the Chef Development Kit (Chefdk). In the following example, running the command `chef generate cookbook webserver` calls the Cookbook Web Server for a policy that automatically deploys IIS. This will generate a set of files under the directory `C:\Chef\cookbooks\webserver`.
 
-  ```ruby
+
+1. Installing the Chef Development Kit creates the Chef workstation automatically in your **C:\Chef** directory. After installation completes, run the following example command that calls the Cookbook web server for a policy that automatically deploys IIS:
+
+    ```ruby
     chef generate cookbook webserver
-  ```
+    ```
 
-3. Next, you will define a set of commands for the Chef client to execute on a managed virtual machine. The commands will be stored in the file `default.rb`. For this example, the set of commands you define install IIS, start IIS, and copy a template file to the `wwwroot` directory.
+    This command generates a set of files under the directory **C:\Chef\cookbooks\webserver**. Next, you need to define the set of commands that you want the Chef client to execute on your managed virtual machine. The commands are stored in the **default.rb** file. 
 
-    Modify the file `C:\chef\cookbooks\webserver\recipes\default.rb` by adding the following lines:
+2. For this example, a set of commands will be defined that installs and starts Microsoft Internet Information Services (IIS), and copies a template file to the **wwwroot** folder. Modify the **C:\chef\cookbooks\webserver\recipes\default.rb** file by adding the following lines:
 
-  ```ruby
+    ```ruby
     powershell_script 'Install IIS' do
-
+    
     action :run
-
+    
     code 'add-windowsfeature Web-Server'
-
+    
     end
-
+    
     service 'w3svc' do
-
+    
     action [ :enable, :start ]
-
+    
     end
-
+    
     template 'c:\inetpub\wwwroot\Default.htm' do
-
+    
     source 'Default.htm.erb'
-
+    
     rights :read, 'Everyone'
-
+    
     end
-  ```
+    ```
 
-3. Now, save the file.
+3. Save the file after you are done.
 
 4. To generate the template, run the following command:
 
-  ```ruby
+    ```ruby
     chef generate template webserver Default.htm
-  ```
+    ```
 
-5. Now, navigate to the file `C:\chef\cookbooks\webserver\templates\default\Default.htm.erb`. Edit the file by adding some simple *Hello World* HTML code, and then save the file.
+5. Now navigate to the **C:\chef\cookbooks\webserver\templates\default\Default.htm.erb** file. Edit the file by adding some simple **Hello World** HTML code, and then save the file. 
 
-6. Upload the cookbook to the Chef Server so that it appears under the **Policy** tab by running the following command:
+6. Run the following command to upload the cookbook to the Chef Server so that it appears under the **Policy** tab:
 
-  ```ruby
+    ```ruby
     chef generate template webserver Default.htm
-  ```
+    ```
 
-You have created your first cookbook for use.
+We have now created our cookbook and it's ready to use. 
 
-### Using cookbooks
+The next steps (which we will not be covering at this time), would be to:
 
-Providing a detailed account of the next steps that are required to use cookbook are beyond the scope of this lesson. However, the following is a brief overview of the steps you would need to take to use the cookbook.
-
-- Create a *Role* to define a baseline set of cookbooks and attributes to be applied to multiple servers.
-- Create a *Node* to deploy the configuration to, i.e. the machine you want to configure.
-- Bootstrap the machine to add the role to the node, i.e. deploy the configuration to the machine using Chef.
+1. Create a role to define a baseline set of cookbooks and attributes that you can apply to multiple servers.
+2. Create a node to deploy the configuration to the machine you want to configure.
+3. Bootstrap the machine using Chef to add the role to the node that deployed the configuration to the machine.

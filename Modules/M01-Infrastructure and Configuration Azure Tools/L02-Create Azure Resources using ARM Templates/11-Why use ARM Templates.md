@@ -1,29 +1,15 @@
-Using Azure Resource Manager templates makes your deployments faster and more repeatable. For example, with templates, you do not need to create a VM in Azure portal, wait for it to finish, then create the next VM, and so on. Azure Resource Manager takes care of the entire deployment for you.
+Using Resource Manager templates will make your deployments faster and more repeatable. For example, you no longer have to create a VM in the portal, wait for it to finish, then create the next VM, and so on. Resource Manager takes care of the entire deployment for you.
 
-The following are benefits to using Azure Resource Manager templates.
+Here are some other template benefits to consider:
 
-:one: **Templates improve consistency**
+* Templates improve consistency. Resource Manager templates provide a common language for you and others to describe your deployments. Regardless of the tool or SDK that you use  to deploy the template, the structure, format, and expressions inside the template remain the same.
 
-Resource Manager templates provide a common language for describing your deployments. Regardless of which tool or SDK is used to deploy the template, the structure, format, and expressions inside the template remain the same.
+* Templates help express complex deployments. Templates enable you to deploy multiple resources in the correct order. For example, you wouldn't want to deploy a virtual machine prior to creating an operating system (OS) disk or network interface. Resource Manager maps out each resource and its dependent resources, and creates dependent resources first. Dependency mapping helps ensure that the deployment is carried out in the correct order.
 
-:two: **Templates help express complex deployments**
+* Templates reduce manual, error-prone tasks. Manually creating and connecting resources can be time consuming, and it's easy to make mistakes. Resource Manager ensures that the deployment happens the same way every time.
 
-Templates enable you to deploy multiple resources in the correct order. For example, you can create an OS Disk Image or Network Interface before you deploy a VM. Templates map the dependent resources to each resource. Using the template, Azure Resource Manager begins by creating each of the dependent resources first. Dependency mapping helps ensure that your deployments occur in the correct order.
+* Templates are code. Templates express your requirements through code. Think of a template as a type of Infrastructure as Code that can be shared, tested, and versioned similar to any other piece of software. Also, because templates are code, you can create a "paper trail" that you can follow. The template code documents the deployment. Most users maintain their templates under some kind of revision control, such as GIT. When you change the template, its revision history also documents how the template (and your deployment) has evolved over time.
 
-:three: **Templates reduce manual, error-prone tasks**
+* Templates promote reuse. Your template can contain parameters that are filled in when the template runs. A parameter can define a username or password, a domain name, and so on. Template parameters enable you to create multiple versions of your infrastructure, such as staging and production, while still utilizing the exact same template.
 
-Manually creating and connecting resources can be time consuming, and mistakes can be made along the way. Azure Resource Manager ensures your deployments happen the same way every time.
-
-  ![Image representing a three tier template file. An icon representing a script is shown at the top. Three arrows point outwards from the script icon. Each of the arrows points to an icon below the script icon. The first arrow points to an icon representing a SQL database, the second arrow points to an icon representing an App Service, and the third icon points to an icon representing a Virtual Machine. The SQL database and App Service icons are linked with an additional arrow, below the icons. The arrow is labelled 'reference()', to indicate that the SQL database template uses the reference function to call the App Service template. The text label 'Resource Group' is shown in the bottom right corner of the image, to indicate that all three services belong to the same resource group.](../Linked_Image_Files/3-tier-template.png)
-
-:four: **Templates are code**
-
-Templates allow you to define your requirements in code. Think of a template as a type of *Infrastructure as Code* that can be shared, tested, and version-controlled, just like any other piece of software. Also, because templates are code, they create a 'paper trail' which can be traced to help resolve issues. The template code acts as a record of your deployments. Most users maintain their templates under some kind of revision control, such as Git. When you change the template, its revision history also help track changes to the template (and your deployments) over time.
-
-:five: **Templates promote reuse**
-
-Your template can contain parameters that are assigned values when the template runs. A parameter can define a username or password, a domain name, and so on. Template parameters enable you to create and utilize the same templates across different implementations of your infrastructure, such as your staging and production environments.
-
-:six: **Templates are linkable**
-
-Azure Resource Manager templates can be linked together, which supports modularization. You can write small templates, each of which defines a particular piece of your solution and then combine them to create a complete system.
+* Templates are linkable. You can link Resource Manager templates together to make the templates themselves modular. You can write small templates that each define a piece of a solution, and then combine them to create a complete system.

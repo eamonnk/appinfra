@@ -5,7 +5,7 @@
 
 #### Module 4 - Third Party and Open Source Tool integration with Azure
 
-This course includes labs in which you can try out the techniques demonstrated in the course for yourself.
+This course includes labs in which you can try out the techniques demonstrated in the course.
 
 Steps for the labs are available on **GitHub** at the below sites under the **Infrastructure as Code** sections
 
@@ -14,12 +14,13 @@ Steps for the labs are available on **GitHub** at the below sites under the **In
 
 You should click on the links below, for the individual lab tasks for this module, and follow the steps outlined there for each lab task.
 
-This Lab contain the following tasks:
 
-1) **PartsUnlimitedMRP (PUMRP)**
+**PartsUnlimitedMRP (PUMRP)**
 
-    - <a href="http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-DeployappwithChefonAzure.html" target="_blank"><span style="color: #0066cc;" color="#0066cc">Deploy app with Chef on Azure </span></a>
-    - <a href="http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-DeployappwithPuppetonAzure.html" target="_blank"><span style="color: #0066cc;" color="#0066cc">Deploy app with Puppet on Azure</span></a>
-    - <a href="http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-AnsiblewithAzure.html" target="_blank"><span style="color: #0066cc;" color="#0066cc">Ansible with Azure</span></a>
+- <a href="http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-DeployappwithChefonAzure.html" target="_blank"><span style="color: #0066cc;" color="#0066cc">Deploy app with Chef on Azure </span></a>
+
+- <a href="http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-DeployappwithPuppetonAzure.html" target="_blank"><span style="color: #0066cc;" color="#0066cc">Deploy app with Puppet on Azure</span></a>
+
+- <a href="http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-AnsiblewithAzure.html" target="_blank"><span style="color: #0066cc;" color="#0066cc">Ansible with Azure</span></a>
 
  

@@ -1,16 +1,22 @@
-In the context of Infrastructure and Configuration as Code, *Idempotency* is the application of one or more operations, against a resource, which result in the same outcome.
 
-With idempotency, using a script or template to apply a deployment to a set of resources, innumerable times, should always produce the same result, after each application of the script or template.
 
-> :information_source: For example, idempotency requires that running a script on a system should result in the same outcome, regardless of the number of times the script is executed, without erroring out or performing duplicate actions, and despite the environment’s starting state.
+*Idempotence* is a mathematical term that can be used in the context of Infrastructure as Code and Configuration as Code. It is the ability to apply one or more operations against a resource, resulting in the same outcome. 
 
-<p style="text-align:center;"><img src="../Linked_Image_Files/idempotency.png" alt="An image depicting the cyclical process from the execution of a script to the final state of a software application, with symbols representing scripts and software applications located at fixed intervals around a circle.."></p>
+For example, if you run a script on a system it should have the same outcome regardless of the number of times you execute the script. It should not error out, or perform duplicate actions regardless of the environment’s starting state.
 
-Idempotency can be achieved by either *one* of the following:
+In essence, if you apply a deployment to a set of resources 1,000 times, you should end up with the same result after each application of the script or template.
 
-- Automatically configuring, and re-configuring, an existing set of resources.
+<p style="text-align:center;"><img src="../Linked_Image_Files/idempotency.png" alt="A circle with two simultaneously repeating icons of a script and an application in its final state. This pattern continues in a circle."></p>
+
+Idempotency can be achieved by:
+
+- Automatically configuring and reconfiguring an existing set of resources.
+
+    Or 
+
 - Discarding the existing resources and recreating a fresh environment.
 
-With Infrastructure and Configuration as Code, it is best practice to consider *idempotency* whenever you create scripts and templates. Idempotency considerations are especially relevant to cloud services, where resources and applications are scaled in and out regularly, and new instances of services can be started, to facilitate *elasticity* in a service. Ignoring *idempotency* is bad practice.
+When defining Infrastructure as Code and Configuration as Code, as a best practice, build the scripts and templates in such a way as to embrace idempotency. This is particularly important when working with cloud services, because resources and applications can be scaled in and out regularly, and new instances of services can be started up to provide service elasticity. 
 
-> :information_source: You can read more about *idempotence* on the page [Idempotency for Windows Azure Message Queues](https://www.wintellect.com/idempotency-for-windows-azure-message-queues/).
+
+> **Note**: You can read more about idempotence at [Idempotency for Windows Azure Message Queues](https://www.wintellect.com/idempotency-for-windows-azure-message-queues/).

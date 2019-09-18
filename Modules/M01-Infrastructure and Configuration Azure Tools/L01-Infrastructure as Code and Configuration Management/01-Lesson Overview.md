@@ -1,11 +1,13 @@
+
+
 This lesson includes the following topics:
 
-- Environment Deployment
-- Environment Configuration
-- Architecting Automation
+- Environment deployment
+- Environment configuration
+- Architecting automation
 - Modularization
-- Imperative vs. Declarative
+- Imperative vs. declarative
 - Idempotence
-- Technical Debt
-- Configuration Drift
-- Database as Code
+- Technical debt
+- Configuration drift
+- Database as code

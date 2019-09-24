@@ -7,8 +7,8 @@ In this module, you’ll learn about Infrastructure as Code and Configuration ma
 * Lesson 2: Create Azure Resources using ARM Templates
 * Lesson 3: Create Azure Resources using Azure CLI
 * Lesson 4: Create Azure Resources by using Azure PowerShell
-* Lesson 4: Additional Automation Tools
-* Lesson 5: Version Control
+* Lesson 5: Additional Automation Tools
+* Lesson 6: Version Control
 * Lab: Azure Deployments using Resource Manager templates
 
 **Module 2 – Azure Automation**

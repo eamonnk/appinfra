@@ -1,7 +1,6 @@
 
-
 ## About review questions ##
-End-of-module review questions are for practice only and are not included in your grade for the course.  The final assessment at the end of the course is graded. 
+End-of-module review questions are for practice only and are not included in your grade for the course.  The final assessment at the end of the course is graded.
 
 ---
 ##Checkbox##
@@ -16,7 +15,6 @@ End-of-module review questions are for practice only and are not included in you
 [ ] Chef Facts
 [x] Chef Client
 [x] Chef Workstation
-
 
 [explanation]
 The correct answers are Chef Server, Chef Client and Chef Workstation.
@@ -69,7 +67,7 @@ The correct answers are Master, Agent and Facts.
 
 Habitat is an incorrect answer.
 
-Habitat is used with Chef for creating platform-independent build artifacts called for your applications.
+Habitat is used with Chef for creating platform-independent build artifacts for your applications.
 
 Master, Agent and Facts are core components of the Puppet automation platform. Another core component is 'Console Services'. Puppet Master acts as a center for Puppet activities and processes. Puppet Agent runs on machines managed by Puppet, to facilitate management. Console Services is a toolset for managing and configuring resources managed by Puppet. Facts are metadata used to determine the state of resources managed by Puppet.
 [explanation]
@@ -95,7 +93,7 @@ All other answers are incorrect answers.
 
 Habitat, InSpec and Cookbooks are incorrect because they relate to the Chef automation platform.
 
-The main elements of a Puppet Program (PP) Manifest file are Class, Resource and Module. Classes define related resources according to their classification, to be reused when composing other workflows. Resources are single elements of your configuration which you can specify parameters for. Modules are collection of all the classes, resources and other elements in a single entity.
+The main elements of a Puppet Program (PP) Manifest file are Class, Resource and Module. Classes define related resources according to their classification, to be reused when composing other workflows. Resources are single elements of your configuration which you can specify parameters for. A module is a collection of the classes, resources and other elements in a single entity.
 [explanation]
 
 ---
@@ -112,11 +110,11 @@ The main elements of a Puppet Program (PP) Manifest file are Class, Resource and
 [ ] Ansible
 
 [explanation]
-The correct answers are: Puppet and Chef.
+The correct answers are Puppet and Chef.
 
 Ansible is an incorrect answer.
 
-Ansible is agentless because you do not need to install an Agent on each of the target machines it manages. Ansible uses the Secure Shell (SSH) protocol to communicate with target machines. You choose when to conduct compliance checks and perform corrective actions, instead of using Agents and a Master to perform these operations automatically.
+Ansible is agentless because it does not require the installation of an Agent on each target machine it manages.
 
 Puppet and Chef use Agents to communicate with target machines. With Puppet and Chef, you install an Agent on each target machine managed by the platform. Agents typically run as a background service and facilitate communication with a Master, which runs on a server. The Master uses information provided by Agents to conduct compliance checks and perform corrective actions automatically.
 [explanation]
@@ -138,8 +136,6 @@ False in an incorrect answer.
 
 A Control Machine in Ansible must have Python installed. Control Machine is one of the core components of Ansible. Control Machine is for running configurations. The other core components of Ansible are Managed Nodes, Playbooks, Modules, Inventory, Roles, Facts, and Plug-ins. Managed Nodes are resources managed by Ansible. Playbooks are ordered lists of Ansible tasks. Modules are small blocks of code within a Playbook that perform specific tasks. Inventory is list of managed nodes. Roles allow for the automatic and sequenced loading of variables, files, tasks and handlers. Facts are data points about the remote system which Ansible is managing. Plug-ins supplement Ansible's core functionality.
 [explanation]
-
----
 
 ---
 ##Multiple choice##
@@ -176,7 +172,7 @@ Cloud-init is a package that is often used to add custom configurations to a Lin
 [explanation]
 All of the answers are correct answers.
 
-In Azure, you can add custom configurations to a Linux VM with cloud-init by appending the --custom-data parameter, and passing the name of a configuration file (.txt), to the az vm create command. The --custom-data parameter passes the name of the configuration file (.txt) as an argument to cloud-init. Then, cloud-init applies Base64 encoding to the contents of the configuration file (.txt), and sends it along with any provisioning configuration information that is contained within the configuration file (.txt). Any provisioning configuration information contained in the specified configuration file (.txt) is applied to the new VM, when the VM is created. The YML syntax is used within the configuration file (.txt) to define any provisioning configuration information that needs to be applied to the VM.
+In Azure, you can add custom configurations to a Linux VM with cloud-init by appending the --custom-data parameter, and passing the name of a configuration file (.txt), to the az vm create command. The --custom-data parameter passes the name of the configuration file as an argument to cloud-init. Then, cloud-init applies Base64 encoding to the contents of the configuration file, and sends it along with any provisioning configuration information that is contained within the configuration file. Any provisioning configuration information contained in the specified configuration file is applied to the new VM, when the VM is created. The YML syntax is used within the configuration file to define any provisioning configuration information that needs to be applied to the VM.
 [explanation]
 
 ---

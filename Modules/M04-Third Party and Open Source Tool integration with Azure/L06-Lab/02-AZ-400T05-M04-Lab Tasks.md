@@ -7,13 +7,12 @@
 
 This course includes labs in which you can try out the techniques demonstrated in the course.
 
-Steps for the labs are available on **GitHub** at the below sites under the **Infrastructure as Code** sections
+Steps for the labs are available on **GitHub** at the following sites, under the sections **Infrastructure as Code**.
 
 - <p><a href="https://microsoft.github.io/PartsUnlimited" title="" target="_blank">https://microsoft.github.io/PartsUnlimited</a></p>
 - <p><a href="https://microsoft.github.io/PartsUnlimitedMRP" title="" target="_blank">https://microsoft.github.io/PartsUnlimitedMRP</a></p>
 
-You should click on the links below, for the individual lab tasks for this module, and follow the steps outlined there for each lab task.
-
+Use the links below to access individual lab tasks for this module, and follow the steps outlined in each lab task.
 
 **PartsUnlimitedMRP (PUMRP)**
 
@@ -22,5 +21,3 @@ You should click on the links below, for the individual lab tasks for this modul
 - <a href="http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-DeployappwithPuppetonAzure.html" target="_blank"><span style="color: #0066cc;" color="#0066cc">Deploy app with Puppet on Azure</span></a>
 
 - <a href="http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-AnsiblewithAzure.html" target="_blank"><span style="color: #0066cc;" color="#0066cc">Ansible with Azure</span></a>
-
- 

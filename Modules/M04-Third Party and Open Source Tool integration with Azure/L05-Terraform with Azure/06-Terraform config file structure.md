@@ -1,4 +1,4 @@
-Take a moment to skim through the below sample terraform **.tf** file and try to identify the different elements within it. The file performs the below following on Azure:
+Take a moment to skim through the following example of a terraform **.tf** file. Try to identify the different elements within the file. The file performs the following actions on Azure:
 
 - Authenticates
 - Creates a resource group
@@ -7,7 +7,7 @@ Take a moment to skim through the below sample terraform **.tf** file and try to
 - Creates a public IP address
 - Creates a network security group and rule
 - Creates a virtual network interface card
-- Creates a random text for a unique storage account name
+- Generates random text for use as a unique storage account name
 - Creates a storage account for diagnostics
 - Creates a virtual machine
 
@@ -22,7 +22,7 @@ provider "azurerm" {
     tenant_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
 
-# Create a resource group if it doesn’t exist
+# Create a resource group if it does not exist
 resource "azurerm_resource_group" "myterraformgroup" {
     name     = "myResourceGroup"
     location = "eastus"

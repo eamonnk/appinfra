@@ -1,5 +1,4 @@
 
-
 This lesson includes the following topics:
 
 - Azure Security Center
@@ -8,7 +7,7 @@ This lesson includes the following topics:
 - Policies
 - Initiatives
 - Azure Key Vault
-- RBAC
+- Role Based Access Control (RBAC)
 - Locks
 - Subscription governance
 - Azure Blueprints

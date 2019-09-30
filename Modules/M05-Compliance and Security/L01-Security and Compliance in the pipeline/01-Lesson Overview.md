@@ -1,5 +1,4 @@
 
-
 This lesson includes the following topics:
 
 - What is rugged DevOps?
@@ -8,7 +7,7 @@ This lesson includes the following topics:
 - WhiteSource integration with Azure DevOps pipeline
 - Fortify integration with Microsoft Azure DevOps pipeline
 - CheckMarx integration with Azure DevOps
-- Veracode integration with Azure DevOp
 - How to integrate SCA checks into pipelines
+- Veracode integration with Azure DevOp
 - DevOps and pipeline security
 - Secure DevOps Kit for Azure

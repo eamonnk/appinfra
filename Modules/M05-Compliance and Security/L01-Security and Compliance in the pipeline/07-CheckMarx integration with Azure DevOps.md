@@ -1,10 +1,11 @@
 
-<a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.cxsast" target="_blank"><span style="color: #0066cc;" color="#0066cc">Checkmarx CxSAST</span></a> is another example of an extension you can leverage from the **Azure DevOops Marketplace** and integrate with your CI/CD pipeline to address Rugged DevOps security-related issues. **Checkmarx CxSAS** is designed for identifying, tracking, and fixing technical and logical security flaws. Checkmarx is a powerful, unified security solution for Static Source Code Analysis (SAST) and Open Source Analysis (OSA). You can download Checkmarx from the Azure DevOps Marketplace.
+<a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.cxsast" target="_blank"><span style="color: #0066cc;" color="#0066cc">Checkmarx CxSAST</span></a> is another example of an extension from the **Azure DevOps Marketplace** that you can apply to your CI/CD pipeline to address Rugged DevOps security-related issues. Checkmarx CxSAST is designed to identify, track, and fix technical and logical security flaws. Checkmarx is a powerful, unified security solution for Static Source Code Analysis (SAST) and Open Source Analysis (OSA). You can download Checkmarx from the Azure DevOps Marketplace.
 
 <p style="text-align:center;"><img src="../Linked_Image_Files/checkmarx1.png" alt="Screenshot of the Add tasks pane in Azure DevOps with the Checkmarx CxSAST task listed and available to choose."></p>
 
 ### Checkmarx functionality
-Checkmarx functionality includes:
+
+Checkmarx's functionality includes:
 
 - Best fix location. Checkmarx highlights the best place to fix your code to minimize the time required to remediate the issue. A visual chart of the data flow graph indicates the ideal location in the code to address multiple vulnerabilities within the data flow using a single line of code.
 - Quick and accurate scanning. Checkmarx helps reduce false positives, adapt the rule set to minimize false positives, and understand the root cause for results.
